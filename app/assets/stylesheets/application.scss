@@ -220,6 +220,22 @@ h6{
     letter-spacing: 0.5px;
 }
 
+.wrapper_posts_home{
+	padding-bottom: 100px;
+}
+
+.wrapper_collections_home{
+	padding-bottom: 100px;
+}
+
+.wrapper_blog_posts{
+	padding-bottom: 100px;
+}
+
+.wrapper_gallery_collections{
+	padding-bottom: 100px;
+}
+
 .container,
 .contact_wrapper,
 .collection_wrapper,
@@ -231,9 +247,6 @@ h6{
 	width: 80%;
 }
 
-.container{
-	padding-bottom: 60px;
-}
 
 .containerTwo{
 	text-align: center;
@@ -272,6 +285,17 @@ h6{
     margin: auto;
 }
 
+.link{
+	font-family: Playfair Display;
+    font-weight: 400;
+    font-style: italic;
+    color: #000;
+    font-size: 20px;
+
+    &:hover{
+    	color: #9d132c;
+    }
+}
 
 /***********************HEADER***********************/
 
@@ -412,6 +436,7 @@ header{
     font-style: italic;
     font-size: 20px;
     color: #212121;
+    padding-bottom: 20px;
 }
 
 /***********************SLIDER***********************/
@@ -706,18 +731,6 @@ header{
 
 /***********************COLLECTIONGRID***********************/
 
-.collection_home_wrapper{
-	padding-bottom: 100px;
-}
-
-.gallery_wrapper{
-	padding-bottom: 100px;
-}
-
-.collection_wrapper{
-	padding: 0px 0 100px 0;
-}
-
 .collection_container{
 	width: 33.33333%;
 	display: inline-block;
@@ -870,6 +883,16 @@ header{
 	}
 }
 
+.image_grid{
+	padding: 0 50px 0 50px;
+}
+
+.image_container{
+
+	&:hover .slick-arrow{
+	opacity: 1;
+	}
+}
 
 /***********************ABOUT***********************/
 

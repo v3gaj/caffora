@@ -301,3 +301,2661 @@ Completed 200 OK in 5066ms (Views: 5015.1ms | ActiveRecord: 2.1ms)
   Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3750.3ms)
   Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
   Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3687.2ms)
+Started GET "/" for 127.0.0.1 at 2017-08-21 12:30:42 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (26.0ms)
+  Rendered posts/index.html.erb (43.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (40.0ms)
+  Rendered collections/index.html.erb (57.0ms)
+  Rendered index/home.html.erb within layouts/application (563.4ms)
+Completed 200 OK in 1052ms (Views: 907.1ms | ActiveRecord: 61.1ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 12:31:43 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 315ms (Views: 290.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 12:31:48 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (31.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (30.0ms)
+  Rendered index/home.html.erb within layouts/application (118.1ms)
+Completed 200 OK in 378ms (Views: 356.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:05:57 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (43.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (257.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (294.2ms)
+  Rendered posts/index.html.erb (457.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (268.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (271.0ms)
+  Rendered collections/index.html.erb (2876.5ms)
+  Rendered index/home.html.erb within layouts/application (3627.0ms)
+Completed 200 OK in 7234ms (Views: 6489.3ms | ActiveRecord: 568.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 13:06:13 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (3.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 345ms (Views: 297.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 13:06:14 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (101.1ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (105.1ms)
+  Rendered collections/index.html.erb (124.1ms)
+  Rendered index/gallery.html.erb within layouts/application (169.1ms)
+Completed 200 OK in 417ms (Views: 288.1ms | ActiveRecord: 101.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 13:06:16 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (85.2ms)
+  Rendered index/about.html.erb within layouts/application (417.4ms)
+Completed 200 OK in 730ms (Views: 589.5ms | ActiveRecord: 83.2ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 13:06:17 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendered index/blog.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 290ms (Views: 270.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:06:20 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (27.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (3.0ms)
+  Rendered collections/index.html.erb (25.0ms)
+  Rendered index/home.html.erb within layouts/application (106.1ms)
+Completed 200 OK in 373ms (Views: 346.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 13:06:21 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/gallery.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 283ms (Views: 264.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:06:27 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (3.0ms)
+  Rendered posts/index.html.erb (21.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (3.0ms)
+  Rendered collections/index.html.erb (20.0ms)
+  Rendered index/home.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 312ms (Views: 290.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sliders" for 127.0.0.1 at 2017-08-21 13:06:44 -0600
+Processing by SlidersController#index as HTML
+Completed 401 Unauthorized in 127ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 13:06:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (368.5ms)
+Completed 200 OK in 969ms (Views: 721.7ms | ActiveRecord: 160.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-21 13:06:49 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8Em1VZzI+DKeYXknYAUcLP8/60xXFIMgVfX2mp3mWwrflT52TyJfYLRIWVB0GNrBaAz36qu1vIbNDDQBGqmcw==", "user"=>{"email"=>"juanvegaquesada@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'juanvegaquesada@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 40ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8Em1VZzI+DKeYXknYAUcLP8/60xXFIMgVfX2mp3mWwrflT52TyJfYLRIWVB0GNrBaAz36qu1vIbNDDQBGqmcw==", "user"=>{"email"=>"juanvegaquesada@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 539ms (Views: 272.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-08-21 13:06:51 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 357ms (Views: 355.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-21 13:07:10 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9jmULLscVdWJaJSt1mtGhvlfaVj0M/NjzgCtm0gt1c4YOeWzS/9YEZowGaC2Y01e396pOo+0uZh5/gFSeXTHw==", "user"=>{"email"=>"juanvegaquesada@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (21.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'juanvegaquesada@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (43.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('juanvegaquesada@gmail.com', '$2a$11$dQoyrEXfZ409o1N93nK.uOISPmEDFfoS4OELkx2uGhRIS04/D/IdS', '2017-08-21 19:07:10', '2017-08-21 19:07:10')[0m
+  [1m[35m (116.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.0ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2017-08-21 19:07:10', `last_sign_in_at` = '2017-08-21 19:07:10', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 2[0m
+  [1m[35m (58.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/sliders
+Completed 302 Found in 767ms (ActiveRecord: 251.2ms)
+
+
+Started GET "/sliders" for 127.0.0.1 at 2017-08-21 13:07:10 -0600
+Processing by SlidersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 13:07:10 -0600
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:07:11 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.0ms)
+  Rendered index/home.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 339ms (Views: 320.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:09:11 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (3.1ms)
+  Rendered collections/index.html.erb (22.2ms)
+  Rendered index/home.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 309ms (Views: 286.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/sliders" for 127.0.0.1 at 2017-08-21 13:09:24 -0600
+Processing by SlidersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sliders/index.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendered sliders/_table.html.erb (3.0ms)
+  Rendered sliders/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 340ms (Views: 300.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sliders/new" for 127.0.0.1 at 2017-08-21 13:09:26 -0600
+Processing by SlidersController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sliders/new.js.erb
+  Rendered sliders/_errors.html.erb (0.0ms)
+  Rendered sliders/_form.html.erb (271.8ms)
+  Rendered sliders/new.js.erb (940.0ms)
+Completed 200 OK in 1529ms (Views: 1312.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sliders" for 127.0.0.1 at 2017-08-21 13:10:03 -0600
+Processing by SlidersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gv5jAu17Sc8QweqE95SdGZOi3DiNTqx3SRE0/sEU4P9p8bSGS/RqnfKogS/jLBXpE9aRplQYkj5MmOSccyy2cw==", "slider"=>{"index"=>"1", "title"=>"Cafeteria de Colores", "subtitle"=>"Cafeteria de Colores", "url"=>"Cafeteria de Colores", "image"=>#<ActionDispatch::Http::UploadedFile:0x5509dd0 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-10s91yk.jpeg>, @original_filename="WhatsApp Image 2017-08-19 at 5.33.00 PM.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"slider[image]\"; filename=\"WhatsApp Image 2017-08-19 at 5.33.00 PM.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Slider", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/512aa27f6a77b6a1432d74fd4899956020170821-13360-jekkux.jpeg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/af0b8e6e140ad87c531cb057e71d86a220170821-13360-xcdr7e.jpeg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/af0b8e6e140ad87c531cb057e71d86a220170821-13360-xcdr7e.jpeg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/af0b8e6e140ad87c531cb057e71d86a220170821-13360-xcdr7e.jpeg[0]" -auto-orient -resize "1920x" -crop "1920x900+0+90" +repage "C:/Users/VEGA/AppData/Local/Temp/2dc8e9c78d1b82b4a7dd5c7c7d31407720170821-13360-1texr8w"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/af0b8e6e140ad87c531cb057e71d86a220170821-13360-xcdr7e.jpeg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/af0b8e6e140ad87c531cb057e71d86a220170821-13360-xcdr7e.jpeg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/af0b8e6e140ad87c531cb057e71d86a220170821-13360-xcdr7e.jpeg[0]" -auto-orient -resize "336x" -crop "336x123+0+33" +repage "C:/Users/VEGA/AppData/Local/Temp/2dc8e9c78d1b82b4a7dd5c7c7d31407720170821-13360-8u6ch1"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/512aa27f6a77b6a1432d74fd4899956020170821-13360-124w5vc.jpeg"
+  [1m[36mSlider Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `sliders` WHERE `sliders`.`index` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `sliders` (`title`, `subtitle`, `url`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`, `index`) VALUES ('Cafeteria de Colores', 'Cafeteria de Colores', 'Cafeteria de Colores', 'WhatsApp_Image_2017-08-19_at_5.33.00_PM.jpeg', 'image/jpeg', 211209, '2017-08-21 19:10:03', '2017-08-21 19:10:06', '2017-08-21 19:10:06', 1)[0m
+  [1m[35m (93.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering sliders/create.js.erb
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendered sliders/_table.html.erb (4.0ms)
+  Rendered sliders/create.js.erb (28.0ms)
+Completed 200 OK in 2957ms (Views: 83.1ms | ActiveRecord: 95.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:10:13 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 325ms (Views: 306.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-08-21 13:10:36 -0600
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering posts/new.js.erb
+  Rendered posts/_errors.html.erb (2.0ms)
+  Rendered posts/_form.html.erb (618.8ms)
+  Rendered posts/new.js.erb (919.7ms)
+Completed 200 OK in 1542ms (Views: 1249.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-08-21 13:11:10 -0600
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R5efuMDihhaFna06ZLOUNI4Aj9y3xDhdnKofuovl0GqtEkY3DSO7a0q4ZmuU8QD4Iqw8FoH2H34RbatO9yCvxQ==", "post"=>{"title"=>"Cafeteria de Colores", "subtitle"=>"Kahli", "release_date(1i)"=>"2017", "release_date(2i)"=>"8", "release_date(3i)"=>"21", "author"=>"Juan", "cover"=>#<ActionDispatch::Http::UploadedFile:0xc28df28 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-fwxtx2.jpg>, @original_filename="6.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[cover]\"; filename=\"6.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-12wjx58.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1dice65.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1dice65.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1dice65.jpg[0]" -auto-orient -resize "x250" -crop "370x250+2+0" +repage "C:/Users/VEGA/AppData/Local/Temp/b28f3437e9dff147338881e4300e234320170821-13360-1iwxf21"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1dice65.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1dice65.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1dice65.jpg[0]" -auto-orient -resize "1500x" -crop "1500x400+0+300" +repage "C:/Users/VEGA/AppData/Local/Temp/b28f3437e9dff147338881e4300e234320170821-13360-qdhcu8"
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1v70tb0.jpg"
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `subtitle`, `release_date`, `cover_file_name`, `cover_content_type`, `cover_file_size`, `cover_updated_at`, `created_at`, `updated_at`, `author`) VALUES ('Cafeteria de Colores', 'Kahli', '2017-08-21', '6.jpg', 'image/jpeg', 1278436, '2017-08-21 19:11:10', '2017-08-21 19:11:10', '2017-08-21 19:11:10', 'Juan')[0m
+  [1m[35m (111.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering posts/create.js.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/create.js.erb (38.0ms)
+Completed 200 OK in 992ms (Views: 101.7ms | ActiveRecord: 115.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:11:14 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 331ms (Views: 307.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/collections/new" for 127.0.0.1 at 2017-08-21 13:11:31 -0600
+Processing by CollectionsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering collections/new.js.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  Rendered collections/_errors.html.erb (0.0ms)
+  Rendered collections/_form.html.erb (290.6ms)
+  Rendered collections/new.js.erb (509.4ms)
+Completed 200 OK in 1084ms (Views: 852.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/collections" for 127.0.0.1 at 2017-08-21 13:11:56 -0600
+Processing by CollectionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yj4O6VxTmgd6RFjrRPEeJazqtyyzWdzfWFUZEvvnQJOvP9073flZLcEN3HD+zogKiwxOz6GnBNAemmCTk0Ldcw==", "collection"=>{"post_id"=>"7", "title"=>"Cafetería de Luces", "subtitle"=>"Kahli", "cover"=>#<ActionDispatch::Http::UploadedFile:0xae03b88 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-13hjmpq.jpg>, @original_filename="1.1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"collection[cover]\"; filename=\"1.1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Collection", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-g3a3zm.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1l1mkfi.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1l1mkfi.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1l1mkfi.jpg[0]" -auto-orient -resize "686x" -crop "686x464+0+25" +repage "C:/Users/VEGA/AppData/Local/Temp/fbb2beaa5c9d661c8e48ea342938d74520170821-13360-1idro0v"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1l1mkfi.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1l1mkfi.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1l1mkfi.jpg[0]" -auto-orient -resize "1920x" -crop "1920x1280+0+80" +repage "C:/Users/VEGA/AppData/Local/Temp/fbb2beaa5c9d661c8e48ea342938d74520170821-13360-1mvl0yn"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1wq1n2n.jpg"
+  [1m[36mCollection Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `collections` (`post_id`, `title`, `subtitle`, `cover_file_name`, `cover_content_type`, `cover_file_size`, `cover_updated_at`, `created_at`, `updated_at`) VALUES (7, 'Cafetería de Luces', 'Kahli', '1.1.jpg', 'image/jpeg', 875968, '2017-08-21 19:11:57', '2017-08-21 19:11:58', '2017-08-21 19:11:58')[0m
+  [1m[35m (65.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering collections/create.js.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/create.js.erb (31.0ms)
+Completed 200 OK in 1350ms (Views: 83.1ms | ActiveRecord: 66.4ms)
+
+
+Started GET "/collections/3/edit" for 127.0.0.1 at 2017-08-21 13:12:19 -0600
+Processing by CollectionsController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering collections/edit.js.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  Rendered collections/_errors.html.erb (0.0ms)
+  Rendered collections/_form.html.erb (225.1ms)
+  Rendered collections/edit.js.erb (428.2ms)
+Completed 200 OK in 1194ms (Views: 789.9ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/collections/3" for 127.0.0.1 at 2017-08-21 13:12:23 -0600
+Processing by CollectionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m/D/uJrOlUsJPX6ABOyEO349s1t+e1LSiRfHkUGXWTKD+KRe64xcjJosTIq7Kxst5tg0LyNB0Lkjekf1nypoAA==", "collection"=>{"post_id"=>"7", "title"=>"Cafetería de Luces", "subtitle"=>"Kahli"}, "commit"=>"Update Collection", "id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCollection Exists (8.0ms)[0m  [1m[34mSELECT  1 AS one FROM `collections` WHERE `collections`.`post_id` = 7 AND (`collections`.`id` != 3) LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering collections/update.js.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/update.js.erb (31.0ms)
+Completed 200 OK in 84ms (Views: 61.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:12:26 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (15.6ms)
+  Rendered collections/show.html.erb within layouts/application (125.0ms)
+Completed 200 OK in 555ms (Views: 435.6ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/collections/3/images/new" for 127.0.0.1 at 2017-08-21 13:12:30 -0600
+Processing by ImagesController#new as JS
+  Parameters: {"collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering images/new.js.erb
+  Rendered images/_errors.html.erb (0.0ms)
+  Rendered images/_form.html.erb (203.1ms)
+  Rendered images/new.js.erb (449.6ms)
+Completed 200 OK in 1022ms (Views: 795.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:24:03 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (5.2ms)
+  Rendered collections/show.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 1929ms (Views: 1905.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/collections/3/images/new" for 127.0.0.1 at 2017-08-21 13:24:51 -0600
+Processing by ImagesController#new as JS
+  Parameters: {"collection_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering images/new.js.erb
+  Rendered images/_errors.html.erb (0.0ms)
+  Rendered images/_form.html.erb (220.1ms)
+  Rendered images/new.js.erb (470.1ms)
+Completed 200 OK in 1217ms (Views: 843.9ms | ActiveRecord: 78.5ms)
+
+
+Started POST "/collections/3/images" for 127.0.0.1 at 2017-08-21 13:25:26 -0600
+Processing by ImagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jBetFvQ1HJrQAuyvJ3jyBCRtOMUjdy9lCKOLCtVbVZMTEXvcJwkSeWJAandMcwTBHZDPmr0yapHalbpDnuYQQ==", "commit"=>"Create Image", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "image"=>{"content"=>#<ActionDispatch::Http::UploadedFile:0x9f52938 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-12yup0l.jpg>, @original_filename="1.1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[content]\"; filename=\"1.1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "collection_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-sd3xg8.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1y5ljmp.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1y5ljmp.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1y5ljmp.jpg[0]" -auto-orient -resize "1600x" -crop "1600x1000+0+100" +repage "C:/Users/VEGA/AppData/Local/Temp/b509903ed5522fd0357ae99312ecaabb20170821-13360-620w6f"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1y5ljmp.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1y5ljmp.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-1y5ljmp.jpg[0]" -auto-orient -resize "370x" -crop "370x170+0+53" +repage "C:/Users/VEGA/AppData/Local/Temp/b509903ed5522fd0357ae99312ecaabb20170821-13360-1y4z6tf"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/777d45bbbcdf50d49c42c70ad7acf5fe20170821-13360-2eeehi.jpg"
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `images` (`collection_id`, `content_file_name`, `content_content_type`, `content_file_size`, `content_updated_at`, `created_at`, `updated_at`) VALUES (3, '1.1.jpg', 'image/jpeg', 875968, '2017-08-21 19:25:26', '2017-08-21 19:25:27', '2017-08-21 19:25:27')[0m
+  [1m[35m (188.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/collections/3
+Completed 200 OK in 1717ms (ActiveRecord: 190.9ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:25:28 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 275ms (Views: 252.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:25:55 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered collections/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 323ms (Views: 280.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/collections/3/images/new" for 127.0.0.1 at 2017-08-21 13:26:00 -0600
+Processing by ImagesController#new as JS
+  Parameters: {"collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering images/new.js.erb
+  Rendered images/_errors.html.erb (0.0ms)
+  Rendered images/_form.html.erb (218.8ms)
+  Rendered images/new.js.erb (439.7ms)
+Completed 200 OK in 998ms (Views: 783.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/collections/3/images" for 127.0.0.1 at 2017-08-21 13:26:12 -0600
+Processing by ImagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjCLpJ2rBjk6y3MdD8NndjekAGsF/S88wkEiqljDzc4cTJD/tuf2ArQCeQZub0itI0P3tnuEOisRCfpvfe042Q==", "commit"=>"Create Image", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "image"=>{"content"=>#<ActionDispatch::Http::UploadedFile:0xc873888 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-1y784qq.jpg>, @original_filename="6.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[content]\"; filename=\"6.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-utqtr2.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1ozxnz4.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1ozxnz4.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1ozxnz4.jpg[0]" -auto-orient -resize "1600x" -crop "1600x1000+0+33" +repage "C:/Users/VEGA/AppData/Local/Temp/443fdaa584630122d975d9cd9f2245e020170821-13360-2wj4t9"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1ozxnz4.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1ozxnz4.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-1ozxnz4.jpg[0]" -auto-orient -resize "370x" -crop "370x170+0+38" +repage "C:/Users/VEGA/AppData/Local/Temp/443fdaa584630122d975d9cd9f2245e020170821-13360-14u11ne"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/1679091c5a880faf6fb5e6087eb1b2dc20170821-13360-ky8gdl.jpg"
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `images` (`collection_id`, `content_file_name`, `content_content_type`, `content_file_size`, `content_updated_at`, `created_at`, `updated_at`) VALUES (3, '6.jpg', 'image/jpeg', 1278436, '2017-08-21 19:26:12', '2017-08-21 19:26:13', '2017-08-21 19:26:13')[0m
+  [1m[35m (113.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/collections/3
+Completed 200 OK in 1354ms (ActiveRecord: 114.1ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:26:13 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (15.6ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 241ms (Views: 224.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/collections/3/images/new" for 127.0.0.1 at 2017-08-21 13:26:54 -0600
+Processing by ImagesController#new as JS
+  Parameters: {"collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering images/new.js.erb
+  Rendered images/_errors.html.erb (1.0ms)
+  Rendered images/_form.html.erb (216.2ms)
+  Rendered images/new.js.erb (445.3ms)
+Completed 200 OK in 1027ms (Views: 808.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/collections/3/images" for 127.0.0.1 at 2017-08-21 13:27:07 -0600
+Processing by ImagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r0J18AQ5q+QGxtYVTH4wTrqhRwz1pHbyHKewidI2RRwVPm6rL3Vb34gP3A4t0h+Vrkaw0YvdY+XP72hM9xiwCw==", "commit"=>"Create Image", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "image"=>{"content"=>#<ActionDispatch::Http::UploadedFile:0xbc77b90 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-11jj4fk.jpg>, @original_filename="2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[content]\"; filename=\"2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "collection_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-klsf3w.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-midq32.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-midq32.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-midq32.jpg[0]" -auto-orient -resize "1600x" -crop "1600x1000+0+33" +repage "C:/Users/VEGA/AppData/Local/Temp/8c4c29b139203a16a8a1d1d7c70ff97920170821-13360-17zvy9v"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-midq32.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-midq32.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-midq32.jpg[0]" -auto-orient -resize "370x" -crop "370x170+0+38" +repage "C:/Users/VEGA/AppData/Local/Temp/8c4c29b139203a16a8a1d1d7c70ff97920170821-13360-po525d"
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c81e728d9d4c2f636f067f89cc14862c20170821-13360-1ldxkq4.jpg"
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `images` (`collection_id`, `content_file_name`, `content_content_type`, `content_file_size`, `content_updated_at`, `created_at`, `updated_at`) VALUES (3, '2.jpg', 'image/jpeg', 1168310, '2017-08-21 19:27:07', '2017-08-21 19:27:08', '2017-08-21 19:27:08')[0m
+  [1m[35m (136.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/collections/3
+Completed 200 OK in 1419ms (ActiveRecord: 138.0ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:27:08 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 292ms (Views: 267.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:28:07 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (4.6ms)
+  Rendered collections/show.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 934ms (Views: 911.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:31:42 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered collections/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 905ms (Views: 881.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-21 13:32:21 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8q+NcIStSFHUqy09Xfjk63SdKVCEa+62MGIlNWztZmGyEP9cC+LizJwDibyBqJPwwsHlIh+ZakiqAcI/AvBZfg=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 101ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:32:21 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (33.0ms)
+  Rendered posts/index.html.erb (51.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (9.0ms)
+  Rendered collections/index.html.erb (28.0ms)
+  Rendered index/home.html.erb within layouts/application (166.1ms)
+Completed 200 OK in 418ms (Views: 336.5ms | ActiveRecord: 50.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 13:32:24 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 277ms (Views: 258.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:32:28 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 241ms (Views: 230.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:45:53 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "....7s ease-in-out": expected "{", was ";"):
+    4:     <title>Caffora</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+   10:   </head>
+  
+app/assets/stylesheets/application.scss:446
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__495025512_98175864'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1637.1ms)
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:46:14 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 260ms (Views: 236.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:47:31 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 259ms (Views: 237.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:48:10 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 302ms (Views: 277.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:50:14 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 260ms (Views: 237.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:53:43 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 767ms (Views: 742.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 13:54:20 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 281ms (Views: 274.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-21 13:54:23 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GPEQmiv+u1x9oX1rVq4y2YhkHVk0ABmSA/j/W91h0hVBUqsrOpTCpqxqanMBbI2FPCv3KADbyRyrDbLzUg7rDA==", "user"=>{"email"=>"juanvegaquesada@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'juanvegaquesada@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-08-21 19:54:23', `sign_in_count` = 2, `updated_at` = '2017-08-21 19:54:23' WHERE `users`.`id` = 2[0m
+  [1m[35m (62.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 409ms (ActiveRecord: 63.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:54:23 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 307ms (Views: 286.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:54:49 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered collections/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 274ms (Views: 246.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/collections/3/images/new" for 127.0.0.1 at 2017-08-21 13:54:57 -0600
+Processing by ImagesController#new as JS
+  Parameters: {"collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering images/new.js.erb
+  Rendered images/_errors.html.erb (0.0ms)
+  Rendered images/_form.html.erb (222.4ms)
+  Rendered images/new.js.erb (425.6ms)
+Completed 200 OK in 979ms (Views: 771.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/collections/3/images" for 127.0.0.1 at 2017-08-21 13:55:13 -0600
+Processing by ImagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cJ+6ykvx8UsVbx4WzNEriM8rAnNPnJzWSHf7BDEc6Am9XP1k7uZMF/byAfB/IjH4BEhJ2bIFpIj95FUetj23Ag==", "commit"=>"Create Image", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "image"=>{"content"=>#<ActionDispatch::Http::UploadedFile:0x5198700 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-1hmgotl.jpg>, @original_filename="8.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[content]\"; filename=\"8.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "collection_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-xfwl1e.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-k7bur3.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-k7bur3.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-k7bur3.jpg[0]" -auto-orient -resize "1600x" -crop "1600x1000+0+33" +repage "C:/Users/VEGA/AppData/Local/Temp/33d43ca4510cf0124312c0a05ce827e420170821-13360-1gngi88"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-k7bur3.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-k7bur3.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-k7bur3.jpg[0]" -auto-orient -resize "370x" -crop "370x170+0+38" +repage "C:/Users/VEGA/AppData/Local/Temp/33d43ca4510cf0124312c0a05ce827e420170821-13360-10szx0b"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170821-13360-b5zhvy.jpg"
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `images` (`collection_id`, `content_file_name`, `content_content_type`, `content_file_size`, `content_updated_at`, `created_at`, `updated_at`) VALUES (3, '8.jpg', 'image/jpeg', 684725, '2017-08-21 19:55:13', '2017-08-21 19:55:14', '2017-08-21 19:55:14')[0m
+  [1m[35m (95.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/collections/3
+Completed 200 OK in 994ms (ActiveRecord: 96.8ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:55:15 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 306ms (Views: 288.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/collections/3/images/new" for 127.0.0.1 at 2017-08-21 13:55:27 -0600
+Processing by ImagesController#new as JS
+  Parameters: {"collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  Rendering images/new.js.erb
+  Rendered images/_errors.html.erb (0.0ms)
+  Rendered images/_form.html.erb (213.4ms)
+  Rendered images/new.js.erb (425.6ms)
+Completed 200 OK in 997ms (Views: 790.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/collections/3/images" for 127.0.0.1 at 2017-08-21 13:55:33 -0600
+Processing by ImagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9qQlOTdEOI0zt32+ZP5nFopRZyJ1qvHL3SBPTawfQ3c7Z2KXklOF0dAqYljXDX1mQTIsiIgzyZVos+FXKz4cfA==", "commit"=>"Create Image", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "image"=>{"content"=>#<ActionDispatch::Http::UploadedFile:0xaae5480 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-9hsbm9.jpg>, @original_filename="12.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[content]\"; filename=\"12.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "collection_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-5mnyhh.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-w5l4hi.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-w5l4hi.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-w5l4hi.jpg[0]" -auto-orient -resize "1600x" -crop "1600x1000+0+33" +repage "C:/Users/VEGA/AppData/Local/Temp/2ff4f00664db6163d659ceba11c22e2720170821-13360-s45ngl"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-w5l4hi.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-w5l4hi.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-w5l4hi.jpg[0]" -auto-orient -resize "370x" -crop "370x170+0+38" +repage "C:/Users/VEGA/AppData/Local/Temp/2ff4f00664db6163d659ceba11c22e2720170821-13360-ck3rcl"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-hi58f0.jpg"
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `images` (`collection_id`, `content_file_name`, `content_content_type`, `content_file_size`, `content_updated_at`, `created_at`, `updated_at`) VALUES (3, '12.jpg', 'image/jpeg', 1001700, '2017-08-21 19:55:33', '2017-08-21 19:55:35', '2017-08-21 19:55:35')[0m
+  [1m[35m (83.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/collections/3
+Completed 200 OK in 1318ms (ActiveRecord: 85.8ms)
+
+
+Started GET "/collections/3" for 127.0.0.1 at 2017-08-21 13:55:35 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (15.6ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 234ms (Views: 221.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:56:06 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/home.html.erb within layouts/application (95.1ms)
+Completed 200 OK in 327ms (Views: 306.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:56:16 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 319ms (Views: 299.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sliders" for 127.0.0.1 at 2017-08-21 13:56:53 -0600
+Processing by SlidersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sliders/index.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendered sliders/_table.html.erb (4.0ms)
+  Rendered sliders/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 246ms (Views: 225.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sliders/new" for 127.0.0.1 at 2017-08-21 13:56:56 -0600
+Processing by SlidersController#new as JS
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sliders/new.js.erb
+  Rendered sliders/_errors.html.erb (1.0ms)
+  Rendered sliders/_form.html.erb (211.1ms)
+  Rendered sliders/new.js.erb (459.3ms)
+Completed 200 OK in 1070ms (Views: 820.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sliders" for 127.0.0.1 at 2017-08-21 13:57:21 -0600
+Processing by SlidersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JpWfuadsU6cr+wUX4RUKmfURlTtS0atbm8sC4MbvEh2zxDK5C1Y5mRHae7HgrQy9rPphg5oS5ImDCAvYa4l3cA==", "slider"=>{"index"=>"2", "title"=>"Cafeteria de Colores", "subtitle"=>"Cafeteria de Colores", "url"=>"Cafeteria de Colores", "image"=>#<ActionDispatch::Http::UploadedFile:0xc57f600 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170821-13360-1wb0uvz.jpg>, @original_filename="12.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"slider[image]\"; filename=\"12.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Slider", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-1ey0aeq.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-iy9ibj.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-iy9ibj.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-iy9ibj.jpg[0]" -auto-orient -resize "1920x" -crop "1920x900+0+190" +repage "C:/Users/VEGA/AppData/Local/Temp/419ad41717877596636e104485e9115720170821-13360-oux8u8"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-iy9ibj.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-iy9ibj.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-iy9ibj.jpg[0]" -auto-orient -resize "336x" -crop "336x123+0+50" +repage "C:/Users/VEGA/AppData/Local/Temp/419ad41717877596636e104485e9115720170821-13360-1q4j6au"
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c20ad4d76fe97759aa27a0c99bff671020170821-13360-5fasmq.jpg"
+  [1m[36mSlider Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `sliders` WHERE `sliders`.`index` = 2 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `sliders` (`title`, `subtitle`, `url`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`, `index`) VALUES ('Cafeteria de Colores', 'Cafeteria de Colores', 'Cafeteria de Colores', '12.jpg', 'image/jpeg', 1001700, '2017-08-21 19:57:21', '2017-08-21 19:57:22', '2017-08-21 19:57:22', 2)[0m
+  [1m[35m (204.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering sliders/create.js.erb
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendered sliders/_table.html.erb (5.0ms)
+  Rendered sliders/create.js.erb (30.0ms)
+Completed 200 OK in 1283ms (Views: 56.0ms | ActiveRecord: 206.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:57:26 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (7.2ms)
+  Rendered posts/index.html.erb (24.2ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 317ms (Views: 295.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:58:13 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (26.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (96.1ms)
+Completed 200 OK in 830ms (Views: 805.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 13:58:23 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered collections/_table.html.erb (7.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 277ms (Views: 253.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:58:26 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered collections/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 258ms (Views: 233.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 13:59:30 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (94.1ms)
+Completed 200 OK in 340ms (Views: 310.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 13:59:46 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (25.0ms)
+  Rendered index/gallery.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 285ms (Views: 263.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 13:59:49 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 242ms (Views: 221.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:02:07 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered collections/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 712ms (Views: 687.8ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-21 14:07:27 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j/uFgYDEmOdczKJ7MqnHa4O0J8bpnGfDyOoY4WKDOhCLR2LXBi9gfY1qb2I405qvO06Q7B/KS1TVUoDxosVggA=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:07:27 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (3.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 318ms (Views: 298.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:07:31 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 247ms (Views: 225.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/collections" for 127.0.0.1 at 2017-08-21 14:10:16 -0600
+Processing by CollectionsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 14:10:16 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 276ms (Views: 275.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:10:18 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/home.html.erb within layouts/application (95.1ms)
+Completed 200 OK in 331ms (Views: 309.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:11:34 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 985ms (Views: 964.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:11:55 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 248ms (Views: 229.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:14:50 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 263ms (Views: 239.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/collections" for 127.0.0.1 at 2017-08-21 14:15:05 -0600
+Processing by CollectionsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 14:15:05 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 260ms (Views: 261.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:16:42 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 255ms (Views: 230.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:16:45 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (0.0ms)
+  Rendered collections/index.html.erb (15.6ms)
+  Rendered index/gallery.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 292ms (Views: 274.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:16:49 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.6ms)
+  Rendered collections/show.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 275ms (Views: 251.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:16:58 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 321ms (Views: 303.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:17:02 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 245ms (Views: 222.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:17:18 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 272ms (Views: 253.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:17:45 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 819ms (Views: 800.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:17:47 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 263ms (Views: 238.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:17:53 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (17.5ms)
+  Rendered collections/index.html.erb (33.2ms)
+  Rendered index/gallery.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 304ms (Views: 282.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:17:57 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (21.0ms)
+  Rendered index/blog.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 276ms (Views: 257.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:18:03 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (2.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered posts/show.html.erb within layouts/application (84.2ms)
+Completed 200 OK in 473ms (Views: 335.4ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:20:56 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (1.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 271ms (Views: 243.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:22:36 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (25.0ms)
+  Rendered index/gallery.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 292ms (Views: 271.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:22:37 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/gallery.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 305ms (Views: 283.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:22:39 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 257ms (Views: 232.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:23:49 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 722ms (Views: 698.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:24:48 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendered index/blog.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 301ms (Views: 282.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:24:51 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (2.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 302ms (Views: 274.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:26:14 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (39.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (101.7ms)
+Completed 200 OK in 362ms (Views: 328.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:27:14 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (10.0ms)
+  Rendered posts/index.html.erb (34.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (105.2ms)
+Completed 200 OK in 792ms (Views: 771.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:28:03 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.2ms)
+  Rendered posts/index.html.erb (21.2ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (88.3ms)
+Completed 200 OK in 751ms (Views: 730.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:28:07 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 282ms (Views: 263.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:29:03 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (9.0ms)
+  Rendered posts/index.html.erb (27.0ms)
+  Rendered index/blog.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 844ms (Views: 824.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:30:52 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 811ms (Views: 790.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:31:04 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 294ms (Views: 275.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:31:39 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 991ms (Views: 971.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:31:53 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 275ms (Views: 256.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:31:56 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (2.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 292ms (Views: 264.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:32:11 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 302ms (Views: 275.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:32:14 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (4.0ms)
+  Rendered collections/show.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 299ms (Views: 271.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:32:28 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (3.0ms)
+  Rendered collections/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 721ms (Views: 698.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:32:34 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 284ms (Views: 266.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:32:37 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (1.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 309ms (Views: 280.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:32:56 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 268ms (Views: 248.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:32:59 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/home.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 326ms (Views: 304.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:33:05 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 288ms (Views: 269.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:33:06 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 278ms (Views: 258.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 14:33:07 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (22.0ms)
+  Rendered index/about.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 285ms (Views: 241.7ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-21 14:33:09 -0600
+Processing by IndexController#contact as HTML
+  Rendering index/contact.html.erb within layouts/application
+  Rendering messages/new.html.erb
+  Rendered messages/new.html.erb (30.2ms)
+  Rendered index/contact.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 463ms (Views: 387.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 14:33:10 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (3.0ms)
+  Rendered index/about.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 264ms (Views: 245.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:33:11 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 274ms (Views: 254.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:33:12 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (11.0ms)
+  Rendered posts/index.html.erb (66.4ms)
+  Rendered index/blog.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 302ms (Views: 288.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:33:13 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (3.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 335ms (Views: 314.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:44:06 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 279ms (Views: 261.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:44:13 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (0.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (23.4ms)
+  Rendered posts/show.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 369ms (Views: 342.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:44:20 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (29.0ms)
+  Rendered index/gallery.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 317ms (Views: 294.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:44:23 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 289ms (Views: 258.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:44:33 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (0.0ms)
+  Rendered collections/index.html.erb (31.3ms)
+  Rendered index/gallery.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 248ms (Views: 238.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 14:44:36 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (3.0ms)
+  Rendered index/about.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 264ms (Views: 244.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:46:44 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (25.0ms)
+  Rendered index/gallery.html.erb within layouts/application (50.0ms)
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:46:45 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (10.0ms)
+  Rendered posts/index.html.erb (36.0ms)
+  Rendered index/blog.html.erb within layouts/application (104.1ms)
+Completed 200 OK in 561ms (Views: 541.3ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 421ms (Views: 394.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:46:45 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (27.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (99.1ms)
+Completed 200 OK in 349ms (Views: 327.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:51:20 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 314ms (Views: 292.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:52:17 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 289ms (Views: 271.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:52:18 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (25.0ms)
+  Rendered index/gallery.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 291ms (Views: 269.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery/3" for 127.0.0.1 at 2017-08-21 14:52:21 -0600
+Processing by CollectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`id` = 3 LIMIT 1[0m
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m  [["collection_id", 3]]
+  Rendering collections/show.html.erb within layouts/application
+  Rendered images/_table.html.erb (0.0ms)
+  Rendered collections/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 256ms (Views: 236.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:53:12 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendered index/blog.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 281ms (Views: 261.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:53:14 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (2.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 317ms (Views: 287.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-08-21 14:53:38 -0600
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-21 14:53:38 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 309ms (Views: 307.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:54:14 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (2.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 311ms (Views: 278.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2017-08-21 14:54:15 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (0.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (15.6ms)
+  Rendered posts/show.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 253ms (Views: 235.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2017-08-21 14:54:36 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (4.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 341ms (Views: 313.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:54:39 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (0.0ms)
+  Rendered posts/index.html.erb (15.6ms)
+  Rendered index/blog.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 240ms (Views: 236.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:54:43 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (1.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 300ms (Views: 272.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:54:45 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.5ms)
+  Rendered index/blog.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 283ms (Views: 266.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-21 14:54:48 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (15.6ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 332ms (Views: 304.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:54:51 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (0.0ms)
+  Rendered posts/index.html.erb (15.6ms)
+  Rendered index/blog.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 270ms (Views: 251.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:54:53 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 316ms (Views: 296.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 14:54:55 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 273ms (Views: 255.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 14:54:56 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (2.0ms)
+  Rendered index/about.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 274ms (Views: 256.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-21 14:54:57 -0600
+Processing by IndexController#contact as HTML
+  Rendering index/contact.html.erb within layouts/application
+  Rendering messages/new.html.erb
+  Rendered messages/new.html.erb (2.0ms)
+  Rendered index/contact.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 255ms (Views: 236.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 14:55:01 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (28.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (101.1ms)
+Completed 200 OK in 349ms (Views: 323.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:58:41 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (34.9ms)
+  Rendered index/blog.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 333ms (Views: 312.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 14:58:53 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 293ms (Views: 275.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 15:01:32 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (6.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 292ms (Views: 272.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:01:42 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (0.0ms)
+  Rendered posts/index.html.erb (15.6ms)
+  Rendered index/blog.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 284ms (Views: 265.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:01:43 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (30.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (26.0ms)
+  Rendered index/home.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 355ms (Views: 334.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:09:28 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 786ms (Views: 760.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:11:54 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 288ms (Views: 262.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:12:36 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 953ms (Views: 934.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 15:12:42 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/gallery.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 281ms (Views: 262.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:12:49 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 282ms (Views: 260.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:12:49 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 322ms (Views: 301.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:13:58 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 792ms (Views: 773.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:14:07 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 319ms (Views: 293.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:14:31 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 715ms (Views: 696.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:14:34 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.6ms)
+  Rendered posts/index.html.erb (22.6ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (91.7ms)
+Completed 200 OK in 320ms (Views: 299.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:19:02 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (11.0ms)
+  Rendered posts/index.html.erb (28.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (26.0ms)
+  Rendered index/home.html.erb within layouts/application (116.4ms)
+Completed 200 OK in 373ms (Views: 353.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:19:38 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 331ms (Views: 310.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:20:20 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (25.0ms)
+  Rendered index/blog.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 304ms (Views: 284.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:21:04 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (25.0ms)
+  Rendered index/home.html.erb within layouts/application (95.1ms)
+Completed 200 OK in 341ms (Views: 321.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:22:44 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/home.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 904ms (Views: 883.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:23:37 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 333ms (Views: 313.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:24:11 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (21.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.6ms)
+  Rendered collections/index.html.erb (22.2ms)
+  Rendered index/home.html.erb within layouts/application (87.2ms)
+Completed 200 OK in 778ms (Views: 758.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:24:20 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.2ms)
+  Rendered collections/index.html.erb (22.2ms)
+  Rendered index/home.html.erb within layouts/application (89.3ms)
+Completed 200 OK in 317ms (Views: 290.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:24:27 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 280ms (Views: 260.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:24:45 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 747ms (Views: 728.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:24:49 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 315ms (Views: 295.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:25:00 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 290ms (Views: 270.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:26:44 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (21.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 1027ms (Views: 1006.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:26:45 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.5ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 320ms (Views: 299.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:29:35 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendered index/blog.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 286ms (Views: 257.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:29:35 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 268ms (Views: 249.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:30:54 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 823ms (Views: 806.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 15:31:00 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/gallery.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 274ms (Views: 255.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 15:32:43 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/gallery.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 774ms (Views: 755.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:32:46 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 290ms (Views: 267.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:32:50 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (24.0ms)
+  Rendered index/home.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 317ms (Views: 297.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 15:33:46 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (12.1ms)
+  Rendered collections/index.html.erb (49.5ms)
+  Rendered index/gallery.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 334ms (Views: 314.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 15:33:50 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (3.0ms)
+  Rendered index/about.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 302ms (Views: 283.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-21 15:33:56 -0600
+Processing by IndexController#contact as HTML
+  Rendering index/contact.html.erb within layouts/application
+  Rendering messages/new.html.erb
+  Rendered messages/new.html.erb (3.0ms)
+  Rendered index/contact.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 253ms (Views: 235.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 15:34:04 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (4.0ms)
+  Rendered index/about.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 277ms (Views: 257.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 15:34:05 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/gallery.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 278ms (Views: 260.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:34:06 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (26.0ms)
+  Rendered index/blog.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 272ms (Views: 253.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:34:07 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (26.0ms)
+  Rendered index/home.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 320ms (Views: 299.2ms | ActiveRecord: 2.0ms)
+
+

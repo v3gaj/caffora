@@ -3,10 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery(document).on 'turbolinks:load', ->
-	$('.slider-for').slick({
-		slidesToShow: 1, slidesToScroll: 1, arrows: false, fade: true, asNavFor: '.slider-nav'
-	});
-
-	$('.slider-nav').slick({
-	  	slidesToShow: 3, slidesToScroll: 1, asNavFor: '.slider-for', centerMode: true, focusOnSelect: true
+	$('.fade').slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
 	});

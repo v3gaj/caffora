@@ -1,5 +1,5 @@
 <div class="image_grid">    
-    <div class="image_container slider-for">
+    <div class="image_container fade">
         <% @collection.images.each do |image| %>
             <div class="image">
                 <div><%= image_tag image.content.url(:large) %></div>
@@ -8,13 +8,6 @@
                         <%= link_to 'Destroy', [@collection, image], method: :delete, data: { confirm: 'Are you sure?' }, class: "image_delete" %>
                     </div>    
                 <%end%>      
-            </div>
-        <% end %>
-    </div>
-    <div class="slider-nav">
-        <% @collection.images.each do |image| %>
-            <div class="image">
-                <div><%= image_tag image.content.url(:thumb) %></div>  
             </div>
         <% end %>
     </div>
