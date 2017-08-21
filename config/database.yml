@@ -9,7 +9,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: caffora
-  password: juan9174
+  password: Juan9173.
   host: localhost
 
 development:
