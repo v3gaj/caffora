@@ -1,0 +1,4 @@
+$('.delete_slider').bind('ajax:success', function() {
+	$(".rowForm").remove();
+	$(this).closest('tr').fadeOut();
+});

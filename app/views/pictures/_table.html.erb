@@ -1,0 +1,19 @@
+<div class="picture_grid">    
+    <div class="picture_container center">
+        <% @pictures.each do |picture| %>
+            <div class="picture">
+                <div><%= image_tag picture.image.url(:large) %></div>
+                <% if user_signed_in? && current_user.role ==="admin" %>
+                    <div class="picture_links">
+                        <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class: "picture_delete" %>
+                    </div>    
+                <%end%>      
+            </div>
+        <% end %>
+    </div>
+    <% if user_signed_in? && current_user.role ==="admin" %>
+        <div class="picture_new">
+            <td colspan="8"><%= link_to 'New picture', new_picture_path, :remote => true, class: "transitionOne buttonOne" %></td>
+        </div>
+    <%end%>        
+</div>

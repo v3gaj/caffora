@@ -1,0 +1,46 @@
+<div class="content_grid">
+    <% @post.contents.each do |content| %>
+        <div class="content_container">
+            <div class="content">
+                <% if user_signed_in? && current_user.role ==="admin" %>
+                    <div class="content_links">
+                        <span><%= content.index %></span>/
+                        <span><%= content.style %></span>/
+                        <%= link_to 'Show', post_content_path(@post, content) %>/
+                        <%= link_to 'Edit', edit_post_content_path(@post, content), :remote => true, class: "content_edit" %>/
+                        <%= link_to 'Destroy', [@post, content], method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "content_delete" %>
+                    </div>
+                <%end%>   
+                <% if content.title.present? %>
+                    <div class="content_title">
+                        <%= content.title %>
+                    </div>
+                <% end %>
+                <% if content.style ==="Paragraph" && content.body.present? %>
+                    <div class="content_paragraph">
+                        <%= content.body.html_safe %>
+                    </div>
+                <%end%>
+                <% if content.style ==="Image" %>
+                    <div class="content_image">
+                        <% if content.image.present? %>
+                            <%= image_tag content.image.url(:large) %>
+                        <% end %>
+                    </div>
+                <%end%>
+                <% if content.style ==="Video" %>
+                    <div class="content_video">
+                        <% if content.video.present? %>
+                            <iframe id="ytplayer" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/<%= content.video %>?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                        <% end %>
+                    </div>          
+                <%end%>
+            </div>
+        </div>
+    <% end %>
+    <% if user_signed_in? && current_user.role ==="admin" %>
+        <div class="content_new">
+            <td colspan="8"><%= link_to 'New Content', new_post_content_path(@post), :remote => true, class: "transitionOne buttonOne" %></td>
+        </div>
+    <%end%>        
+</div>

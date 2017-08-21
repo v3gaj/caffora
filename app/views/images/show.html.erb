@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= image_tag @image.content.url(:large) %>
+</p>
+
+<%= link_to 'Edit', edit_collection_image_path(@collection, @image) %> |
+<%= link_to 'Back', collection_path(@collection) %>

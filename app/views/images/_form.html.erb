@@ -1,0 +1,14 @@
+<%= form_for([@collection, @image], remote: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.file_field :content, class: "image_clear" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <div class="images_errors"><%= render 'images/errors' %></div>
+
+<% end %>

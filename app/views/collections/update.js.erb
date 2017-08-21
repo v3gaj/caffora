@@ -1,0 +1,9 @@
+<% if @collection.errors.any? %>
+  $(".collection_errors").html("<%= j (render 'errors') %>");
+<% else %>
+	$(".collection_clear").val('');
+	$(".collection_table").html("<%= j (render 'table') %>");
+	$(".collection_form").show();
+	$(".collection_form").html("<p class='post_notice'>Collection updated succesfully.</p>");
+	$(".collection_form").delay(3000).hide(0);
+<% end %>

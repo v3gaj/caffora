@@ -1,0 +1,56 @@
+
+table {
+	display: inline-block;
+	text-align: left;
+	border-collapse: collapse;
+	color: #1f1f1f;
+  margin-bottom: 30px;
+  max-width: 1200px;
+
+	thead{
+		background: #f7f7f7;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: proxima_nova_ltsemibold;
+
+    th{
+    	padding: 9px 12px;
+    }
+	}
+
+	tbody{
+		font-family: proxima_nova_ltlight;
+		letter-spacing: .5px;
+		line-height: 24px;
+
+		tr{
+			border-top: 1px solid rgba(0,0,0,.1);
+
+			td{	
+	    	padding: 6px 12px;
+
+	    	img{
+	    		display: block;
+	    	}	
+
+	    	a{
+	    		text-decoration: none;
+	    		font-family: proxima_nova_ltsemibold;
+	    		text-transform: uppercase;
+	    		font-size: 14px;
+	    		color: #1f1f1f;
+	    	}
+
+	    	a:hover{
+	    		color: #9d132c;
+	    	}
+			}
+
+			a{
+				float: right;
+			}
+		}
+	}
+}

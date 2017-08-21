@@ -1,0 +1,8 @@
+<% if @picture.errors.any? %>
+  $('.picture_errors').html("<%= j (render 'errors') %>");
+<% else %>
+	$(".picture_clear").val('');
+	$(".picture_table").html("<%= j (render 'table') %>");
+	$(".picture_form").html("<p class='picture_notice'>Picture created succesfully.</p>");
+	$(".picture_notice").delay(3000).hide(0);
+<% end %>

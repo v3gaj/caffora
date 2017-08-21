@@ -1,0 +1,9 @@
+<% if @slider.errors.any? %>
+  $('.errors').html("<%= j (render 'errors') %>");
+<% else %>
+	$(".clear").val('');
+	$('#rentable').html("<%= j (render 'table') %>");
+	$(".task-form").html("<p class='notice'>Slider created succesfully.</p>");
+	$(".notice").delay(3000).hide(0);
+<% end %>
+

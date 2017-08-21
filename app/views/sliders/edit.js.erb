@@ -1,0 +1,9 @@
+$(".clear").val('');
+$(function(){
+  $(".editLink").bind('ajax:complete', function() {
+  	$(".task-form").hide();
+  	$(".rowForm").remove();
+   	$(this).closest('tr').after('<tr class="rowForm animationOne"><td colspan="8" class="cellForm"><%= j (render "form") %></td></tr>');
+  });
+});
+

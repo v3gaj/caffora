@@ -1,0 +1,23 @@
+<div class="title_page">
+	<%= image_tag 'page-title.jpg'%>
+	<div class="title_content">
+		<h2>Galleria</h2>
+		<div class="page_subtitle">We are Caffora team</div>
+	</div>
+</div>
+<div class="collection_wrapper">
+	<div class="title_container">
+		<h1><%= @collection.title%></h1>
+		<div class="line"></div>
+		<%= image_tag 'gallery.png'%>
+	</div>
+
+	<div class="image_table"><%= render "images/table" %></div>
+
+	<div class="image_form"></div>
+
+	<%= link_to 'Ir a Galeria', collections_path %>
+
+	<!-- 	<%= link_to 'Edit', edit_collection_path(@collection) %> -->
+
+</div>

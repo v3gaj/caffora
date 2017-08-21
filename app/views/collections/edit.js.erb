@@ -1,0 +1,8 @@
+$(".collection_clear").val('');
+$(function(){
+  $(".collection_edit").bind('ajax:complete', function() {
+  	$(".collection_form").hide();
+  	$(".collection_row").remove();
+   	$(this).closest('div').after('<div class="collection_row animationOne"><%= j (render "form") %></div>');
+  });
+});

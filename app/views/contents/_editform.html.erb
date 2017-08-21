@@ -1,0 +1,40 @@
+<%= form_for([@post, @content], remote: true) do |f| %>
+  
+  <div class="field">
+    <%= f.label :index %>
+    <%= f.number_field :index, class: "content_clear" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "content_clear" %>
+  </div>
+
+  <% if @content.style ==="Paragraph" %>
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "content_clear" %>
+    </div>
+  <%end%>
+
+  <% if @content.style ==="Image" %>
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "content_clear" %>
+    </div>
+  <%end%>
+
+  <% if @content.style ==="Video" %>
+    <div class="field">
+      <%= f.label :video %>
+      <%= f.text_field :video, class: "content_clear" %>
+    </div>
+  <%end%>  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <div class="content_errors"><%= render 'errors' %></div>
+
+<% end %>

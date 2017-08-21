@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Caffora</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+  <header>
+  	<div class="containerOne">
+  		<%= link_to root_path do %>
+    		<%= image_tag 'logo.png'%>
+    	<%end%>		
+	  	<nav>
+				<ul>
+					<li><%= active_link_to "Inicio", root_path, active: :exclusive %></li>
+					<li><%= active_link_to "Blog", blog_path, active: :inclusive %></li>
+          <li><%= active_link_to "Gallery", gallery_path, active: :inclusive %></li>
+          <li><%= active_link_to "Caffora", about_path, active: :inclusive %></li>
+          <li><%= active_link_to "Contacto", contact_path, active: :inclusive %></li>
+	        <% if user_signed_in? %>
+	          <li><%= active_link_to destroy_user_session_path, method: :delete do %><i class="fa fa-sign-out" aria-hidden="true"></i><% end %></li>
+	        <%else%>  
+	          <li><%= active_link_to new_user_session_path do %><i class="fa fa-sign-in" aria-hidden="true"></i><% end %></li>
+	        <%end%>
+	        <% if user_signed_in? && current_user.role ==="admin" %>
+	        	<li><%= active_link_to "Crear Cuenta", new_user_registration_path %></li>
+	        <%end%>	
+				</ul>
+			</nav>
+		</div>
+  </header>
+  <div class="containerTwo">
+  	<%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+  <footer>
+    <div class="footer_social">
+      <a href="" class="transitionOne">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="" class="transitionOne">
+        <i class="fa fa-pinterest"></i>
+      </a>
+      <a href="" class="transitionOne">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+    <div class="footer_info">
+      <div>14 Tottenham Court Road, London, England / (102) 3456 789 / info@domain.com</div>
+      <p>Copyright © 2016 TK-Themes</p>
+    </div>
+  </footer>
+  </body>
+</html>

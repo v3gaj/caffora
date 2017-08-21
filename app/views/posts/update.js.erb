@@ -1,0 +1,9 @@
+<% if @post.errors.any? %>
+  $(".post_errors").html("<%= j (render 'errors') %>");
+<% else %>
+	$(".post_clear").val('');
+	$(".post_table").html("<%= j (render 'table') %>");
+	$(".post_form").show();
+	$(".post_form").html("<p class='post_notice'>Post updated succesfully.</p>");
+	$(".post_form").delay(3000).hide(0);
+<% end %>

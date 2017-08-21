@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @slider.index %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @slider.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @slider.subtitle %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @slider.url %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @slider.image.url(:thumb) %>
+</p>
+
+<%= link_to 'Edit', edit_slider_path(@slider) %> |
+<%= link_to 'Back', sliders_path %>

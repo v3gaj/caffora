@@ -1,0 +1,10 @@
+<% if @message.errors.any? %>
+	$('.message_errors').html("<%= j (render 'errors') %>");
+<% else %>
+	$(".message_errors").html("<p class='message_notice'>Mensaje enviado exitosamente.</p>");
+	$(".message_notice").addClass("message_warning").delay(5000).queue(function(next){
+	    $(this).removeClass("message_warning");
+	    next();
+	});
+	$(".message_clear").val('');
+<% end %>

@@ -1,0 +1,4 @@
+$('.content_delete').bind('ajax:success', function() {
+	$(".content_row").remove();
+	$(this).closest('.content_container').fadeOut();
+});

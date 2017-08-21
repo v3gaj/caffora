@@ -1,0 +1,8 @@
+$(".image_clear").val('');
+$(function(){
+  $(".image_edit").bind('ajax:complete', function() {
+  	$(".image_form").hide();
+  	$(".image_row").remove();
+   	$(this).closest('div').after('<div class="image_row animationOne"><%= j (render form") %></div>');
+  });
+});

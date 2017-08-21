@@ -1,0 +1,11 @@
+<%= form_for(@picture) do |f| %>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "post_clear"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

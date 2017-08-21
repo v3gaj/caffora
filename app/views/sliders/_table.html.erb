@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Url</th>
+      <th>Image</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sliders.each do |slider| %>
+      <tr class="animationOne">
+        <td><%= slider.index %></td>
+        <td><%= slider.title %></td>
+        <td><%= slider.subtitle %></td>
+        <td><%= slider.url %></td>
+        <td><%= image_tag slider.image.url(:thumb) %></td>
+        <td><%= link_to 'Show', slider %></td>
+        <td><%= link_to 'Edit', edit_slider_path(slider), :remote => true, class: "editLink"  %></td>
+        <td><%= link_to 'Destroy', slider, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "delete_slider" %></td>
+      </tr>
+    <% end %>
+      <tr>
+        <td colspan="8"><%= link_to 'New Slider', new_slider_path, :remote => true, class: "buttonOne" %></td>
+      </tr>
+  </tbody>
+</table>

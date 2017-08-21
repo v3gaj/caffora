@@ -1,0 +1,24 @@
+<%= form_for @message, url: contact_path, remote: true do |message_form| %>
+  <fieldset>
+    <div class="field">
+      <%= message_form.text_field :name, placeholder: "Nombre", class: "message_clear", required: true %>
+    </div>
+    
+    <div class="field">
+      <%= message_form.email_field :email, placeholder: "Email", class: "message_clear", required: true %>
+    </div>
+    
+    <div class="field">
+      <%= message_form.text_area :content, placeholder: "Mensaje...", class: "message_clear", required: true %>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="buttom">
+      <%= message_form.submit "Enviar Mensaje", class: "buttonOne transitionOne" %>
+    </div>
+  </fieldset>
+<% end %>
+<div class="message_errors">
+  
+</div>

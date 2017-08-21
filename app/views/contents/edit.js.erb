@@ -1,0 +1,8 @@
+$(".content_clear").val('');
+$(function(){
+  $(".content_edit").bind('ajax:complete', function() {
+  	$(".content_form").hide();
+  	$(".content_row").remove();
+   	$(this).closest('div').after('<div class="content_row animationOne"><%= j (render "contents/editform") %></div>');
+  });
+});

@@ -1,0 +1,19 @@
+<%= form_for([@post, @content], remote: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :index %>
+    <%= f.number_field :index, class: "content_clear" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :style %>
+    <%= f.select :style, options_for_select([ "Paragraph", "Image", "Video"], :selected => f.object.style), prompt: "Select" , class: "content_clear"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <div class="content_errors"><%= render 'contents/errors' %></div>
+
+<% end %>

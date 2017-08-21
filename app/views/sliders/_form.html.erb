@@ -1,0 +1,34 @@
+<%= form_for(@slider, remote: true, id: "form_data") do |f| %>
+
+  <div class="field">
+    <%= f.label :index %>
+    <%= f.number_field :index, class: "clear", required: true%>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "clear" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle, class: "clear" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url, class: "clear" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "clear" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "button" %>
+  </div>
+
+  <div class="errors"><%= render 'errors' %></div>
+
+<% end %>

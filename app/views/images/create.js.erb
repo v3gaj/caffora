@@ -1,0 +1,8 @@
+<% if @image.errors.any? %>
+  $('.image_errors').html("<%= j (render 'errors') %>");
+<% else %>
+	$(".image_clear").val('');
+	$(".image_table").html("<%= j (render 'table') %>");
+	$(".image_form").html("<p class='image_notice'>Image created succesfully.</p>");
+	$(".image_notice").delay(3000).hide(0);
+<% end %>

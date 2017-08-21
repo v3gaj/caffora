@@ -1,0 +1,26 @@
+<div class="image_grid">    
+    <div class="image_container slider-for">
+        <% @collection.images.each do |image| %>
+            <div class="image">
+                <div><%= image_tag image.content.url(:large) %></div>
+                <% if user_signed_in? && current_user.role ==="admin" %>
+                    <div class="image_links">
+                        <%= link_to 'Destroy', [@collection, image], method: :delete, data: { confirm: 'Are you sure?' }, class: "image_delete" %>
+                    </div>    
+                <%end%>      
+            </div>
+        <% end %>
+    </div>
+    <div class="slider-nav">
+        <% @collection.images.each do |image| %>
+            <div class="image">
+                <div><%= image_tag image.content.url(:thumb) %></div>  
+            </div>
+        <% end %>
+    </div>
+    <% if user_signed_in? && current_user.role ==="admin" %>
+        <div class="image_new">
+            <td colspan="8"><%= link_to 'New Image', new_collection_image_path(@collection), :remote => true, class: "transitionOne buttonOne" %></td>
+        </div>
+    <%end%>        
+</div>

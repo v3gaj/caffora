@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @content.index %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @content.style %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @content.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @content.body %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @content.image.url(:thumb) %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <iframe id="ytplayer" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/<%= @content.video %>?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+</p>
+
+<%= link_to 'Edit', edit_post_content_path(@post, @content) %> |
+<%= link_to 'Back', post_path(@post) %>
+

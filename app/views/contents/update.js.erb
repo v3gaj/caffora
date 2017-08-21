@@ -1,0 +1,9 @@
+<% if @content.errors.any? %>
+  $(".content_errors").html("<%= j (render 'errors') %>");
+<% else %>
+	$(".content_clear").val('');
+	$('.content_table').html("<%= j (render 'table') %>");
+	$(".content_form").show();
+	$(".content_form").html("<p class='notice'>Content updated succesfully.</p>");
+	$(".content_form").delay(3000).hide(0);
+<% end %>

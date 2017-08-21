@@ -1,0 +1,27 @@
+<div class="collection_grid">
+    <% @collections.each do |collection| %>
+        <div class="collection_container">
+            <div class="collection">
+                <%= image_tag collection.cover.url(:thumb) %>
+                <div class="overlay_collection">
+                  <div class="overlay_content">
+                    <h4><%= link_to collection.title, collectionlink_path(collection) %></h4>
+                    <span><%= collection.subtitle %></span>
+                  </div>
+                </div>
+            </div>
+            <% if user_signed_in? && current_user.role ==="admin" %>
+                <div class="collection_links transitionOne">
+                    <%= link_to 'Edit', edit_collection_path(collection), :remote => true, class: "collection_edit transitionOne" %>
+                    <span>/</span>
+                    <%= link_to 'Destroy', collection, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "collection_delete transitionOne" %>
+                </div>
+            <%end%>
+        </div>
+    <% end %>
+    <% if user_signed_in? && current_user.role ==="admin" %>
+        <div class="collection_new">
+            <td colspan="8"><%= link_to 'New collection', new_collection_path, :remote => true, class: "transitionOne buttonOne" %></td>
+        </div>
+    <%end%>        
+</div>

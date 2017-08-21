@@ -1,0 +1,29 @@
+<%= form_for(@collection, remote: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :post_id %>
+    <%= f.select :post_id, options_for_select(Post.all.map{|p|[p.subtitle, p.id]}, :selected => f.object.post_id), prompt: "Select" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cover %>
+    <%= f.file_field :cover %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <div class="collection_errors"><%= render 'errors' %></div>
+
+<% end %>

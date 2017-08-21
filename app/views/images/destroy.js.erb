@@ -1,0 +1,4 @@
+$('.image_delete').bind('ajax:success', function() {
+	$(".image_row").remove();
+	$(this).closest('.image').fadeOut();
+});

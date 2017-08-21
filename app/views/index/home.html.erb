@@ -1,0 +1,35 @@
+<div class="scroller_container">
+	<div class="scroller">
+		<% @sliders.each do |slider| %>
+	  	<div><%= image_tag slider.image.url(:large) %></div>
+	  <% end %>
+	</div>
+	<div class="overlay"></div>
+</div>	
+<div class="container">
+	<div class="title_container">
+		<h1>“The world offers itself to your imagination.”</h1>
+		<div class="line"></div>
+		<%= image_tag 'bean_icon.png'%>
+	</div>
+	<div>
+		<%= render :file => '/posts/index' %>
+	</div>
+</div>
+<div class="parallax">
+	<div class="overlay"></div>
+	<span class="span_h1">Happiness in the joy of achievement</span>
+</div>
+<div class="collection_home_wrapper">
+	<div class="title_container">
+		<h1>“The world offers itself to your imagination.”</h1>
+		<div class="line"></div>
+		<%= image_tag 'home_icon.png'%>
+	</div>
+	<div>
+		<%= render :file => '/collections/index' %>
+	</div>
+</div>
+
+
+
