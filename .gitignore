@@ -1,4 +1,4 @@
 public/assets/*
 public/system/*
 tmp/*
-log/*
+log/*.log
