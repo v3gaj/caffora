@@ -436,7 +436,7 @@ header{
     font-style: italic;
     font-size: 20px;
     color: #212121;
-    padding-bottom: 20px;
+    padding: 0 100px 20px 100px;
 }
 
 /***********************SLIDER***********************/
@@ -705,7 +705,7 @@ header{
 .content_paragraph{
 	text-align: justify;
 	font-size: 20px;
-    font-family: Playfair Display;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-style: italic;
     padding-bottom: 25px;
@@ -956,6 +956,7 @@ header{
     		color: #888;
     		font-size: 14px;
     		font-family: proxima_nova_ltlight;
+    		text-align: justify;
 	    }
 	}
 }

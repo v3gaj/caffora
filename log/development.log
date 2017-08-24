@@ -2959,3 +2959,437 @@ Processing by IndexController#home as HTML
 Completed 200 OK in 320ms (Views: 299.2ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 15:59:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (55.0ms)
+  Rendered posts/index.html.erb (78.1ms)
+  Rendered index/blog.html.erb within layouts/application (4413.0ms)
+Completed 200 OK in 4830ms (Views: 4694.2ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 16:20:33 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendered index/blog.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 732ms (Views: 714.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 16:20:49 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (2.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (181.4ms)
+  Rendered collections/index.html.erb (200.2ms)
+  Rendered index/gallery.html.erb within layouts/application (224.2ms)
+Completed 200 OK in 540ms (Views: 385.7ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 16:20:57 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 284ms (Views: 263.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-21 16:30:41 -0600
+Processing by IndexController#contact as HTML
+  Rendering index/contact.html.erb within layouts/application
+  Rendering messages/new.html.erb
+  Rendered messages/new.html.erb (31.4ms)
+  Rendered index/contact.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 280ms (Views: 263.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 16:30:45 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (21.0ms)
+  Rendered index/about.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 291ms (Views: 250.3ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 16:31:35 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (5.0ms)
+  Rendered index/about.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 1022ms (Views: 1003.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-21 16:32:20 -0600
+Processing by IndexController#contact as HTML
+  Rendering index/contact.html.erb within layouts/application
+  Rendering messages/new.html.erb
+  Rendered messages/new.html.erb (1.0ms)
+  Rendered index/contact.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 246ms (Views: 228.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2017-08-21 16:33:00 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"46heqt4UEGKz8dbxmZeBpmgz54UYvMHPALZXPbTo4XDUgmkxWcF9M4KquNdDhRd7SYOOCM3hbTq22gJG61/Uzw==", "message"=>{"name"=>"Juan Vega Quesada", "email"=>"juanvegaquesada@gmail.com", "content"=>"Prueba 21 Agosto..."}, "commit"=>"Enviar Mensaje"}
+  Rendering message_mailer/new_message.text.erb within layouts/mailer
+  Rendered message_mailer/new_message.text.erb within layouts/mailer (0.0ms)
+MessageMailer#new_message: processed outbound mail in 969.6ms
+Sent mail to info@caffora.cafe (2135.0ms)
+Date: Mon, 21 Aug 2017 16:33:03 -0600
+From: webcontact@caffora.cafe
+To: info@caffora.cafe
+Message-ID: <599b5f9f6af16_22b02a29f7079eb@DESKTOP-VIMC9AH.mail>
+Subject: Message from Juan Vega Quesada
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Juan Vega Quesada <juanvegaquesada@gmail.com> wrote:
+
+Prueba 21 Agosto...
+
+  Rendering messages/create.js.erb
+  Rendered messages/create.js.erb (1.0ms)
+Completed 200 OK in 5549ms (Views: 158.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-21 16:33:29 -0600
+Processing by IndexController#about as HTML
+  Rendering index/about.html.erb within layouts/application
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT `pictures`.* FROM `pictures`[0m
+  Rendered pictures/_table.html.erb (3.0ms)
+  Rendered index/about.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 265ms (Views: 245.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-08-21 16:33:38 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (41.0ms)
+  Rendered index/gallery.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 321ms (Views: 302.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-21 16:33:43 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (4.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendered index/blog.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 266ms (Views: 246.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 16:33:49 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-21') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-21') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.0ms)
+  Rendered index/home.html.erb within layouts/application (126.1ms)
+Completed 200 OK in 346ms (Views: 294.2ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 16:01:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (8.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-23') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (61.8ms)
+  Rendered posts/index.html.erb (132.2ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-23') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (222.6ms)
+  Rendered collections/index.html.erb (300.3ms)
+  Rendered index/home.html.erb within layouts/application (4371.6ms)
+Completed 200 OK in 6625ms (Views: 6135.6ms | ActiveRecord: 164.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:33:51 -0600
+  
+Mysql2::Error (Can't connect to MySQL server on 'localhost' (10061)):
+  
+mysql2-0.4.7-x86 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.7-x86 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.0.3) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `new'
+activerecord (5.0.3) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `mysql2_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.3) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.3) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.3) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.3) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2513.6ms)
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:14 -0600
+  
+Mysql2::Error (Can't connect to MySQL server on 'localhost' (10061)):
+  
+mysql2-0.4.7-x86 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.7-x86 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.0.3) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `new'
+activerecord (5.0.3) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `mysql2_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.3) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.3) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.3) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.3) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1522.7ms)
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:34:33 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (15.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (33.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (22.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-23') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (61.2ms)
+  Rendered posts/index.html.erb (103.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (33.2ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-23') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (135.7ms)
+  Rendered collections/index.html.erb (176.8ms)
+  Rendered index/home.html.erb within layouts/application (2678.1ms)
+Completed 200 OK in 3478ms (Views: 3141.6ms | ActiveRecord: 185.4ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-23 21:35:48 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.7ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  Rendered contents/_table.html.erb (4.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (94.8ms)
+  Rendered posts/show.html.erb within layouts/application (243.3ms)
+Completed 200 OK in 773ms (Views: 437.3ms | ActiveRecord: 83.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-23 21:35:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (356.1ms)
+Completed 200 OK in 812ms (Views: 653.9ms | ActiveRecord: 85.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-23 21:36:00 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHhGU7ZX99UyBYBwYQWaYRR4/aAGvLDyX/kasYjrVvkPp50DUulaaQfHfk/A0pKcjR2oLGtM3p7i0MS6tourJQ==", "user"=>{"email"=>"juanvegaquesada@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'juanvegaquesada@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-08-24 03:36:00', `last_sign_in_at` = '2017-08-21 19:54:23', `sign_in_count` = 3, `updated_at` = '2017-08-24 03:36:00' WHERE `users`.`id` = 2[0m
+  [1m[35m (64.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 546ms (ActiveRecord: 65.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:36:01 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-23') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (6.5ms)
+  Rendered posts/index.html.erb (24.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-23') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (23.0ms)
+  Rendered index/home.html.erb within layouts/application (94.1ms)
+Completed 200 OK in 326ms (Views: 305.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-23 21:37:21 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (4.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 276ms (Views: 253.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/7/contents/new" for 127.0.0.1 at 2017-08-23 21:37:25 -0600
+Processing by ContentsController#new as JS
+  Parameters: {"post_id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/new.js.erb
+  Rendered contents/_errors.html.erb (0.5ms)
+  Rendered contents/_createform.html.erb (254.1ms)
+  Rendered contents/new.js.erb (476.7ms)
+Completed 200 OK in 1088ms (Views: 803.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/7/contents" for 127.0.0.1 at 2017-08-23 21:37:31 -0600
+Processing by ContentsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g4OtNH2CYmoysVaQeSj7YtG2PZ0bAu2NE3bWAIYVkRuhBx5hDIldfEu9GjakVBhSUElJUKC5P/uOVV327k6Nvg==", "content"=>{"index"=>"", "style"=>"Paragraph"}, "commit"=>"Create Content", "post_id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContent Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` IS NULL AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `contents` (`created_at`, `updated_at`, `style`, `post_id`) VALUES ('2017-08-24 03:37:31', '2017-08-24 03:37:31', 'Paragraph', 7)[0m
+  [1m[35m (69.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/create.js.erb
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (0.0ms)
+  Rendered contents/create.js.erb (19.2ms)
+Completed 200 OK in 251ms (Views: 88.8ms | ActiveRecord: 69.0ms)
+
+
+Started GET "/posts/7/contents/1/edit" for 127.0.0.1 at 2017-08-23 21:37:36 -0600
+Processing by ContentsController#edit as JS
+  Parameters: {"post_id"=>"7", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 1 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/edit.js.erb
+  Rendered contents/_errors.html.erb (1.0ms)
+  Rendered contents/_editform.html.erb (233.0ms)
+  Rendered contents/edit.js.erb (482.2ms)
+Completed 200 OK in 1067ms (Views: 831.4ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/posts/7/contents/1" for 127.0.0.1 at 2017-08-23 21:37:43 -0600
+Processing by ContentsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJOiSmOHpKuvpyXC85jF2E22yhImXZpc4vvdL0pAHVgC2ivMUOArnR5vcpHUBjODjRAP50jBqJTUVCMbftrpYg==", "content"=>{"index"=>"1", "title"=>"", "body"=>"&nbsp&nbsp&nbsp&nbsp&nbsp Existen espacios que logran hacernos vivir sensaciones únicas, donde simplemente no encontramos una razón específica para explicarlo, solo sentimos como fluyen una serie de variables que nos permiten ser protagonistas de todo un conjunto de experiencias.\r\n<br>\r\n<br>\r\n&nbsp&nbsp&nbsp&nbsp&nbsp En San Isidro de Heredia se encuentra una Cafetería Boutique y Bistró con gran personalidad a cargo de la Chef Sophia Rodríguez junto con su equipo de trabajo, resultado de la fusión de personas apasionadas tanto por la buena gastronomía como por el Café de especialidad Brumas del Zurquí, y pues sí, este es uno de esos lugares que nos trasmite un sinfín de sensaciones desde el momento que ingresamos. \r\n"}, "commit"=>"Update Content", "post_id"=>"7", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 1 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContent Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` = 1 AND (`contents`.`id` != 1) AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `contents` SET `index` = 1, `title` = '', `body` = '&nbsp&nbsp&nbsp&nbsp&nbsp Existen espacios que logran hacernos vivir sensaciones únicas, donde simplemente no encontramos una razón específica para explicarlo, solo sentimos como fluyen una serie de variables que nos permiten ser protagonistas de todo un conjunto de experiencias.\r\n<br>\r\n<br>\r\n&nbsp&nbsp&nbsp&nbsp&nbsp En San Isidro de Heredia se encuentra una Cafetería Boutique y Bistró con gran personalidad a cargo de la Chef Sophia Rodríguez junto con su equipo de trabajo, resultado de la fusión de personas apasionadas tanto por la buena gastronomía como por el Café de especialidad Brumas del Zurquí, y pues sí, este es uno de esos lugares que nos trasmite un sinfín de sensaciones desde el momento que ingresamos. \r\n', `updated_at` = '2017-08-24 03:37:43' WHERE `contents`.`id` = 1[0m
+  [1m[35m (60.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/update.js.erb
+  [1m[36mContent Load (15.6ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (15.6ms)
+  Rendered contents/update.js.erb (31.3ms)
+Completed 200 OK in 167ms (Views: 74.3ms | ActiveRecord: 76.2ms)
+
+
