@@ -3393,3 +3393,239 @@ Processing by ContentsController#update as JS
 Completed 200 OK in 167ms (Views: 74.3ms | ActiveRecord: 76.2ms)
 
 
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-23 21:53:38 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (38.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (44.0ms)
+  Rendered posts/show.html.erb within layouts/application (131.7ms)
+Completed 200 OK in 1755ms (Views: 1531.3ms | ActiveRecord: 85.1ms)
+
+
+Started GET "/posts/7/contents/1/edit" for 127.0.0.1 at 2017-08-23 21:53:58 -0600
+Processing by ContentsController#edit as JS
+  Parameters: {"post_id"=>"7", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 1 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/edit.js.erb
+  Rendered contents/_errors.html.erb (0.5ms)
+  Rendered contents/_editform.html.erb (263.2ms)
+  Rendered contents/edit.js.erb (488.9ms)
+Completed 200 OK in 1043ms (Views: 816.9ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/7/contents/1" for 127.0.0.1 at 2017-08-23 21:54:06 -0600
+Processing by ContentsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cq3x1CfmTFeQyFLKGAjEM2OF/uQs/lhw/9t001cK0KdE5HhSFIHDYSEABZk/ljJooyM7EUJiarjJdIrnY5AknQ==", "content"=>{"index"=>"1", "title"=>"EL ESPACIO NOS HABLA", "body"=>"&nbsp&nbsp&nbsp&nbsp&nbsp Existen espacios que logran hacernos vivir sensaciones únicas, donde simplemente no encontramos una razón específica para explicarlo, solo sentimos como fluyen una serie de variables que nos permiten ser protagonistas de todo un conjunto de experiencias.\r\n<br>\r\n<br>\r\n&nbsp&nbsp&nbsp&nbsp&nbsp En San Isidro de Heredia se encuentra una Cafetería Boutique y Bistró con gran personalidad a cargo de la Chef Sophia Rodríguez junto con su equipo de trabajo, resultado de la fusión de personas apasionadas tanto por la buena gastronomía como por el Café de especialidad Brumas del Zurquí, y pues sí, este es uno de esos lugares que nos trasmite un sinfín de sensaciones desde el momento que ingresamos. \r\n"}, "commit"=>"Update Content", "post_id"=>"7", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 1 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContent Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` = 1 AND (`contents`.`id` != 1) AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `contents` SET `title` = 'EL ESPACIO NOS HABLA', `updated_at` = '2017-08-24 03:54:06' WHERE `contents`.`id` = 1[0m
+  [1m[35m (113.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/update.js.erb
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (15.6ms)
+  Rendered contents/update.js.erb (32.7ms)
+Completed 200 OK in 234ms (Views: 87.3ms | ActiveRecord: 113.3ms)
+
+
+Started GET "/posts/7/contents/1/edit" for 127.0.0.1 at 2017-08-23 21:56:01 -0600
+Processing by ContentsController#edit as JS
+  Parameters: {"post_id"=>"7", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 1 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/edit.js.erb
+  Rendered contents/_errors.html.erb (0.5ms)
+  Rendered contents/_editform.html.erb (212.0ms)
+  Rendered contents/edit.js.erb (422.5ms)
+Completed 200 OK in 962ms (Views: 746.7ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/7/contents/1" for 127.0.0.1 at 2017-08-23 21:56:15 -0600
+Processing by ContentsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4vtvgqIoM0nd58qAUsttuvs+Z6nll0TciVlQZs2p7NessuYEkU+8f2wvndN1VZvhO5iiXIsLdhS/9q5S+TMY7Q==", "content"=>{"index"=>"1", "title"=>"El espacio nos habla", "body"=>"&nbsp&nbsp&nbsp&nbsp&nbsp Existen espacios que logran hacernos vivir sensaciones únicas, donde simplemente no encontramos una razón específica para explicarlo, solo sentimos como fluyen una serie de variables que nos permiten ser protagonistas de todo un conjunto de experiencias.\r\n<br>\r\n<br>\r\n&nbsp&nbsp&nbsp&nbsp&nbsp En San Isidro de Heredia se encuentra una Cafetería Boutique y Bistró con gran personalidad a cargo de la Chef Sophia Rodríguez junto con su equipo de trabajo, resultado de la fusión de personas apasionadas tanto por la buena gastronomía como por el Café de especialidad Brumas del Zurquí, y pues sí, este es uno de esos lugares que nos trasmite un sinfín de sensaciones desde el momento que ingresamos. \r\n"}, "commit"=>"Update Content", "post_id"=>"7", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 1 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContent Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` = 1 AND (`contents`.`id` != 1) AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `contents` SET `title` = 'El espacio nos habla', `updated_at` = '2017-08-24 03:56:15' WHERE `contents`.`id` = 1[0m
+  [1m[35m (99.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/update.js.erb
+  [1m[36mContent Load (0.5ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (6.0ms)
+  Rendered contents/update.js.erb (31.5ms)
+Completed 200 OK in 199ms (Views: 69.0ms | ActiveRecord: 100.4ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-23 21:57:58 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (4.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 867ms (Views: 839.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/7/contents/new" for 127.0.0.1 at 2017-08-23 21:58:13 -0600
+Processing by ContentsController#new as JS
+  Parameters: {"post_id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/new.js.erb
+  Rendered contents/_errors.html.erb (0.0ms)
+  Rendered contents/_createform.html.erb (200.5ms)
+  Rendered contents/new.js.erb (401.6ms)
+Completed 200 OK in 974ms (Views: 759.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/7/contents" for 127.0.0.1 at 2017-08-23 21:58:21 -0600
+Processing by ContentsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U8yrZ8fiHRnRP5fawpUuAVl1Lpg8iJKLTqgdDB8mgRVxSBgytukiD6gz23wf6c0x2IpaVYczQP3Ti5b6d32dsA==", "content"=>{"index"=>"2", "style"=>"Image"}, "commit"=>"Create Content", "post_id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContent Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` = 2 AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `contents` (`index`, `created_at`, `updated_at`, `style`, `post_id`) VALUES (2, '2017-08-24 03:58:21', '2017-08-24 03:58:21', 'Image', 7)[0m
+  [1m[35m (78.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/create.js.erb
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (15.6ms)
+  Rendered contents/create.js.erb (31.2ms)
+Completed 200 OK in 178ms (Views: 94.1ms | ActiveRecord: 78.2ms)
+
+
+Started GET "/posts/7/contents/2/edit" for 127.0.0.1 at 2017-08-23 21:58:25 -0600
+Processing by ContentsController#edit as JS
+  Parameters: {"post_id"=>"7", "id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 2 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/edit.js.erb
+  Rendered contents/_errors.html.erb (0.0ms)
+  Rendered contents/_editform.html.erb (226.7ms)
+  Rendered contents/edit.js.erb (444.3ms)
+Completed 200 OK in 1019ms (Views: 797.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/7/contents/2" for 127.0.0.1 at 2017-08-23 21:58:34 -0600
+Processing by ContentsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1EpHFZAjadORLqVR9nMH5tocaBOq6zyWpcfAh0378yyxnGGz/AepYQKez84UW2jCyqt16sLTlEolHjORH2crTw==", "content"=>{"index"=>"2", "title"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0xb79c720 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170823-11924-zr26y4.jpg>, @original_filename="8.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"content[image]\"; filename=\"8.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Content", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "post_id"=>"7", "id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 2 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-ye814s.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-1tkbm73.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-1tkbm73.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-1tkbm73.jpg[0]" -auto-orient -resize "x250" -crop "370x250+2+0" +repage "C:/Users/VEGA/AppData/Local/Temp/85a975aad16352fe5845459a7ff2760320170823-11924-6fhzes"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-1tkbm73.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-1tkbm73.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-1tkbm73.jpg[0]" -auto-orient -resize "1200x" -crop "1200x500+0+150" +repage "C:/Users/VEGA/AppData/Local/Temp/85a975aad16352fe5845459a7ff2760320170823-11924-lp7b8b"
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/c9f0f895fb98ab9159f51fd0297e236d20170823-11924-vjoq1z.jpg"
+  [1m[36mContent Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` = 2 AND (`contents`.`id` != 2) AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `contents` SET `title` = '', `image_file_name` = '8.jpg', `image_content_type` = 'image/jpeg', `image_file_size` = 1057077, `image_updated_at` = '2017-08-24 03:58:34', `updated_at` = '2017-08-24 03:58:36' WHERE `contents`.`id` = 2[0m
+  [1m[35m (84.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/update.js.erb
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (7.0ms)
+  Rendered contents/update.js.erb (32.0ms)
+Completed 200 OK in 2686ms (Views: 87.0ms | ActiveRecord: 87.3ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-23 21:59:56 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (39.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (37.5ms)
+  Rendered posts/show.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 584ms (Views: 287.6ms | ActiveRecord: 163.9ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-23 22:00:48 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (4.5ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 765ms (Views: 736.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/7/contents/2/edit" for 127.0.0.1 at 2017-08-23 22:00:52 -0600
+Processing by ContentsController#edit as JS
+  Parameters: {"post_id"=>"7", "id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 2 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering contents/edit.js.erb
+  Rendered contents/_errors.html.erb (0.5ms)
+  Rendered contents/_editform.html.erb (214.6ms)
+  Rendered contents/edit.js.erb (435.3ms)
+Completed 200 OK in 995ms (Views: 770.8ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/7/contents/2" for 127.0.0.1 at 2017-08-23 22:01:02 -0600
+Processing by ContentsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lvJYNfEQPoi0m9i3phAvkHgFM0Zd79qjYtJGT/y/qi3zJH6TnTT+OicrsihEOEC0aLIuvzXXcn/iC7VZriNyTg==", "content"=>{"index"=>"2", "title"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0xcf5b008 @tempfile=#<Tempfile:C:/Users/VEGA/AppData/Local/Temp/RackMultipart20170823-11924-1ftxte8.jpg>, @original_filename="7.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"content[image]\"; filename=\"7.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Content", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01", "post_id"=>"7", "id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` WHERE `contents`.`id` = 2 ORDER BY `contents`.`index` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-7nnokk.jpg"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-vs3l7w.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-vs3l7w.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-vs3l7w.jpg[0]" -auto-orient -resize "x250" -crop "370x250+2+0" +repage "C:/Users/VEGA/AppData/Local/Temp/66dc9570de723677594909ef9bd6d05120170823-11924-bn6nb0"
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-vs3l7w.jpg[0]" 2>NUL
+Command :: identify -format %m "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-vs3l7w.jpg[0]"
+Command :: convert "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-vs3l7w.jpg[0]" -auto-orient -resize "1200x" -crop "1200x800+0+0" +repage "C:/Users/VEGA/AppData/Local/Temp/66dc9570de723677594909ef9bd6d05120170823-11924-togo88"
+Command :: file -b --mime "C:/Users/VEGA/AppData/Local/Temp/8f14e45fceea167a5a36dedd4bea254320170823-11924-638kki.jpg"
+  [1m[36mContent Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM `contents` WHERE `contents`.`index` = 2 AND (`contents`.`id` != 2) AND `contents`.`post_id` = 7 LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `contents` SET `image_file_name` = '7.jpg', `image_file_size` = 1496706, `image_updated_at` = '2017-08-24 04:01:02', `updated_at` = '2017-08-24 04:01:03' WHERE `contents`.`id` = 2[0m
+[paperclip] deleting C:/Sites/Caffora/public/system/contents/images/000/000/002/original/8.jpg
+[paperclip] deleting C:/Sites/Caffora/public/system/contents/images/000/000/002/thumb/8.jpg
+[paperclip] deleting C:/Sites/Caffora/public/system/contents/images/000/000/002/large/8.jpg
+  [1m[35m (103.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contents/update.js.erb
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  Rendered contents/_table.html.erb (6.0ms)
+  Rendered contents/update.js.erb (33.0ms)
+Completed 200 OK in 1412ms (Views: 76.6ms | ActiveRecord: 106.6ms)
+
+

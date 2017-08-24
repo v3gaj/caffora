@@ -686,6 +686,10 @@ header{
 
 /***********************CONTENTGRID***********************/
 
+.content_container{
+	margin: 0 100px 0 100px;
+}
+
 .content_links{
 	width: 100%;
 	text-align: left;
@@ -713,6 +717,10 @@ header{
 
 .content_image{
     padding-bottom: 25px;
+
+    img{
+    	width: 100%;
+    }
 }
 
 .content_video{
@@ -724,9 +732,9 @@ header{
 	text-align: left;
 	font-size: 27px;
 	letter-spacing: 1px;
-	font-family: proxima_nova_ltsemibold;
+	font-family: 'Lato', sans-serif;
+    font-weight: 600;
 	padding-bottom: 17px;
-	text-decoration: underline;
 }
 
 /***********************COLLECTIONGRID***********************/
