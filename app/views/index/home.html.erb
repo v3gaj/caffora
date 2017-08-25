@@ -1,14 +1,20 @@
 <div class="scroller_container">
 	<div class="scroller">
 		<% @sliders.each do |slider| %>
-	  	<div><%= image_tag slider.image.url(:large) %></div>
+	  	<div>
+	  		<div class="overlay"></div>
+	  		<div class="scroller_content">
+	  			<h5><%= slider.title %></h5>
+	  			<span><%= slider.subtitle %></span>
+	  		</div>
+	  		<%= image_tag slider.image.url(:large) %>
+	  	</div>
 	  <% end %>
 	</div>
-	<div class="overlay"></div>
 </div>	
 <div class="wrapper_posts_home">
 	<div class="title_container">
-		<h1>“The world offers itself to your imagination.”</h1>
+		<h1>Publicaciones Recientes.</h1>
 		<div class="line"></div>
 		<%= image_tag 'bean_icon.png'%>
 	</div>
@@ -22,7 +28,7 @@
 </div>
 <div class="wrapper_collections_home">
 	<div class="title_container">
-		<h1>“The world offers itself to your imagination.”</h1>
+		<h1>Galeria de Fotografías.</h1>
 		<div class="line"></div>
 		<%= image_tag 'home_icon.png'%>
 	</div>

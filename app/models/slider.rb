@@ -7,6 +7,8 @@ class Slider < ApplicationRecord
 
 	validates_uniqueness_of :index
 
-	validates :title, presence: true, length: { minimum: 20 }
+	validates :title, presence: true
+
+	validates :subtitle, presence: true
 
 end
