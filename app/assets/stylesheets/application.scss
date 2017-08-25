@@ -308,7 +308,22 @@ h6{
     }
 }
 
+#menu_mobile{
+	display: none;
+}
+
+.noDisplay{
+	display: none !important;
+}
+
+
+
 /***********************HEADER***********************/
+
+.header_wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
 
 header{
 	padding: 25px 0 25px 0;
@@ -325,7 +340,7 @@ header{
 	nav ul{
 		list-style-type: none;
 		float: right;
-		margin-top: 20px;
+		margin-top: 25px;
     	margin-bottom: 10px;
 
 		li{
@@ -381,6 +396,8 @@ header{
 		}
 	}
 }
+
+
 
 /***********************VIEWTITLE***********************/
 
@@ -1229,6 +1246,13 @@ footer{
 
 /***********************RESPONSIVE***********************/
 
+@media (max-width: 1220px) {
+    
+	.header_wrapper{
+		width: 100%;
+	}
+}
+
 @media (max-width: 1200px) {
     
 	.container,
@@ -1239,14 +1263,101 @@ footer{
 		margin-right: 3%;
 		width: 94%;
 	}
+
+	h5{
+		font-size: 50px;
+	}
+
+	.scroller_content{
+
+		span{
+			font-size: 25px;
+		}
+	} 
 }
 
-/***********************FORMS***********************/
+@media (max-width: 1000px) {
+    
+	header{
+
+		img{
+			display: block;
+			padding: 30px 0 30px 0;
+			margin: 0 auto;
+			float: none;
+		}
+
+		nav{
+
+			ul{
+				float: none;
+
+				li{
+					display: inline-block;
+					float: none;
+					padding: 0 20px 0 20px;
+				}
+			}
+		}
+	}
+}
 
 
+@media (max-width: 800px) {
+    
+    header{
+		nav{
 
+			ul{
 
+				li{
+					display: block;
+					
+					a{
+						color: #fff;
+						margin: 0 auto;
+						display: block;
+						float: none;
+						padding: 15px 0 10px 0;
+						background-color: #2d2d2d;
+						line-height: 25px;
+						font-size: 13px;
 
+						&:hover{
+							color: #fff;
+						}
+
+						&:after{
+							border-bottom: 0px;
+						}
+					}
+
+					.active{
+						border-bottom: 0px;
+						color: #fff;
+						background-color: #9d132c;
+
+						&:hover{
+							color: #fff;
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+	#menu_mobile{
+		padding: 20px 0 15px 0;
+		line-height: 25px;
+		font-size: 20px;
+		background-color: #2d2d2d;
+		color: #fff;
+		cursor: pointer;
+		display: block;
+	}
+
+}
 
 
 

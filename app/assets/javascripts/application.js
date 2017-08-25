@@ -19,4 +19,30 @@
 //= require jquery.remotipart
 
 
+function menu() {
 
+    if (window.innerWidth < 801 ) {
+      $("#menu_mobile").removeClass("noDisplay");
+      $("#menu_classic").addClass("noDisplay");
+    }else{
+      $("#menu_mobile").addClass("noDisplay");
+      $("#menu_classic").removeClass("noDisplay");
+    }
+}
+
+function showMenu() {
+
+    var display = $('#menu_classic').css('display');
+
+    if (display === "none") {
+    	$('#menu_classic').removeClass("noDisplay");
+    }else{
+    	$('#menu_classic').addClass("noDisplay");
+    }
+}
+
+window.onload = menu;
+
+$( window ).resize(function() {
+	menu();
+});
