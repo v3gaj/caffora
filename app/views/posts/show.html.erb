@@ -1,11 +1,11 @@
 <div class="post_cover">
-	<span class="span_h1" name="title"><%= @post.subtitle %></span>
+	<span class="span_h1"><%= @post.subtitle %></span>
 	<%= image_tag @post.cover.url(:large) %>
 	<div class="overlay"></div>
 </div>
 
 <div class="containerOne">
-
+<meta name="title" content="<%= @post.title %>">
 	<div class="post_title">
 		<h1><%= @post.title %></h1>
 		<p><%= @post.release_date.to_formatted_s(:long) %></p>
