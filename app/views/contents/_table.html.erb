@@ -17,7 +17,6 @@
                     </div>
                 <% end %>
                 <% if content.style ==="Paragraph" && content.body.present? %>
-                    <meta name="description" content="<%= content.body.html_safe %>">
                     <div class="content_paragraph">
                         <%= content.body.html_safe %>
                     </div>

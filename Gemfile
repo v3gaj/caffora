@@ -42,6 +42,8 @@ gem "paperclip"
 
 gem "remotipart"
 
+gem 'meta-tags'
+
 #gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 
 platform :ruby, :x64_mingw, :mingw do
