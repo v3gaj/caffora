@@ -15,7 +15,12 @@ class PostsController < ApplicationController
     @post.contents = @post.contents.all.order(:index)
     @collection = Collection.find_by_post_id(@post.id)
 
-    
+    @post.contents.each do |content|
+      if content.style === "Paragraph"
+          @page_description = content.body
+        break
+      end
+    end
   end
 
   # GET /posts/new
