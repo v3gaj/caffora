@@ -43,7 +43,7 @@ body{
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,section { 
     display:block;
 }
 
@@ -310,6 +310,10 @@ h6{
 
 #menu_mobile{
 	display: none;
+}
+
+.display{
+	display: block !important;
 }
 
 .noDisplay{
@@ -1355,6 +1359,9 @@ footer{
 		color: #fff;
 		cursor: pointer;
 		display: block;
+	}
+
+	#menu_classic{
 	}
 
 }

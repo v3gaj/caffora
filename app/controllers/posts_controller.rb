@@ -15,9 +15,6 @@ class PostsController < ApplicationController
     @post.contents = @post.contents.all.order(:index)
     @collection = Collection.find_by_post_id(@post.id)
 
-    @page_title       = @post.title
-    @page_description = @post.title
-
     @post.contents.each do |content|
       if content.style === "Paragraph"
           @page_description = content.body

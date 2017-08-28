@@ -30,19 +30,31 @@ function menu() {
     }
 }
 
+var show = false;
+
 function showMenu() {
 
-    var display = $('#menu_classic').css('display');
-
-    if (display === "none") {
+    if (show === false) {
     	$('#menu_classic').removeClass("noDisplay");
+    	show = true;
     }else{
     	$('#menu_classic').addClass("noDisplay");
+    	show = false;
     }
 }
 
-window.onload = menu;
+$(document).ready(function() {
+  	menu();
+});
+
 
 $( window ).resize(function() {
 	menu();
+});
+
+
+window.addEventListener("turbolinks:load",function(event){
+	if (show === true) {
+		$('#menu_classic').addClass("noDisplay");
+	}
 });
