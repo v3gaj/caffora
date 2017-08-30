@@ -1263,6 +1263,27 @@ footer{
 
 /***********************RESPONSIVE***********************/
 
+@media (max-width: 1500px) {
+    
+	.post_cover span {
+	    font-size: 180px;
+	}
+}
+
+@media (max-width: 1400px) {
+    
+	.post_cover span {
+	    font-size: 160px;
+	}
+}
+
+@media (max-width: 1300px) {
+    
+	.post_cover span {
+	    font-size: 140px;
+	}
+}
+
 @media (max-width: 1220px) {
     
 	.header_wrapper{
@@ -1296,6 +1317,10 @@ footer{
 	.post_wrapper{
 		padding: 0;
 	}
+
+	.post_cover span {
+	    font-size: 130px;
+	}
 }
 
 @media (max-width: 1100px) {
@@ -1313,6 +1338,10 @@ footer{
 		span{
 			font-size: 22px;
 		}
+	}
+
+	.post_cover span {
+	    font-size: 120px;
 	}
 }
 
@@ -1391,6 +1420,10 @@ footer{
 		margin-right: 3%;
 		width: 94%;
 	}
+
+	.post_cover span {
+	    font-size: 110px;
+	}
 }
 
 @media (max-width: 900px) {
@@ -1439,6 +1472,10 @@ footer{
 	.about_image {
     	float: right !important;
     	width: 535px;
+	}
+
+	.post_cover span {
+	    font-size: 100px;
 	}
 }
 
@@ -1539,6 +1576,10 @@ footer{
 	.about_container{
 		padding-top: 60px;
 	}
+
+	.post_cover span {
+	    font-size: 90px;
+	}
 }
 
 @media (max-width: 700px) {
@@ -1574,6 +1615,10 @@ footer{
 	.contact_info{
 		padding: 0;
 	}
+
+	.post_cover span {
+	    font-size: 75px;
+	}
 }
 
 @media (max-width: 650px) {
@@ -1597,6 +1642,10 @@ footer{
 
 	.scroller_content{
 		width: 100%;
+	}
+
+	.post_cover span {
+	    font-size: 60px;
 	}
 
 }
@@ -1631,6 +1680,10 @@ footer{
 
 	.about_image {
     	width: 100%;
+	}
+
+	.post_cover span {
+	    font-size: 50px;
 	}
 }
 

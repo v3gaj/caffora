@@ -24136,3 +24136,442 @@ Processing by IndexController#about as HTML
 Completed 200 OK in 264ms (Views: 241.9ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-30 17:21:25 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (893.4ms)
+Completed 200 OK in 4398ms (Views: 4184.8ms | ActiveRecord: 56.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-30 17:21:59 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wBoRVN5nIuoRnA5aVWw4IdCTZOPUdQmdBtuxs7wj6fWTOs3OO5kfyX2++iBzIqu2gn+aykrSPq+uJBaI6atjPQ==", "user"=>{"email"=>"juanvegaquesada@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'juanvegaquesada@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-08-30 23:21:59', `last_sign_in_at` = '2017-08-28 23:30:00', `sign_in_count` = 10, `updated_at` = '2017-08-30 23:21:59' WHERE `users`.`id` = 2[0m
+  [1m[35m (64.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 750ms (ActiveRecord: 85.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 17:21:59 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (56.0ms)
+  Rendered posts/index.html.erb (74.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (166.3ms)
+  Rendered collections/index.html.erb (185.3ms)
+  Rendered index/home.html.erb within layouts/application (354.7ms)
+Completed 200 OK in 701ms (Views: 516.4ms | ActiveRecord: 91.6ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2017-08-30 17:22:11 -0600
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering posts/edit.js.erb
+  Rendered posts/_errors.html.erb (0.5ms)
+  Rendered posts/_form.html.erb (303.8ms)
+  Rendered posts/edit.js.erb (642.9ms)
+Completed 200 OK in 1249ms (Views: 1003.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2017-08-30 17:22:19 -0600
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cUGS1gnh8l2+8zr9voL0sAhsKrERyXbaNYMK2aTeeMLlH5cKu9DRxTJBxc3extjmNMTlubNSdc5Wqm81P4q8Dw==", "post"=>{"title"=>"Cafeteria de Colores", "subtitle"=>"Kahli Cafe", "release_date(1i)"=>"2017", "release_date(2i)"=>"8", "release_date(3i)"=>"21", "author"=>"Juan"}, "commit"=>"Update Post", "id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE `posts` SET `subtitle` = 'Kahli Cafe', `updated_at` = '2017-08-30 23:22:19' WHERE `posts`.`id` = 7[0m
+  [1m[35m (140.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering posts/update.js.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/update.js.erb (33.0ms)
+Completed 200 OK in 238ms (Views: 83.9ms | ActiveRecord: 141.2ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:22:20 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (93.9ms)
+  Rendered posts/show.html.erb within layouts/application (152.9ms)
+Completed 200 OK in 479ms (Views: 343.2ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:24:08 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (7.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 1060ms (Views: 1031.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:24:30 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.2ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 998ms (Views: 972.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:24:53 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 873ms (Views: 848.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:25:25 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 873ms (Views: 846.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-30 17:25:53 -0600
+Processing by IndexController#blog as HTML
+  Rendering index/blog.html.erb within layouts/application
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered posts/_table.html.erb (9.0ms)
+  Rendered posts/index.html.erb (25.5ms)
+  Rendered index/blog.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 288ms (Views: 270.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2017-08-30 17:25:59 -0600
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  Rendering posts/edit.js.erb
+  Rendered posts/_errors.html.erb (1.0ms)
+  Rendered posts/_form.html.erb (217.6ms)
+  Rendered posts/edit.js.erb (429.8ms)
+Completed 200 OK in 993ms (Views: 764.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2017-08-30 17:26:12 -0600
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QRCrn54DWaYexSGUFxe3XiSBsb0D94AO6nUsMYrbYxLVTq5DLDJ6PpJ33qR3U5sIGCl+taFsgxqJXEndEY+n3w==", "post"=>{"title"=>"Cafeteria de Colores", "subtitle"=>"Cafe del Barista", "release_date(1i)"=>"2017", "release_date(2i)"=>"8", "release_date(3i)"=>"21", "author"=>"Juan"}, "commit"=>"Update Post", "id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `posts` SET `subtitle` = 'Cafe del Barista', `updated_at` = '2017-08-30 23:26:12' WHERE `posts`.`id` = 7[0m
+  [1m[35m (232.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering posts/update.js.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`release_date` DESC[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/update.js.erb (31.0ms)
+Completed 200 OK in 329ms (Views: 81.0ms | ActiveRecord: 235.1ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:26:17 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (6.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 286ms (Views: 257.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:26:56 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 907ms (Views: 882.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:28:01 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 914ms (Views: 886.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:28:35 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.5ms)
+  Rendered posts/show.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 920ms (Views: 895.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:28:54 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 994ms (Views: 966.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:29:39 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (6.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.0ms)
+  Rendered posts/show.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 1061ms (Views: 1028.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:30:10 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 859ms (Views: 834.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:30:25 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 926ms (Views: 898.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:30:40 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 1078ms (Views: 1046.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:31:07 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (9.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (11.0ms)
+  Rendered posts/show.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 1044ms (Views: 1017.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:31:23 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (12.5ms)
+  Rendered posts/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 932ms (Views: 907.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:31:48 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (4.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 914ms (Views: 888.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:32:05 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (1.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (10.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (7.8ms)
+  Rendered posts/show.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 945ms (Views: 910.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:32:26 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.0ms)
+  Rendered posts/show.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 929ms (Views: 902.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:32:50 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (0.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (5.0ms)
+  Rendered posts/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 947ms (Views: 920.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog/7" for 127.0.0.1 at 2017-08-30 17:33:05 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  [1m[36mContent Load (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`post_id` = 7 ORDER BY `contents`.`index` ASC[0m  [["post_id", 7]]
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` WHERE `collections`.`post_id` = 7 LIMIT 1[0m
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered contents/_table.html.erb (5.0ms)
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT `images`.* FROM `images` WHERE `images`.`collection_id` = 3[0m
+  Rendered images/_table.html.erb (6.3ms)
+  Rendered posts/show.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 1050ms (Views: 1014.9ms | ActiveRecord: 2.0ms)
+
+
