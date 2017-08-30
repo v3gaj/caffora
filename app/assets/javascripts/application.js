@@ -54,7 +54,11 @@ $( window ).resize(function() {
 
 
 window.addEventListener("turbolinks:load",function(event){
-	if (show === true) {
-		$('#menu_classic').addClass("noDisplay");
+	if (window.innerWidth < 801 ) {
+		if (show === true) {
+			$('#menu_classic').removeClass("noDisplay");
+		}else{
+			$('#menu_classic').addClass("noDisplay");
+		}
 	}
 });
