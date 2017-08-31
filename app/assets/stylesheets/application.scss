@@ -328,6 +328,16 @@ h6{
 
 /***********************HEADER***********************/
 
+.logo{
+	background-image: url(logo.png);
+    height: 67px;
+    width: 185px;
+    display: block;
+    float: left;
+    margin: 0 0 0 40px;
+    background-repeat: no-repeat;
+}
+
 .header_wrapper{
 	width: 1200px;
 	margin: 0 auto;
@@ -405,6 +415,9 @@ header{
 	}
 }
 
+#menu_classic{
+	overflow: auto;
+}
 
 
 /***********************VIEWTITLE***********************/
@@ -606,10 +619,13 @@ header{
 
 /***********************POSTGRID***********************/
 
+.post_grid{
+	font-size: 0;
+}
+
 .post_container{
 	width: 33.333333%;
 	display: inline-block;
-	margin-right: -4px;
     position: relative;
     padding-bottom: 40px;
     vertical-align: top;
@@ -672,6 +688,7 @@ header{
 
     span{
     	padding: 0 3px;
+    	font-size: 16px;
     }
 }
 
@@ -1424,6 +1441,11 @@ footer{
 	.post_cover span {
 	    font-size: 110px;
 	}
+
+	.logo{
+	    float: none;
+	    margin: 30px auto;	
+	}
 }
 
 @media (max-width: 900px) {
@@ -1579,6 +1601,16 @@ footer{
 
 	.post_cover span {
 	    font-size: 90px;
+	}
+
+	.logo{
+		background-image: url(logo1.png);
+	    height: 248px;
+	    width: 250px;
+	}
+
+	header {
+	    padding: 0px 0 25px 0;
 	}
 }
 
