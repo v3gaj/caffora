@@ -24575,3 +24575,382 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 1050ms (Views: 1014.9ms | ActiveRecord: 2.0ms)
 
 
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-30 19:19:48 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kqnW7jGL8Ic+eli+lvadL0d22gnXVQK64EZtBWPdC28G99Myg7rTH7LIp472srF5e94VAXXOAa6Dbwjp+InPog=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:20:01 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (50.0ms)
+  Rendered posts/index.html.erb (70.1ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (100.6ms)
+  Rendered collections/index.html.erb (118.1ms)
+  Rendered index/home.html.erb within layouts/application (1728.2ms)
+Completed 200 OK in 2119ms (Views: 1972.1ms | ActiveRecord: 100.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:22:03 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 333ms (Views: 314.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:22:06 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.3ms)
+  Rendered index/home.html.erb within layouts/application (88.9ms)
+Completed 200 OK in 334ms (Views: 314.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:22:11 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.5ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 325ms (Views: 306.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:22:18 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (20.0ms)
+  Rendered index/home.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 324ms (Views: 305.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:23:21 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.5ms)
+  Rendered collections/index.html.erb (36.0ms)
+  Rendered index/home.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 327ms (Views: 306.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:24:53 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.5ms)
+  Rendered collections/index.html.erb (22.5ms)
+  Rendered index/home.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 431ms (Views: 410.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:25:00 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (13.0ms)
+  Rendered posts/index.html.erb (32.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.5ms)
+  Rendered index/home.html.erb within layouts/application (106.1ms)
+Completed 200 OK in 339ms (Views: 318.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:26:16 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (7.0ms)
+  Rendered posts/index.html.erb (35.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (3.0ms)
+  Rendered collections/index.html.erb (21.1ms)
+  Rendered index/home.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 474ms (Views: 453.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:28:10 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 373ms (Views: 352.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:28:17 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.6ms)
+  Rendered index/home.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 311ms (Views: 292.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:28:25 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.0ms)
+  Rendered index/home.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 336ms (Views: 311.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:28:29 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (86.6ms)
+Completed 200 OK in 310ms (Views: 286.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:28:33 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.5ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 335ms (Views: 309.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:28:40 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.5ms)
+  Rendered posts/index.html.erb (24.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (5.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 425ms (Views: 405.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:31:29 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (3.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 312ms (Views: 292.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:31:30 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:31:30 -0600
+  [1m[36mPost Load (5.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+Processing by IndexController#home as HTML
+  Rendered posts/_table.html.erb (12.0ms)
+  Rendered posts/index.html.erb (77.1ms)
+  Rendering collections/index.html.erb
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (7.0ms)
+  Rendered collections/index.html.erb (42.0ms)
+  Rendered index/home.html.erb within layouts/application (240.2ms)
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (18.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (24.5ms)
+  Rendered posts/index.html.erb (44.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (2.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (7.0ms)
+  Rendered collections/index.html.erb (27.0ms)
+  Rendered index/home.html.erb within layouts/application (128.1ms)
+Completed 200 OK in 611ms (Views: 586.9ms | ActiveRecord: 7.0ms)
+
+
+Completed 200 OK in 459ms (Views: 420.4ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:31:52 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.1ms)
+  Rendered posts/index.html.erb (24.1ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (87.7ms)
+Completed 200 OK in 309ms (Views: 290.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:33:44 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.5ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (22.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (22.0ms)
+  Rendered index/home.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 508ms (Views: 489.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:33:50 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.5ms)
+  Rendered collections/index.html.erb (22.1ms)
+  Rendered index/home.html.erb within layouts/application (86.6ms)
+Completed 200 OK in 304ms (Views: 284.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:35:15 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (1.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (6.0ms)
+  Rendered posts/index.html.erb (41.6ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.0ms)
+  Rendered index/home.html.erb within layouts/application (105.6ms)
+Completed 200 OK in 332ms (Views: 312.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-30 19:35:58 -0600
+Processing by IndexController#home as HTML
+  Rendering index/home.html.erb within layouts/application
+  [1m[36mSlider Load (0.0ms)[0m  [1m[34mSELECT `sliders`.* FROM `sliders` ORDER BY `sliders`.`index` ASC[0m
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE (release_date <= '2017-08-30') ORDER BY `posts`.`release_date` DESC LIMIT 9[0m
+  Rendered posts/_table.html.erb (5.0ms)
+  Rendered posts/index.html.erb (23.0ms)
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (0.0ms)[0m  [1m[34mSELECT  `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-08-30') ORDER BY posts.release_date desc LIMIT 6[0m
+  Rendered collections/_table.html.erb (4.0ms)
+  Rendered collections/index.html.erb (21.0ms)
+  Rendered index/home.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 301ms (Views: 284.0ms | ActiveRecord: 0.0ms)
+
+

@@ -34,13 +34,13 @@ var show = false;
 
 function showMenu() {
 
-    if (show === false) {
-    	$('#menu_classic').removeClass("noDisplay");
+	if ($('#menu_classic').css("display") == 'none'){
+		$('#menu_classic').removeClass("noDisplay");
     	show = true;
     }else{
     	$('#menu_classic').addClass("noDisplay");
     	show = false;
-    }
+    }	
 }
 
 $(document).ready(function() {
