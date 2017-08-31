@@ -345,64 +345,61 @@ header{
 		padding-left: 40px;
 	}
 
-	.menu_classic{
+	nav ul{
+		list-style-type: none;
+		float: right;
+		margin-top: 25px;
+    	margin-bottom: 10px;
 
-		ul{
-			list-style-type: none;
-			float: right;
-			margin-top: 25px;
-	    	margin-bottom: 10px;
+		li{
+			float: left;
+			padding: 0 40px 0 0;
+			transition: all .3s linear 0s;			
 
-			li{
+			a{
 				float: left;
-				padding: 0 40px 0 0;
-				transition: all .3s linear 0s;			
+				cursor: pointer;
+				text-decoration: none;
+				color: #212121;
+			    font-size: 13px;
+			    text-transform: uppercase;
+			    letter-spacing: 1px;
+			    transition: all .4s linear 0s;
 
-				a{
-					float: left;
-					cursor: pointer;
-					text-decoration: none;
-					color: #212121;
-				    font-size: 13px;
-				    text-transform: uppercase;
-				    letter-spacing: 1px;
-				    transition: all .4s linear 0s;
-
-				    i{
-					   	font-size: 20px !important;
-					}
-
-				    &:hover{
-				    	color: #9d132c;
-				    	text-decoration: none;
-
-				    	&:after{
-				    		color: #9d132c;
-							width: 100%;
-				    	};
-				    }
-
-				    &:focus{
-				    	text-decoration: none;
-				    }
-
-				    &:after{
-				    	display: block;
-					    content: "";
-					    width: 0;
-					    left: 0;
-					    border-bottom: 2px solid #9d132c;
-					    transition: all .3s linear 0s;
-					    padding-bottom: 3px;
-					    position: relative;
-					    bottom: -2px;
-				    }
+			    i{
+				   	font-size: 20px !important;
 				}
 
-				.active{
-					color: #9d132c;
-					border-bottom: 2px solid #9d132c;
-				}
+			    &:hover{
+			    	color: #9d132c;
+			    	text-decoration: none;
+
+			    	&:after{
+			    		color: #9d132c;
+						width: 100%;
+			    	};
+			    }
+
+			    &:focus{
+			    	text-decoration: none;
+			    }
+
+			    &:after{
+			    	display: block;
+				    content: "";
+				    width: 0;
+				    left: 0;
+				    border-bottom: 2px solid #9d132c;
+				    transition: all .3s linear 0s;
+				    padding-bottom: 3px;
+				    position: relative;
+				    bottom: -2px;
+			    }
+			}
+
+			.active{
+				color: #9d132c;
+				border-bottom: 2px solid #9d132c;
 			}
 		}
 	}
@@ -1359,7 +1356,7 @@ footer{
 			float: none;
 		}
 
-		.menu_classic{
+		nav{
 
 			ul{
 				float: none;
@@ -1486,7 +1483,7 @@ footer{
 @media (max-width: 800px) {
     
     header{
-		.menu_classic{
+		nav{
 
 			ul{
 
