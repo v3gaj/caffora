@@ -21,7 +21,7 @@
     		<%= image_tag 'logo.png'%>
     	<%end%>
       <div id="menu_mobile"  onclick="showMenu()"><i class="fa fa-bars"></i></div>		
-	  	<nav id="menu_classic">
+	  	<div id="menu_classic">
 				<ul>
 					<li><%= active_link_to "Inicio", root_path, active: :exclusive %></li>
 					<li><%= active_link_to "Blog", blog_path, active: :inclusive %></li>
@@ -37,7 +37,7 @@
 	        	<li><%= active_link_to "Crear Cuenta", new_user_registration_path %></li>
 	        <%end%>	
 				</ul>
-			</nav>
+			</div>
 		</div>
   </header>
   <div class="containerTwo">

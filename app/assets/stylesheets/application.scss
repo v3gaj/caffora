@@ -345,61 +345,64 @@ header{
 		padding-left: 40px;
 	}
 
-	nav ul{
-		list-style-type: none;
-		float: right;
-		margin-top: 25px;
-    	margin-bottom: 10px;
+	.menu_classic{
 
-		li{
-			float: left;
-			padding: 0 40px 0 0;
-			transition: all .3s linear 0s;			
+		ul{
+			list-style-type: none;
+			float: right;
+			margin-top: 25px;
+	    	margin-bottom: 10px;
 
-			a{
+			li{
 				float: left;
-				cursor: pointer;
-				text-decoration: none;
-				color: #212121;
-			    font-size: 13px;
-			    text-transform: uppercase;
-			    letter-spacing: 1px;
-			    transition: all .4s linear 0s;
+				padding: 0 40px 0 0;
+				transition: all .3s linear 0s;			
 
-			    i{
-				   	font-size: 20px !important;
+				a{
+					float: left;
+					cursor: pointer;
+					text-decoration: none;
+					color: #212121;
+				    font-size: 13px;
+				    text-transform: uppercase;
+				    letter-spacing: 1px;
+				    transition: all .4s linear 0s;
+
+				    i{
+					   	font-size: 20px !important;
+					}
+
+				    &:hover{
+				    	color: #9d132c;
+				    	text-decoration: none;
+
+				    	&:after{
+				    		color: #9d132c;
+							width: 100%;
+				    	};
+				    }
+
+				    &:focus{
+				    	text-decoration: none;
+				    }
+
+				    &:after{
+				    	display: block;
+					    content: "";
+					    width: 0;
+					    left: 0;
+					    border-bottom: 2px solid #9d132c;
+					    transition: all .3s linear 0s;
+					    padding-bottom: 3px;
+					    position: relative;
+					    bottom: -2px;
+				    }
 				}
 
-			    &:hover{
-			    	color: #9d132c;
-			    	text-decoration: none;
-
-			    	&:after{
-			    		color: #9d132c;
-						width: 100%;
-			    	};
-			    }
-
-			    &:focus{
-			    	text-decoration: none;
-			    }
-
-			    &:after{
-			    	display: block;
-				    content: "";
-				    width: 0;
-				    left: 0;
-				    border-bottom: 2px solid #9d132c;
-				    transition: all .3s linear 0s;
-				    padding-bottom: 3px;
-				    position: relative;
-				    bottom: -2px;
-			    }
-			}
-
-			.active{
-				color: #9d132c;
-				border-bottom: 2px solid #9d132c;
+				.active{
+					color: #9d132c;
+					border-bottom: 2px solid #9d132c;
+				}
 			}
 		}
 	}
@@ -1356,7 +1359,7 @@ footer{
 			float: none;
 		}
 
-		nav{
+		.menu_classic{
 
 			ul{
 				float: none;
@@ -1483,7 +1486,7 @@ footer{
 @media (max-width: 800px) {
     
     header{
-		nav{
+		.menu_classic{
 
 			ul{
 
