@@ -579,6 +579,27 @@ header{
     	font-weight: 400;
     	font-style: italic;
     }
+
+    a{
+    	font-family: 'Questrial', sans-serif;
+    	border: 1px solid #fff;
+	    padding: 10px 20px;
+	    margin-top: 30px;
+	    display: inline-block;
+	    color: #fff;
+	    font-size: 15px;
+	    -webkit-transition: all 150ms linear 0ms;
+	    -khtml-transition: all 150ms linear 0ms;
+	    -moz-transition: all 150ms linear 0ms;
+	    -ms-transition: all 150ms linear 0ms;
+	    -o-transition: all 150ms linear 0ms;
+	    transition: all 150ms linear 0ms;
+
+    	&:hover{
+    		background: #fff;
+    		color: #1f1f1f;
+    	}
+    }
 }
 
 /***********************INDEX***********************/
@@ -712,6 +733,7 @@ header{
 .post_links{
 	width: 100%;
 	padding: 30px 0 0 0;
+	font-size: 16px;
 
 	a, span{
 		color: #888;
@@ -1275,6 +1297,61 @@ footer{
 
 .message_warning{
 	display: block;
+}
+
+/***********************WINNERS***********************/
+
+.wrapper_winners_barismo{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 40px 0 80px 0;
+}
+
+.title_container_winners{
+
+	padding: 60px 100px 0px 100px;
+	img{
+		width: 167px;
+		padding: 0 30px 0 30px;
+	}
+
+	h1{
+		display: inline;
+		vertical-align: top;
+		position: relative;
+		top: 55px;
+	}
+}
+
+.winners_wrapper{
+
+	padding: 0 100px 50px 100px;
+    border-bottom: 1px solid #E0E0E0;
+
+	img{
+		width: 30px;
+	}
+
+	ul{
+
+		padding-left: 350px;
+		list-style-type: none;
+
+		h4{
+			padding: 0 0 10px 0;
+			font-size: 25px;
+		}
+
+		span{
+			font-family: 'Playfair Display';
+			font-style: italic;
+    		letter-spacing: .5px;
+    		font-weight: 400;
+    		text-transform: none;
+    		color: #888;
+		}
+	}
 }
 
 

@@ -6,6 +6,9 @@
 	  		<div class="scroller_content">
 	  			<h5><%= slider.title %></h5>
 	  			<span><%= slider.subtitle %></span>
+	  			<% if slider.url.present? %>
+	  				<%= link_to "Más Información", slider.url %>
+	  			<%end%>	
 	  		</div>
 	  		<%= image_tag slider.image.url(:large) %>
 	  	</div>
