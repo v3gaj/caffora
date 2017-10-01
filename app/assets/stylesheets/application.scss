@@ -1383,6 +1383,10 @@ footer{
 	.header_wrapper{
 		width: 100%;
 	}
+
+	.wrapper_winners_barismo{
+		width: 100%;
+	}
 }
 
 @media (max-width: 1200px) {
@@ -1417,6 +1421,25 @@ footer{
 	}
 }
 
+@media (max-width: 1150px) {
+
+	.title_container_winners{
+		text-align: left;
+
+		img{
+			padding: 0 30px 0 0;
+		}
+	}
+
+	.winners_wrapper{
+		ul{
+			padding-left: 0;
+			text-align: right;
+		}
+	}
+
+}
+
 @media (max-width: 1100px) {
 	
 	h1{
@@ -1437,6 +1460,7 @@ footer{
 	.post_cover span {
 	    font-size: 120px;
 	}
+
 }
 
 @media (max-width: 1000px) {
@@ -1522,6 +1546,14 @@ footer{
 	.logo{
 	    float: none;
 	    margin: 30px auto;	
+	}
+
+	.title_container_winners{
+		padding: 60px 50px 0px 50px;
+	}
+
+	.winners_wrapper{
+		padding: 0 50px 50px 50px;
 	}
 }
 
@@ -1689,6 +1721,40 @@ footer{
 	header {
 	    padding: 0px 0 25px 0;
 	}
+
+	.title_container_winners{
+
+		padding: 60px 10px 0px 10px;
+
+		img {
+		    display: block;
+		    margin: 0 auto;
+		    padding: 0;
+		}
+
+		h1{
+			display: block;
+		    text-align: center;
+		    padding: 30px 0 0 0;
+		    top: 0;
+		}
+	}
+
+	.winners_wrapper {
+
+		padding: 0 10px 50px 10px;
+
+		ul {
+
+			padding-top: 30px;
+			text-align: center;
+
+			h4 {
+    			padding: 0 0 10px 0;
+    			font-size: 18px;
+			}
+		}
+	}
 }
 
 @media (max-width: 700px) {
@@ -1757,6 +1823,15 @@ footer{
 	    font-size: 60px;
 	}
 
+	.winners_wrapper {
+
+		ul {
+
+			h4 {
+    			font-size: 16px;
+			}
+		}
+	}
 }
 
 @media (max-width: 550px) {
@@ -1793,6 +1868,16 @@ footer{
 
 	.post_cover span {
 	    font-size: 50px;
+	}
+
+	.winners_wrapper {
+
+		ul {
+
+			h4 {
+    			font-size: 14px;
+			}
+		}
 	}
 }
 

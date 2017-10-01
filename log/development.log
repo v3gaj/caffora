@@ -27668,3 +27668,429 @@ Processing by IndexController#home as HTML
 Completed 200 OK in 331ms (Views: 309.8ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/winners" for 127.0.0.1 at 2017-09-30 10:53:09 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (2105.4ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2471ms (Views: 2416.8ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-09-30 11:00:33 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (394.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 842ms (Views: 788.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-09-30 11:00:58 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 265ms (Views: 244.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-09-30 11:02:30 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2344ms (Views: 2318.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-09-30 11:06:31 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 248ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-09-30 11:36:53 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 268ms (Views: 247.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:02:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (39.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (27907.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 29737ms (Views: 29574.1ms | ActiveRecord: 102.2ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:04:04 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1039ms (Views: 1017.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:05:19 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1139ms (Views: 1115.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:08:00 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 946ms (Views: 925.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:08:15 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 995ms (Views: 973.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:09:10 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 905ms (Views: 884.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:09:42 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 262ms (Views: 243.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:10:45 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (45.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1141ms (Views: 1119.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:11:30 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 951ms (Views: 931.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:12:05 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 268ms (Views: 248.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:12:47 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 965ms (Views: 942.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:13:06 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1190ms (Views: 1166.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:13:46 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 958ms (Views: 935.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:14:32 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 931ms (Views: 908.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:18:38 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 910ms (Views: 890.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:19:25 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (39.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1400ms (Views: 1333.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:21:37 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1025ms (Views: 1006.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:22:22 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1112ms (Views: 1093.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:22:27 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 978ms (Views: 959.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:23:07 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1057ms (Views: 1033.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:25:20 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 999ms (Views: 980.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:26:03 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1028ms (Views: 1008.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:26:58 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 910ms (Views: 892.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:29:20 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1074ms (Views: 1055.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:31:53 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1180ms (Views: 1160.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:32:31 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 905ms (Views: 885.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:32:50 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1254ms (Views: 1235.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:33:20 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 959ms (Views: 940.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:35:29 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 595ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "		overflow: ": expected expression (e.g. 1px, bold), was ";"):
+    3:   <head>
+    4:     <%= display_meta_tags site: "Caffora" %>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:     <meta name="viewport" content="width=device-width, initial-scale=1">
+    9:     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  
+app/assets/stylesheets/application.scss:1729
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___137153573_104275032'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1638.3ms)
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:35:47 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 934ms (Views: 914.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:36:28 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 942ms (Views: 924.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:36:43 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 880ms (Views: 862.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:37:09 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1003ms (Views: 985.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:37:25 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1224ms (Views: 1204.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:37:41 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1031ms (Views: 1005.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:38:51 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1081ms (Views: 1063.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:39:43 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 933ms (Views: 914.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:39:52 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 936ms (Views: 917.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:40:24 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1011ms (Views: 992.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:42:11 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 883ms (Views: 863.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gallery" for 127.0.0.1 at 2017-10-01 17:42:40 -0600
+Processing by IndexController#gallery as HTML
+  Rendering index/gallery.html.erb within layouts/application
+  Rendering collections/index.html.erb
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT `collections`.* FROM `collections` INNER JOIN `posts` ON `posts`.`id` = `collections`.`post_id` WHERE (posts.release_date <= '2017-10-01') ORDER BY posts.release_date desc[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered collections/_table.html.erb (284.8ms)
+  Rendered collections/index.html.erb (304.8ms)
+  Rendered index/gallery.html.erb within layouts/application (339.8ms)
+Completed 200 OK in 619ms (Views: 514.4ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:43:17 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1073ms (Views: 1056.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:46:06 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 244ms (Views: 225.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/winners" for 127.0.0.1 at 2017-10-01 17:46:25 -0600
+Processing by IndexController#winners as HTML
+  Rendering index/winners.html.erb within layouts/application
+  Rendered index/winners.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1067ms (Views: 1048.3ms | ActiveRecord: 1.0ms)
+
+
