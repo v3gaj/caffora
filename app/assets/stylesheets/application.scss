@@ -467,9 +467,9 @@ header{
 
 .title_container{
 	padding: 100px 0 40px 0;
-	margin-left: 13%;
-    margin-right: 13%;
-    width: 74%;
+	margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 
 	h1{
 		padding-bottom: 40px;
@@ -486,7 +486,7 @@ header{
 	font-family: Playfair Display;
     font-weight: 400;
     font-style: italic;
-    font-size: 20px;
+    font-size: 25px;
     color: #212121;
     padding: 0 100px 20px 100px;
 }
@@ -1056,7 +1056,7 @@ header{
 	    	line-height: 24px;
 		    letter-spacing: .5px;
 		    color: #888;
-		    font-size: 14px;
+		    font-size: 20px;
 		    font-family: 'Playfair Display';
     		font-weight: 400;
     		font-style: italic;
@@ -1155,6 +1155,10 @@ footer{
 		line-height: 24px;
     	color: #fff;
     	padding-bottom: 40px;
+
+    	a{
+    		color: #fff;
+    	}
 	}
 
 	p{
@@ -1194,6 +1198,10 @@ footer{
 	    font-family: Playfair Display;
 	    font-weight: 400;
 	    font-style: italic;
+
+	    a{
+	    	color: #212121;
+	    }
 	}
 }
 
@@ -1702,6 +1710,7 @@ footer{
 
 	.subtitle_container{
 		padding: 0;
+		font-size: 18px;
 	}
 
 	.about_container{
