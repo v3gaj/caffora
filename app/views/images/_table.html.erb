@@ -1,15 +1,24 @@
 <div class="image_grid">    
-    <div class="image_container fade">
-        <% @collection.images.each do |image| %>
-            <div class="image">
-                <div><%= image_tag image.content.url(:large) %></div>
+    <div class="cms-grid-wraper cms-grid-masonry shuffle-grid-masonry">
+        <div class="row cms-grid cms-grid-masonry">
+            <% @collection.images.each do |image| %>
+                <div class="cms-grid-item-masonry  cms-grid-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="cms-grid-content overlay_wrap">
+                        <%= image_tag image.content.url(:large) %>
+                        <div class="overlay_collection">
+                            <div class="overlay_content">
+                                <a class="icon circle prettyphoto" href="<%= image.content.url(:large)%>" data-rel="prettyPhoto[rel-cms-grid]"><i class="fa fa-hand-pointer-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <% if user_signed_in? && current_user.role ==="admin" %>
                     <div class="image_links">
                         <%= link_to 'Destroy', [@collection, image], method: :delete, data: { confirm: 'Are you sure?' }, class: "image_delete" %>
                     </div>    
-                <%end%>      
-            </div>
-        <% end %>
+                <%end%>
+            <% end %>
+        </div>
     </div>
     <% if user_signed_in? && current_user.role ==="admin" %>
         <div class="image_new">

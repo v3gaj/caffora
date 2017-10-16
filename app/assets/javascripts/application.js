@@ -11,12 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require turbolinks
 //= require jquery.slick
 //= require home
-//= require turbolinks
-//= require_tree .
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require modernizr.min
+//= require_tree .
 
 
 function menu() {
@@ -62,3 +63,21 @@ window.addEventListener("turbolinks:load",function(event){
 		}
 	}
 });
+
+
+jQuery(document).ready(function($) {
+  "use strict";
+  /* pretty photo */
+  $(document).ready(function(){
+    $("a[data-rel^='prettyPhoto']").prettyPhoto();
+    $("a.prettyphoto").prettyPhoto();
+    $("a[data-rel^='prettyPhoto']").prettyPhoto({hook:"data-rel",social_tools:!1,theme:"pp_default",horizontal_padding:20,opacity:.8,deeplinking:!1});
+   })
+});
+
+$(document).on('turbolinks:load', function() {
+  $('.open_collection').on('click', function(event) {
+    window.location.reload();
+  });
+})
+

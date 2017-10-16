@@ -15,50 +15,50 @@
   </head>
 
   <body>
-  <header>
-  	<div class="header_wrapper">
-  		<%= link_to "", root_path, class: 'logo' %>
-      <div id="menu_mobile"  onclick="showMenu()"><i class="fa fa-bars"></i></div>		
-	  	<nav id="menu_classic">
-				<ul>
-					<li><%= active_link_to "Inicio", root_path, active: :exclusive %></li>
-					<li><%= active_link_to "Blog", blog_path, active: :inclusive %></li>
-          <li><%= active_link_to "Galeria", gallery_path, active: :inclusive %></li>
-          <li><%= active_link_to "Caffora", about_path, active: :inclusive %></li>
-          <li><%= active_link_to "Contacto", contact_path, active: :inclusive %></li>
-	        <% if user_signed_in? %>
-	          <li><%= active_link_to destroy_user_session_path, method: :delete do %><i class="fa fa-sign-out" aria-hidden="true"></i><% end %></li>
-	        <%else%>  
-	          <li><%= active_link_to new_user_session_path do %><i class="fa fa-sign-in" aria-hidden="true"></i><% end %></li>
-	        <%end%>
-	        <% if user_signed_in? && current_user.role ==="admin" %>
-	        	<li><%= active_link_to "Crear Cuenta", new_user_registration_path %></li>
-	        <%end%>	
-				</ul>
-			</nav>
-		</div>
-  </header>
-  <div class="containerTwo">
-  	<%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  </div>
-  <footer>
-    <div class="footer_social">
-      <a href="https://www.facebook.com/caffora/" target="_blank" class="transitionOne">
-        <i class="fa fa-facebook"></i>
-      </a>
-      <a href="https://www.instagram.com/cafforablog/" target="_blank" class="transitionOne">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a href="https://www.youtube.com/channel/UCHksw5TqiCyqZV26e9zgycQ" target="_blank" class="transitionOne">
-        <i class="fa fa-youtube-play"></i>
-      </a>
+    <header>
+    	<div class="header_wrapper">
+    		<%= link_to "", root_path, class: 'logo' %>
+        <div id="menu_mobile"  onclick="showMenu()"><i class="fa fa-bars"></i></div>		
+  	  	<nav id="menu_classic">
+  				<ul>
+  					<li><%= active_link_to "Inicio", root_path, active: :exclusive %></li>
+  					<li><%= active_link_to "Blog", blog_path, active: :inclusive %></li>
+            <li><%= active_link_to "Galeria", gallery_path, active: :inclusive %></li>
+            <li><%= active_link_to "Caffora", about_path, active: :inclusive %></li>
+            <li><%= active_link_to "Contacto", contact_path, active: :inclusive %></li>
+  	        <% if user_signed_in? %>
+  	          <li><%= active_link_to destroy_user_session_path, method: :delete do %><i class="fa fa-sign-out" aria-hidden="true"></i><% end %></li>
+  	        <%else%>  
+  	          <li><%= active_link_to new_user_session_path do %><i class="fa fa-sign-in" aria-hidden="true"></i><% end %></li>
+  	        <%end%>
+  	        <% if user_signed_in? && current_user.role ==="admin" %>
+  	        	<li><%= active_link_to "Crear Cuenta", new_user_registration_path %></li>
+  	        <%end%>	
+  				</ul>
+  			</nav>
+  		</div>
+    </header>
+    <div class="containerTwo">
+    	<%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </div>
-    <div class="footer_info">
-      <div>Heredia, Costa Rica / (506) 8814 3107 / <a href="mailto:info@caffora.cafe">info@caffora.cafe</a></div>
-      <p>Created by BackyardLinks © 2017 All Rights Reserved</p>
-    </div>
-  </footer>
+    <footer>
+      <div class="footer_social">
+        <a href="https://www.facebook.com/caffora/" target="_blank" class="transitionOne">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/cafforablog/" target="_blank" class="transitionOne">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCHksw5TqiCyqZV26e9zgycQ" target="_blank" class="transitionOne">
+          <i class="fa fa-youtube-play"></i>
+        </a>
+      </div>
+      <div class="footer_info">
+        <div>Heredia, Costa Rica / (506) 8814 3107 / <a href="mailto:info@caffora.cafe">info@caffora.cafe</a></div>
+        <p>Created by BackyardLinks © 2017 All Rights Reserved</p>
+      </div>
+    </footer>
   </body>
 </html>
