@@ -774,7 +774,7 @@ header{
 }
 
 .post_title{
-	padding: 60px 0;
+	padding: 60px 0 40px 0;
 
 	p{
 		font-family: 'Playfair Display';
@@ -788,6 +788,27 @@ header{
 
 	span{
 		font-size: 17px;
+	}
+
+	a{
+		color: #fff;
+		background-color: #bbbbbb;
+		width: 45px;
+    	height: 45px;
+    	line-height: 45px;
+    	margin-top: 20px;
+    	display: inline-block;
+    	text-align: center;
+		-webkit-border-radius: 50%;
+	    -khtml-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    -ms-border-radius: 50%;
+	    -o-border-radius: 50%;
+	    border-radius: 50%;
+
+	    &:hover{
+			background-color: #b46d70;
+	    }
 	}
 }
 

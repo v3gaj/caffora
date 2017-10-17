@@ -9,7 +9,8 @@
 	<div class="post_title">
 		<h1><%= title @post.title %></h1>
 		<p><%= @post.release_date.to_formatted_s(:long) %></p>
-		<p><span>Escrito por: <%= @post.author %></span><p>
+		<p><span>Escrito por: <%= @post.author %></span></p>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=" class="transitionOne"><i class="fa fa-facebook"></i></a>
 	</div>
 
 	<div class="content_table"><%= render "contents/table" %></div>
