@@ -3,11 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery(document).on 'turbolinks:load', ->
-  $('.scroller').slick({
+  $('.scroller').not('.slick-initialized').slick({
   	autoplay: true, dots: false, pauseOnHover: false, pauseOnFocus: false
   })
 
-  $('.center').slick({
+  $('.center').not('.slick-initialized').slick({
 	  centerMode: true,
 	  centerPadding: '100px',
 	  slidesToShow: 1,

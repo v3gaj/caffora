@@ -36,10 +36,10 @@ var show = false;
 function showMenu() {
 
 	if ($('#menu_classic').css("display") == 'none'){
-		$('#menu_classic').removeClass("noDisplay");
+		$('#menu_classic').addClass("display");
     	show = true;
     }else{
-    	$('#menu_classic').addClass("noDisplay");
+    	$('#menu_classic').removeClass("display");
     	show = false;
     }	
 }
@@ -81,3 +81,6 @@ $(document).on('turbolinks:load', function() {
   });
 })
 
+document.addEventListener("page:restore", function() {
+  app.init();
+});

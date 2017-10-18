@@ -295,7 +295,7 @@ h6{
 }
 
 .line{
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #E0E0E0;
 	position: relative;
     top: 53px;
     width: 100%;
@@ -324,7 +324,7 @@ h6{
 }
 
 .noDisplay{
-	display: none !important;
+	display: none;
 }
 
 
@@ -379,10 +379,6 @@ header{
 			    letter-spacing: 1px;
 			    transition: all .4s linear 0s;
 
-			    i{
-				   	font-size: 20px !important;
-				}
-
 			    &:hover{
 			    	color: #9d132c;
 			    	text-decoration: none;
@@ -420,6 +416,21 @@ header{
 
 #menu_classic{
 	overflow: auto;
+}
+
+.header_icon{
+
+	border-bottom: none !important;
+	position: relative;
+	top: -9px;
+
+	&:after{
+		border-bottom: none;
+	}
+
+	i{
+		font-size: 30px !important;
+	}
 }
 
 
