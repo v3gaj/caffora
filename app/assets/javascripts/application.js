@@ -40,6 +40,7 @@ function showMenu() {
     	show = true;
     }else{
     	$('#menu_classic').removeClass("display");
+      $('#menu_classic').addClass("noDisplay");
     	show = false;
     }	
 }
@@ -57,9 +58,9 @@ $( window ).resize(function() {
 window.addEventListener("turbolinks:load",function(event){
 	if (window.innerWidth < 801 ) {
 		if (show === true) {
-			$('#menu_classic').removeClass("noDisplay");
+			$('#menu_classic').addClass("display");
 		}else{
-			$('#menu_classic').addClass("noDisplay");
+			$('#menu_classic').removeClass("display");
 		}
 	}
 });
