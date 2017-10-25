@@ -174,8 +174,7 @@ function ajaxExec(){
             url: url,
             async: true,
             strURl: "",
-            username: "",
-            password: "",
+            cache: false,
             success: function(data){
 
                 if (url === "/") {
@@ -208,8 +207,7 @@ function ajaxBack(){
             url: url,
             async: true,
             strURl: "",
-            username: "",
-            password: "",
+            cache: false,
             success: function(data){
                 if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
                     $('#Content').html($(data).find('#Content').html());
@@ -226,6 +224,8 @@ function ajaxBack(){
                 $("html, body").animate({ scrollTop: 0 }, "slow");
             }
         });
+        e.stopImmediatePropagation();
+        return false;
     }
 }
 
