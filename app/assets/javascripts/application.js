@@ -63,11 +63,11 @@ function isActive(){
       var href = $(this).attr("href");
       $(this).removeClass('active');
       if (href === "/"){
-        if (path.substring(19, path.length) === href) {
+        if (path.substring(19, path.length) === href || path.substring(21, path.length) === href) {
           $(this).addClass('active');
         }
       }else{
-        if (path.substring(19, href.length + 19) === href) {
+        if (path.substring(19, href.length + 19) === href || path.substring(21, href.length + 21) === href) {
           $(this).addClass('active');
         }
       }
@@ -211,7 +211,7 @@ function ajaxBack(){
             username: "",
             password: "",
             success: function(data){
-                if (url === "http://localhost:3000/") {
+                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
                     $('#Content').html($(data).find('#Content').html());
                 }else{
                     $("#Content").html(data);
