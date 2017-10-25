@@ -13,6 +13,14 @@ class CollectionsController < ApplicationController
   # GET /collections/1.json
   def show
     @collection.images = @collection.images.all
+
+    if request.xhr? # checks whether its an ajax call
+      render :layout => false
+    else
+      respond_to do |format|
+        format.html {  }
+      end
+    end
   end
 
   # GET /collections/new

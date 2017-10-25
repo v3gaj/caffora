@@ -21,6 +21,14 @@ class PostsController < ApplicationController
         break
       end
     end
+
+    if request.xhr? # checks whether its an ajax call
+      render :layout => false
+    else
+      respond_to do |format|
+        format.html {  }
+      end
+    end
   end
 
   # GET /posts/new

@@ -1,4 +1,4 @@
 $('.post_delete').bind('ajax:success', function() {
 	$(".post_row").remove();
-	$(this).closest('.post_container').fadeOut();
+	$(this).closest('.post_container').slideUp(1000);
 });

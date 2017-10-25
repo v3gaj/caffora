@@ -4,5 +4,6 @@ $(function(){
   	$(".post_form").hide();
   	$(".post_row").remove();
    	$(this).closest('div').after('<div class="post_row animationOne"><%= j (render "form") %></div>');
+   	$(".post_row").slideDown(500);
   });
 });

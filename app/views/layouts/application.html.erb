@@ -17,19 +17,17 @@
   <body>
     <header>
     	<div class="header_wrapper">
-    		<%= link_to "", root_path, class: 'logo' %>
+    		<%= link_to "", root_path, class: 'logo ajaxLink', remote: :true %>
         <div id="menu_mobile"  onclick="showMenu()"><i class="fa fa-bars"></i></div>		
   	  	<nav id="menu_classic">
-  				<ul>
-  					<li><%= active_link_to "Inicio", root_path, active: :exclusive %></li>
-  					<li><%= active_link_to "Blog", blog_path, active: :inclusive %></li>
-            <li><%= active_link_to "Galeria", gallery_path, active: :inclusive %></li>
-            <li><%= active_link_to "Caffora", about_path, active: :inclusive %></li>
-            <li><%= active_link_to "Contacto", contact_path, active: :inclusive %></li>
-            <li><%= active_link_to winners_path, class: "header_icon"  do %><i class="fa fa-trophy" aria-hidden="true"></i><% end %></li>
-
-
-            <% if false %>
+  				<ul >
+  					<li> <%= active_link_to "Inicio", root_path, active: :exclusive, remote: :true, class: "ajaxLink" %></li>
+  					<li> <%= active_link_to "Blog", blog_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
+            <li> <%= active_link_to "Galeria", gallery_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
+            <li> <%= active_link_to "Caffora", about_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
+            <li> <%= active_link_to "Contacto", contact_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
+            <li> <%= active_link_to winners_path, remote: :true, class: "header_icon ajaxLink"  do %><i class="fa fa-trophy" aria-hidden="true"></i><% end %></li>
+              <% if false %>
     	        <% if user_signed_in? %>
     	          <li><%= active_link_to destroy_user_session_path, class: "header_icon", method: :delete do %><i class="fa fa-sign-out" aria-hidden="true"></i><% end %></li>
     	        <%else%>  
@@ -38,15 +36,15 @@
     	        <% if user_signed_in? && current_user.role ==="admin" %>
     	        	<li><%= active_link_to "Crear Cuenta", new_user_registration_path, class: "header_icon" %></li>
     	        <%end%>
-            <% end %>
-
-            
+              <% end %>
   				</ul>
   			</nav>
   		</div>
     </header>
     <div class="containerTwo">
-    	<%= yield %>
+      <div id="Content">
+    	 <%= yield %>
+      </div> 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>

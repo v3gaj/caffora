@@ -7,7 +7,7 @@
 	  			<h5><%= slider.title %></h5>
 	  			<span><%= slider.subtitle %></span>
 	  			<% if slider.url.present? %>
-	  				<%= link_to "Más Información", slider.url %>
+	  				<%= link_to "Más Información", slider.url, remote: false %>
 	  			<%end%>	
 	  		</div>
 	  		<%= image_tag slider.image.url(:large) %>

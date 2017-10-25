@@ -2,34 +2,3 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery(document).on 'turbolinks:load', ->
-  $('.scroller').not('.slick-initialized').slick({
-  	autoplay: true, dots: false, pauseOnHover: false, pauseOnFocus: false
-  })
-
-  $('.center').not('.slick-initialized').slick({
-	  centerMode: true,
-	  centerPadding: '100px',
-	  slidesToShow: 1,
-	  autoplay: true,
-	  responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        arrows: true,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 3
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        arrows: false,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
-	});

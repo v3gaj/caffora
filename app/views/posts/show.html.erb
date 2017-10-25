@@ -7,7 +7,7 @@
 <div class="post_wrapper">
 <meta name="title" content="<%= @post.title %>">
 	<div class="post_title">
-		<h1><%= title @post.title %></h1>
+		<h1 class="meta_title"><%= title @post.title %></h1>
 		<p><%= @post.release_date.to_formatted_s(:long) %></p>
 		<p><span>Escrito por: <%= @post.author %></span></p>
 		<a href="https://www.facebook.com/sharer/sharer.php?u=http://caffora.cafe/blog/<%= @post.id %>" class="transitionOne" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -30,7 +30,7 @@
 
 		<div class="image_form"></div>
 
-		<%= link_to 'Ir al Blog', blog_path, class: "link" %>
+		<%= link_to 'Ir al Blog', blog_path, class: "link ajaxLink", remote: :true %>
 
 		<!-- 	<%= link_to 'Edit', edit_post_path(@post) %> -->
 	</div>

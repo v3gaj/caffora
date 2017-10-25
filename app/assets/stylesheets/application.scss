@@ -40,6 +40,7 @@ time, mark, audio, video {
 body{
 	max-width: 1600px;
 	margin: 0 auto;
+	padding-top: 120px;
 }
 
 article,aside,details,figcaption,figure,
@@ -327,6 +328,13 @@ h6{
 	display: none;
 }
 
+#Content{
+	-webkit-transition: all 1000ms linear;
+    -moz-transition: all 1000ms linear;
+    -o-transition: all 1000ms linear;
+    -ms-transition: all 1000ms linear;
+    transition: all 1000ms linear;
+}
 
 
 /***********************HEADER***********************/
@@ -352,6 +360,13 @@ header{
 	display: block;
 	overflow: auto;
 	text-align: center;
+	position: fixed;
+    z-index: 500;
+    background: rgba(255,255,255,.97)!important;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
+    top: 0;
+    left: 0;
+    right: 0;
 
 	img{
 		float: left;
@@ -409,6 +424,7 @@ header{
 			.active{
 				color: #9d132c;
 				border-bottom: 2px solid #9d132c;
+				transition: none;
 			}
 		}
 	}
@@ -1615,7 +1631,13 @@ footer{
 
 @media (max-width: 1000px) {
     
+	body{
+		padding-top: 0;
+	}
+
 	header{
+
+		position: relative;
 
 		img{
 			display: block;
@@ -2043,7 +2065,14 @@ footer{
 
 
 
+.post_row,
+.post_form{
+	display: none;
+}
 
+.post_container{
+	transition: transform 250ms ease-out, opacity 250ms ease-out;
+}
 
 
 

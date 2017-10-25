@@ -6,7 +6,7 @@
                     <%= image_tag post.cover.url(:thumb) %>
                 </div>
                 <h4>
-                    <%= link_to post.title, postlink_path(post), class: "transitionOne open_collection" %>
+                    <%= link_to post.title, postlink_path(post), class: "transitionOne ajaxLink", remote: :true %>
                 </h4>
                 <div class="post_details">
                     <span><%= post.release_date.to_formatted_s(:long) %></span>
@@ -14,11 +14,11 @@
                     <span><%= post.subtitle %></span>
                 </div>
                 <div class="post_view">
-                    <%= link_to "Ver post →", postlink_path(post), class: "transitionOne open_collection" %>
+                    <%= link_to "Ver post →", postlink_path(post), class: "transitionOne ajaxLink", remote: :true %>
                 </div>
                 <% if user_signed_in? && current_user.role ==="admin" %>
                     <div class="post_links transitionOne">
-                        <%= link_to 'Edit', edit_post_path(post), :remote => true, class: "post_edit transitionOne" %>
+                        <%= link_to 'Edit', edit_post_path(post), :remote => true, class: "post_edit transitionOne", rel: :external %>
                         <span>/</span>
                         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "post_delete transitionOne" %>
                     </div>

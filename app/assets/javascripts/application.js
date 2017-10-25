@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+  // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require turbolinks
+
 //= require jquery.slick
 //= require home
 //= require jquery_ujs
@@ -19,6 +20,13 @@
 //= require modernizr.min
 //= require_tree .
 
+$(document).on('turbolinks:load', function() {
+
+    slickSlider();
+    ajaxExec();
+    ajaxBack();
+
+});
 
 function menu() {
 
@@ -45,8 +53,31 @@ function showMenu() {
     }	
 }
 
+function isActive(){
+    
+    var path = window.location.href;
+
+
+    $("#menu_classic a").each(function(){
+
+      var href = $(this).attr("href");
+      $(this).removeClass('active');
+      if (href === "/"){
+        if (path.substring(21, path.length) === href) {
+          $(this).addClass('active');
+        }
+      }else{
+        if (path.substring(21, href.length + 21) === href) {
+          $(this).addClass('active');
+        }
+      }
+    }); 
+};
+
+
+
 $(document).ready(function() {
-  	menu();
+    menu();
 });
 
 
@@ -76,12 +107,134 @@ jQuery(document).ready(function($) {
    })
 });
 
-$(document).on('turbolinks:load', function() {
-  $('.open_collection').on('click', function(event) {
-    window.location.reload();
-  });
-})
+// $(document).on('turbolinks:load', function() {
+//   $('.open_collection').on('click', function(event) {
+//     window.location.reload();
+//   });
+// })
 
-document.addEventListener("page:restore", function() {
-  app.init();
+//document.addEventListener("page:restore", function() {
+//  app.init();
+//});
+
+jQuery(document).on('turbolinks:load', function () {
+  slickSlider();
+
+  $(document).ready(function(){
+    $("a[data-rel^='prettyPhoto']").prettyPhoto();
+    $("a.prettyphoto").prettyPhoto();
+    $("a[data-rel^='prettyPhoto']").prettyPhoto({hook:"data-rel",social_tools:!1,theme:"pp_default",horizontal_padding:20,opacity:.8,deeplinking:!1});
+   })
 });
+
+function slickSlider() {
+  $('.scroller').not('.slick-initialized').slick({
+    autoplay: true, dots: false, pauseOnHover: false, pauseOnFocus: false
+  })
+
+  $('.center').not('.slick-initialized').slick({
+    centerMode: true,
+    centerPadding: '100px',
+    slidesToShow: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+}
+
+function ajaxExec(){
+    $(document).on('click', '.ajaxLink', function(event, data, status, xhr){
+        event.preventDefault();
+        var url = $(this).attr('href');
+
+        $('#Content').css({ opacity: "0"});
+        $('.ajaxLink').bind('click', false);
+
+
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            async: true,
+            strURl: "",
+            username: "",
+            password: "",
+            success: function(data){
+
+                if (url === "/") {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
+                }
+                window.history.pushState("","", url);
+
+                metaTitle();
+                isActive();
+                slickSlider();
+
+                $('#Content').css({ opacity: "1"});
+                $('.ajaxLink').unbind('click', false);
+                $("html, body").animate({ scrollTop: 0 }, "slow");               
+            }
+        });
+    }); 
+}
+
+function ajaxBack(){
+    window.onpopstate = function (e) {
+        $('#Content').css({ opacity: "0"});
+        $('.ajaxLink').bind('click', false);
+
+        var url = window.location.href;
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            async: true,
+            strURl: "",
+            username: "",
+            password: "",
+            success: function(data){
+                if (url === "/") {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
+                }
+
+                metaTitle();
+                isActive();
+                slickSlider();
+
+                $('#Content').css({ opacity: "1"});
+                $('.ajaxLink').unbind('click', false);
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+        });
+    }
+}
+
+//Funcion para asignar Meta title
+
+function metaTitle(){
+    var title = "";
+    if ( $(".meta_title").text() || undefined) {
+        title = (' | ' + $(".meta_title").text());
+    }
+    $('title').html('Caffora' + title );     
+}
