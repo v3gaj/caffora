@@ -192,13 +192,13 @@ function ajaxExec(){
                 $('.ajaxLink').unbind('click', false);
                 $("html, body").animate({ scrollTop: 0 }, "slow");               
             }
-        });
+        }).delay(1000);
     }); 
 }
 
 function ajaxBack(){
     window.onpopstate = function (e) {
-        $('#Content').css({ opacity: "0"});
+        $('#Content').css({ opacity: "0"}).delay(1000);
         $('.ajaxLink').bind('click', false);
 
         var url = window.location.href;
@@ -219,7 +219,7 @@ function ajaxBack(){
                 isActive();
                 slickSlider();
 
-                $('#Content').css({ opacity: "1"});
+                $('#Content').css({ opacity: "1"}).delay(1000);
                 $('.ajaxLink').unbind('click', false);
                 $("html, body").animate({ scrollTop: 0 }, "slow");
             }
