@@ -164,6 +164,7 @@ function ajaxExec(){
     $(document).on('click', '.ajaxLink', function(event, data, status, xhr){
         event.preventDefault();
         var url = $(this).attr('href');
+        var delay = 700;
 
         $('#Content').css({ opacity: "0"});
         $('.ajaxLink').bind('click', false);
@@ -176,23 +177,24 @@ function ajaxExec(){
             strURl: "",
             cache: false,
             success: function(data){
+                setTimeout(function() {
+                    if (url === "/") {
+                        $('#Content').html($(data).find('#Content').html());
+                    }else{
+                        $("#Content").html(data);
+                    }
+                    window.history.pushState("","", url);
 
-                if (url === "/") {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
-                }
-                window.history.pushState("","", url);
+                    metaTitle();
+                    isActive();
+                    slickSlider();
 
-                metaTitle();
-                isActive();
-                slickSlider();
-
-                $('#Content').css({ opacity: "1"});
-                $('.ajaxLink').unbind('click', false);
-                $("html, body").animate({ scrollTop: 0 }, "slow");               
+                    $('#Content').css({ opacity: "1"});
+                    $('.ajaxLink').unbind('click', false);
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+                }, delay);               
             }
-        }).delay(1000);
+        });
     }); 
 }
 
