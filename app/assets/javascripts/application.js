@@ -220,7 +220,7 @@ function ajaxBack(){
                     metaTitle();
                     isActive();
                     slickSlider();
-                    prettyPhoto();
+                    prettyPhot();
 
                     $('#Content').css({ opacity: "1"}).delay(1000);
                     $('.ajaxLink').unbind('click', false);
