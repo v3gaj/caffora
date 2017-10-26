@@ -8,13 +8,6 @@ Rails.application.routes.draw do
   match "contact", to: "index#contact", :via => 'get'
   match "winners", to: "index#winners", :via => 'get'
 
-  match "home", to: "index#home", :via => 'post'
-  match "blog", to: "index#blog", :via => 'post'
-  match "gallery", to: "index#gallery", :via => 'post'
-  match "about", to: "index#about", :via => 'post'
-  match "contact", to: "index#contact", :via => 'post'
-  match "winners", to: "index#winners", :via => 'post'
-  
   get 'blog/:id', to: 'posts#show', as: 'postlink'
   get 'gallery/:id', to: 'collections#show', as: 'collectionlink'
   
