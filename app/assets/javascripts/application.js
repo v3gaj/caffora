@@ -167,27 +167,24 @@ function ajaxExec(){
             cache: false,
             success: function(data){
 
-                
-
-                if (url === "/") {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
-                }
-                window.history.pushState("","", url);
-
-                metaTitle();
-                isActive();
-                slickSlider();
-                prettyPhot();
-
                 setTimeout(function() {
+
+                    if (url === "/") {
+                        $('#Content').html($(data).find('#Content').html());
+                    }else{
+                        $("#Content").html(data);
+                    }
+                    window.history.pushState("","", url);
 
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
                     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-                }, 700);  
+                }, 700); 
+
+                metaTitle();
+                isActive();
+                slickSlider();
             }
         });
         event.stopImmediatePropagation();
@@ -212,23 +209,24 @@ function ajaxBack(){
             strURl: "",
             cache: false,
             success: function(data){
-                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
-                }
-
-                metaTitle();
-                isActive();
-                slickSlider();
 
                 setTimeout(function() {
+
+                    if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+                        $('#Content').html($(data).find('#Content').html());
+                    }else{
+                        $("#Content").html(data);
+                    }
 
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
                     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-                }, 700);  
+                }, 700);
+
+                metaTitle();
+                isActive();
+                slickSlider();  
             }
         });
         event.stopImmediatePropagation();
