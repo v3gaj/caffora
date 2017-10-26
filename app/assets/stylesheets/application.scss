@@ -41,6 +41,7 @@ body{
 	max-width: 1600px;
 	margin: 0 auto;
 	padding-top: 120px;
+	opacity: 0;
 }
 
 article,aside,details,figcaption,figure,
@@ -328,7 +329,7 @@ h6{
 	display: none;
 }
 
-#Content{
+.animation_partial{
 	-webkit-transition: all 700ms linear;
     -moz-transition: all 700ms linear;
     -o-transition: all 700ms linear;

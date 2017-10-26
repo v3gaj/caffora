@@ -22,9 +22,21 @@
 
 $(document).on('turbolinks:load', function() {
 
+    $(document).ready(function(){
+        $("a[data-rel^='prettyPhoto']").prettyPhoto();
+        $("a.prettyphoto").prettyPhoto();
+        $("a[data-rel^='prettyPhoto']").prettyPhoto({hook:"data-rel",social_tools:!1,theme:"pp_default",horizontal_padding:20,opacity:.8,deeplinking:!1});
+    })
+
     slickSlider();
     ajaxExec();
     ajaxBack();
+
+    setTimeout(function() {
+        $('body').css({ opacity: "1"});
+    }, 1500);   
+
+    
 
 });
 
@@ -52,6 +64,8 @@ function showMenu() {
     	show = false;
     }	
 }
+
+// Funcion mostrar elemento del menu seleccionado con Ajax
 
 function isActive(){
     
@@ -107,25 +121,7 @@ jQuery(document).ready(function($) {
    })
 });
 
-// $(document).on('turbolinks:load', function() {
-//   $('.open_collection').on('click', function(event) {
-//     window.location.reload();
-//   });
-// })
-
-//document.addEventListener("page:restore", function() {
-//  app.init();
-//});
-
-jQuery(document).on('turbolinks:load', function () {
-  slickSlider();
-
-  $(document).ready(function(){
-    $("a[data-rel^='prettyPhoto']").prettyPhoto();
-    $("a.prettyphoto").prettyPhoto();
-    $("a[data-rel^='prettyPhoto']").prettyPhoto({hook:"data-rel",social_tools:!1,theme:"pp_default",horizontal_padding:20,opacity:.8,deeplinking:!1});
-   })
-});
+// Funcion para ejecutar el slider
 
 function slickSlider() {
   $('.scroller').not('.slick-initialized').slick({
@@ -160,16 +156,18 @@ function slickSlider() {
   });
 }
 
+// Funcion para aplicar ajax
+
 function ajaxExec(){
     $(document).on('click', '.ajaxLink', function(event, data, status, xhr){
         event.preventDefault();
-        var url = $(this).attr('href');
+        
         var delay = 700;
 
         $('#Content').css({ opacity: "0"});
         $('.ajaxLink').bind('click', false);
 
-
+        var url = $(this).attr('href');
         $.ajax({
             dataType: 'html',
             url: url,
@@ -195,11 +193,19 @@ function ajaxExec(){
                 }, delay);               
             }
         });
+        e.stopImmediatePropagation();
+        return false;
     }); 
 }
 
+// Funcion para retroceder en el navegador con ajax
+
 function ajaxBack(){
     window.onpopstate = function (e) {
+        event.preventDefault();
+
+        var delay = 700;
+
         $('#Content').css({ opacity: "0"}).delay(1000);
         $('.ajaxLink').bind('click', false);
 
@@ -211,19 +217,21 @@ function ajaxBack(){
             strURl: "",
             cache: false,
             success: function(data){
-                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
-                }
+                setTimeout(function() {
+                    if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+                        $('#Content').html($(data).find('#Content').html());
+                    }else{
+                        $("#Content").html(data);
+                    }
 
-                metaTitle();
-                isActive();
-                slickSlider();
+                    metaTitle();
+                    isActive();
+                    slickSlider();
 
-                $('#Content').css({ opacity: "1"}).delay(1000);
-                $('.ajaxLink').unbind('click', false);
-                $("html, body").animate({ scrollTop: 0 }, "slow");
+                    $('#Content').css({ opacity: "1"}).delay(1000);
+                    $('.ajaxLink').unbind('click', false);
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+                }, delay);
             }
         });
         e.stopImmediatePropagation();
