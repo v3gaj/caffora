@@ -159,15 +159,14 @@ function ajaxExec(){
         $('.ajaxLink').bind('click', false);
 
         var url = $(this).attr('href');
-        $.ajax({
-            dataType: 'html',
-            url: url,
-            async: true,
-            strURl: "",
-            cache: false,
-            success: function(data){
-
-                setTimeout(function() {
+        setTimeout(function() {
+            $.ajax({
+                dataType: 'html',
+                url: url,
+                async: true,
+                strURl: "",
+                cache: false,
+                success: function(data){
 
                     if (url === "/") {
                         $('#Content').html($(data).find('#Content').html());
@@ -180,13 +179,13 @@ function ajaxExec(){
                     $('.ajaxLink').unbind('click', false);
                     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-                }, 700); 
+                    metaTitle();
+                    isActive();
+                    slickSlider();
+                }
+            });
+        }, 700); 
 
-                metaTitle();
-                isActive();
-                slickSlider();
-            }
-        });
         event.stopImmediatePropagation();
         return false;
     }); 
@@ -202,15 +201,14 @@ function ajaxBack(){
         $('.ajaxLink').bind('click', false);
 
         var url = window.location.href;
-        $.ajax({
-            dataType: 'html',
-            url: url,
-            async: true,
-            strURl: "",
-            cache: false,
-            success: function(data){
-
-                setTimeout(function() {
+        setTimeout(function() {
+            $.ajax({
+                dataType: 'html',
+                url: url,
+                async: true,
+                strURl: "",
+                cache: false,
+                success: function(data){
 
                     if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
                         $('#Content').html($(data).find('#Content').html());
@@ -222,13 +220,13 @@ function ajaxBack(){
                     $('.ajaxLink').unbind('click', false);
                     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-                }, 700);
-
-                metaTitle();
-                isActive();
-                slickSlider();  
-            }
-        });
+                    metaTitle();
+                    isActive();
+                    slickSlider();  
+                }
+            });
+        }, 700);
+         
         event.stopImmediatePropagation();
         return false;
     }
