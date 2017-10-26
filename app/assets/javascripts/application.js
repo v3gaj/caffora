@@ -152,77 +152,80 @@ function slickSlider() {
 // Funcion para aplicar ajax
 
 function ajaxExec(){
-    $(document).on('click', '.ajaxLink', function(event){
-        event.preventDefault();
+    setTimeout(function() {
+        $(document).on('click', '.ajaxLink', function(event){
+            event.preventDefault();
 
-        $('#Content').css({ opacity: "0"});
-        $('.ajaxLink').bind('click', false);
+            $('#Content').css({ opacity: "0"});
+            $('.ajaxLink').bind('click', false);
 
-        var url = $(this).attr('href');
-        $.ajax({
-            dataType: 'html',
-            url: url,
-            async: true,
-            strURl: "",
-            cache: false,
-            success: function(data){
-                if (url === "/") {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
+            var url = $(this).attr('href');
+            $.ajax({
+                dataType: 'html',
+                url: url,
+                async: true,
+                strURl: "",
+                cache: false,
+                success: function(data){
+                    if (url === "/") {
+                        $('#Content').html($(data).find('#Content').html());
+                    }else{
+                        $("#Content").html(data);
+                    }
+                    window.history.pushState("","", url);
+
+                    metaTitle();
+                    isActive();
+                    slickSlider();
+
+                    $('#Content').css({ opacity: "1"});
+                    $('.ajaxLink').unbind('click', false);
+                    $("html, body").animate({ scrollTop: 0 }, "slow");            
                 }
-                window.history.pushState("","", url);
-
-                metaTitle();
-                isActive();
-                slickSlider();
-                prettyPhot();
-
-                $('#Content').css({ opacity: "1"});
-                $('.ajaxLink').unbind('click', false);
-                $("html, body").animate({ scrollTop: 0 }, "slow");            
-            }
+            });
+            event.stopImmediatePropagation();
+            return false;
         });
-        event.stopImmediatePropagation();
-        return false;
-    }); 
+    }, 700);
 }
 
 // // Funcion para retroceder en el navegador con ajax
 
 function ajaxBack(){
-    window.onpopstate = function (event) {
-        event.preventDefault();
+    setTimeout(function() {
+        window.onpopstate = function (event) {
+            event.preventDefault();
 
-        $('#Content').css({ opacity: "0"});
-        $('.ajaxLink').bind('click', false);
+            $('#Content').css({ opacity: "0"});
+            $('.ajaxLink').bind('click', false);
 
-        var url = window.location.href;
-        $.ajax({
-            dataType: 'html',
-            url: url,
-            async: true,
-            strURl: "",
-            cache: false,
-            success: function(data){
-                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
+            var url = window.location.href;
+            $.ajax({
+                dataType: 'html',
+                url: url,
+                async: true,
+                strURl: "",
+                cache: false,
+                success: function(data){
+                    if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+                        $('#Content').html($(data).find('#Content').html());
+                    }else{
+                        $("#Content").html(data);
+                    }
+
+                    metaTitle();
+                    isActive();
+                    slickSlider();
+
+                    $('#Content').css({ opacity: "1"});
+                    $('.ajaxLink').unbind('click', false);
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
                 }
-
-                metaTitle();
-                isActive();
-                slickSlider();
-
-                $('#Content').css({ opacity: "1"});
-                $('.ajaxLink').unbind('click', false);
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-            }
-        });
-        event.stopImmediatePropagation();
-        return false;
-    }
+            });
+            event.stopImmediatePropagation();
+            return false;
+        }
+    }, 700);
 }
 
 //Funcion para asignar Meta title
@@ -234,3 +237,27 @@ function metaTitle(){
     }
     $('title').html('Caffora' + title );     
 }
+
+
+
+
+
+
+
+// setTimeout(function() {
+//     if (url === "/") {
+//         $('#Content').html($(data).find('#Content').html());
+//     }else{
+//         $("#Content").html(data);
+//     }
+//     window.history.pushState("","", url);
+
+//     metaTitle();
+//     isActive();
+//     slickSlider();
+//     prettyPhot();
+
+//     $('#Content').css({ opacity: "1"});
+//     $('.ajaxLink').unbind('click', false);
+//     $("html, body").animate({ scrollTop: 0 }, "slow");
+// }, delay);  
