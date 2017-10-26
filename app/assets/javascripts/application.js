@@ -152,80 +152,88 @@ function slickSlider() {
 // Funcion para aplicar ajax
 
 function ajaxExec(){
-    setTimeout(function() {
-        $(document).on('click', '.ajaxLink', function(event){
-            event.preventDefault();
+    $(document).on('click', '.ajaxLink', function(event){
+        event.preventDefault();
 
-            $('#Content').css({ opacity: "0"});
-            $('.ajaxLink').bind('click', false);
+        $('#Content').css({ opacity: "0"});
+        $('.ajaxLink').bind('click', false);
 
-            var url = $(this).attr('href');
-            $.ajax({
-                dataType: 'html',
-                url: url,
-                async: true,
-                strURl: "",
-                cache: false,
-                success: function(data){
-                    if (url === "/") {
-                        $('#Content').html($(data).find('#Content').html());
-                    }else{
-                        $("#Content").html(data);
-                    }
-                    window.history.pushState("","", url);
+        var url = $(this).attr('href');
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            async: true,
+            strURl: "",
+            cache: false,
+            success: function(data){
 
-                    metaTitle();
-                    isActive();
-                    slickSlider();
+                
+
+                if (url === "/") {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
+                }
+                window.history.pushState("","", url);
+
+                metaTitle();
+                isActive();
+                slickSlider();
+                prettyPhot();
+
+                setTimeout(function() {
 
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
-                    $("html, body").animate({ scrollTop: 0 }, "slow");            
-                }
-            });
-            event.stopImmediatePropagation();
-            return false;
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+
+                }, 700);  
+            }
         });
-    }, 700);
+        event.stopImmediatePropagation();
+        return false;
+    }); 
 }
 
 // // Funcion para retroceder en el navegador con ajax
 
 function ajaxBack(){
-    setTimeout(function() {
-        window.onpopstate = function (event) {
-            event.preventDefault();
+    window.onpopstate = function (event) {
+        event.preventDefault();
 
-            $('#Content').css({ opacity: "0"});
-            $('.ajaxLink').bind('click', false);
+        $('#Content').css({ opacity: "0"});
+        $('.ajaxLink').bind('click', false);
 
-            var url = window.location.href;
-            $.ajax({
-                dataType: 'html',
-                url: url,
-                async: true,
-                strURl: "",
-                cache: false,
-                success: function(data){
-                    if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                        $('#Content').html($(data).find('#Content').html());
-                    }else{
-                        $("#Content").html(data);
-                    }
+        var url = window.location.href;
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            async: true,
+            strURl: "",
+            cache: false,
+            success: function(data){
+                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
+                }
 
-                    metaTitle();
-                    isActive();
-                    slickSlider();
+                metaTitle();
+                isActive();
+                slickSlider();
+
+                setTimeout(function() {
 
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
                     $("html, body").animate({ scrollTop: 0 }, "slow");
-                }
-            });
-            event.stopImmediatePropagation();
-            return false;
-        }
-    }, 700);
+
+                }, 700);  
+            }
+        });
+        event.stopImmediatePropagation();
+        return false;
+    }
 }
 
 //Funcion para asignar Meta title
