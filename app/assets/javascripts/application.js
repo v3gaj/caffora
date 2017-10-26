@@ -193,7 +193,7 @@ function ajaxExec(){
                 }, delay);               
             }
         });
-        e.stopImmediatePropagation();
+        event.stopImmediatePropagation();
         return false;
     }); 
 }
@@ -234,7 +234,7 @@ function ajaxBack(){
                 }, delay);
             }
         });
-        e.stopImmediatePropagation();
+        event.stopImmediatePropagation();
         return false;
     }
 }
