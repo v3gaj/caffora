@@ -152,10 +152,8 @@ function slickSlider() {
 // Funcion para aplicar ajax
 
 function ajaxExec(){
-    $(document).on('click', '.ajaxLink', function(event, data, status, xhr){
+    $(document).on('click', '.ajaxLink', function(event){
         event.preventDefault();
-        
-        var delay = 700;
 
         $('#Content').css({ opacity: "0"});
         $('.ajaxLink').bind('click', false);
@@ -168,22 +166,21 @@ function ajaxExec(){
             strURl: "",
             cache: false,
             success: function(data){
-                setTimeout(function() {
-                    if (url === "/") {
-                        $('#Content').html($(data).find('#Content').html());
-                    }else{
-                        $("#Content").html(data);
-                    }
-                    window.history.pushState("","", url);
+                if (url === "/") {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
+                }
+                window.history.pushState("","", url);
 
-                    metaTitle();
-                    isActive();
-                    slickSlider();
+                metaTitle();
+                isActive();
+                slickSlider();
+                prettyPhot();
 
-                    $('#Content').css({ opacity: "1"});
-                    $('.ajaxLink').unbind('click', false);
-                    $("html, body").animate({ scrollTop: 0 }, "slow");
-                }, delay);               
+                $('#Content').css({ opacity: "1"});
+                $('.ajaxLink').unbind('click', false);
+                $("html, body").animate({ scrollTop: 0 }, "slow");            
             }
         });
         event.stopImmediatePropagation();
@@ -191,15 +188,13 @@ function ajaxExec(){
     }); 
 }
 
-// Funcion para retroceder en el navegador con ajax
+// // Funcion para retroceder en el navegador con ajax
 
 function ajaxBack(){
-    window.onpopstate = function (e) {
+    window.onpopstate = function (event) {
         event.preventDefault();
 
-        var delay = 700;
-
-        $('#Content').css({ opacity: "0"}).delay(1000);
+        $('#Content').css({ opacity: "0"});
         $('.ajaxLink').bind('click', false);
 
         var url = window.location.href;
@@ -210,22 +205,19 @@ function ajaxBack(){
             strURl: "",
             cache: false,
             success: function(data){
-                setTimeout(function() {
-                    if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                        $('#Content').html($(data).find('#Content').html());
-                    }else{
-                        $("#Content").html(data);
-                    }
+                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
+                }
 
-                    metaTitle();
-                    isActive();
-                    slickSlider();
-                    prettyPhot();
+                metaTitle();
+                isActive();
+                slickSlider();
 
-                    $('#Content').css({ opacity: "1"}).delay(1000);
-                    $('.ajaxLink').unbind('click', false);
-                    $("html, body").animate({ scrollTop: 0 }, "slow");
-                }, delay);
+                $('#Content').css({ opacity: "1"});
+                $('.ajaxLink').unbind('click', false);
+                $("html, body").animate({ scrollTop: 0 }, "slow");
             }
         });
         event.stopImmediatePropagation();
