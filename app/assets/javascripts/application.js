@@ -159,7 +159,7 @@ function ajaxExec(){
         $('.ajaxLink').bind('click', false);
 
         var url = $(this).attr('href');
-        setTimeout(function() {
+//        setTimeout(function() {
             $.ajax({
                 dataType: 'html',
                 url: url,
@@ -182,18 +182,13 @@ function ajaxExec(){
                     metaTitle();
                     isActive();
                     slickSlider();
-                    prettyPhot();
                 }
             });
-        }, 700); 
-        prettyPhot();
+//        }, 700); 
         
         event.stopImmediatePropagation();
         return false;
-        prettyPhot();
     });
-    
-    prettyPhot();
 }
 
 // // Funcion para retroceder en el navegador con ajax
@@ -207,7 +202,7 @@ function ajaxBack(){
         history.scrollRestoration = 'manual'; //Eliminar scroll a la ultima posicion en pantalla
 
         var url = window.location.href;
-        setTimeout(function() {
+//        setTimeout(function() {
             $.ajax({
                 dataType: 'html',
                 url: url,
@@ -229,14 +224,12 @@ function ajaxBack(){
                     metaTitle();
                     isActive();
                     slickSlider();
-                    prettyPhot();
                 }
             });
-        }, 700);
+//       }, 700);
 
         event.stopImmediatePropagation();
         return false;
-        prettyPhot();
     }
 
 }
