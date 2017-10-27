@@ -183,7 +183,16 @@ function ajaxExec(){
                     isActive();
                     slickSlider();
                     prettyPhot();
-                }
+                },
+                send: function(){
+                    prettyPhot();
+                },
+                complete: function(){
+                    prettyPhot();
+                },
+                start:function(){
+                    prettyPhot();
+                },
             });
         }, 700); 
         
