@@ -178,11 +178,12 @@ function ajaxExec(){
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
 
+                    prettyPhot();
                     ajaxScroll();
                     metaTitle();
                     isActive();
                     slickSlider();
-                    prettyPhot();
+                    
                 }
             });
         }, 700); 
@@ -221,11 +222,12 @@ function ajaxBack(){
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
 
+                    prettyPhot();
                     ajaxScroll();
                     metaTitle();
                     isActive();
                     slickSlider();
-                    prettyPhot();
+                    
                 }
             });
         }, 700);
