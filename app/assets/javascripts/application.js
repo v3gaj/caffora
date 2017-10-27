@@ -187,10 +187,13 @@ function ajaxExec(){
             });
         }, 700); 
         prettyPhot();
-
+        
         event.stopImmediatePropagation();
         return false;
-    }); 
+        prettyPhot();
+    });
+    
+    prettyPhot();
 }
 
 // // Funcion para retroceder en el navegador con ajax
@@ -230,11 +233,12 @@ function ajaxBack(){
                 }
             });
         }, 700);
-        prettyPhot();
 
         event.stopImmediatePropagation();
         return false;
+        prettyPhot();
     }
+
 }
 
 //Funcion para asignar Meta title
