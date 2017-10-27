@@ -177,14 +177,16 @@ function ajaxExec(){
 
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
-                    $("html, body").animate({ scrollTop: 0 }, "slow");
 
+                    ajaxScroll();
                     metaTitle();
                     isActive();
                     slickSlider();
+                    prettyPhot();
                 }
             });
         }, 700); 
+        prettyPhot();
 
         event.stopImmediatePropagation();
         return false;
@@ -199,6 +201,7 @@ function ajaxBack(){
 
         $('#Content').css({ opacity: "0"});
         $('.ajaxLink').bind('click', false);
+        history.scrollRestoration = 'manual'; //Eliminar scroll a la ultima posicion en pantalla
 
         var url = window.location.href;
         setTimeout(function() {
@@ -218,15 +221,17 @@ function ajaxBack(){
 
                     $('#Content').css({ opacity: "1"});
                     $('.ajaxLink').unbind('click', false);
-                    $("html, body").animate({ scrollTop: 0 }, "slow");
 
+                    ajaxScroll();
                     metaTitle();
                     isActive();
-                    slickSlider();  
+                    slickSlider();
+                    prettyPhot();
                 }
             });
         }, 700);
-         
+        prettyPhot();
+
         event.stopImmediatePropagation();
         return false;
     }
@@ -242,9 +247,22 @@ function metaTitle(){
     $('title').html('Caffora' + title );     
 }
 
+//Funcion para determinar la posicion de la pantalla despues de una ejecucion de Ajax
 
+function ajaxScroll(){
 
+    var menu = $( "header" )[ 0 ];
 
+    var offMenu = menu.offsetTop + menu.scrollHeight;
+
+    if (offMenu < document.body.scrollTop || offMenu < window.pageYOffset || offMenu < document.documentElement.scrollTop) {
+        if (window.innerWidth < 1001) {
+            $("html, body").scrollTop(offMenu);
+        }else{
+            $("html, body").scrollTop(0);
+        }
+    }  
+};
 
 
 
@@ -265,3 +283,43 @@ function metaTitle(){
 //     $('.ajaxLink').unbind('click', false);
 //     $("html, body").animate({ scrollTop: 0 }, "slow");
 // }, delay);  
+
+
+// function ajaxBack(){
+//     window.onpopstate = function (event) {
+//         event.preventDefault();
+
+//         $('#Content').css({ opacity: "0"});
+//         $('.ajaxLink').bind('click', false);
+
+//         var url = window.location.href;
+//         setTimeout(function() {
+//             $.ajax({
+//                 dataType: 'html',
+//                 url: url,
+//                 async: true,
+//                 strURl: "",
+//                 cache: false,
+//                 success: function(data){
+
+//                     if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+//                         $('#Content').html($(data).find('#Content').html());
+//                     }else{
+//                         $("#Content").html(data);
+//                     }
+
+//                     $('#Content').css({ opacity: "1"});
+//                     $('.ajaxLink').unbind('click', false);
+//                     $("html, body").animate({ scrollTop: 0 }, "slow");
+
+//                     metaTitle();
+//                     isActive();
+//                     slickSlider();  
+//                 }
+//             });
+//         }, 700);
+         
+//         event.stopImmediatePropagation();
+//         return false;
+//     }
+// }
