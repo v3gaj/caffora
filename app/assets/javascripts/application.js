@@ -23,6 +23,8 @@
 $(document).on('turbolinks:load', function() {
 
     slickSlider();
+    ajaxExec();
+    ajaxBack();
     prettyPhot();
 
     setTimeout(function() {
