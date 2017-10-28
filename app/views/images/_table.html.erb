@@ -4,7 +4,7 @@
             <% @collection.images.each do |image| %>
                 <div class="cms-grid-item-masonry  cms-grid-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="cms-grid-content overlay_wrap">
-                        <%= image_tag image.content.url(:large) %>
+                        <%= image_tag image.content.url(:thumb) %>
                         <div class="overlay_collection">
                             <div class="overlay_content">
                                 <a class="icon circle prettyphoto" href="<%= image.content.url(:large)%>" data-rel="prettyPhoto[rel-cms-grid]"><i class="fa fa-hand-pointer-o"></i></a>
