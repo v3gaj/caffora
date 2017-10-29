@@ -330,11 +330,11 @@ h6{
 }
 
 .animation_partial{
-	-webkit-transition: all 700ms linear;
-    -moz-transition: all 700ms linear;
-    -o-transition: all 700ms linear;
-    -ms-transition: all 700ms linear;
-    transition: all 700ms linear;
+	-webkit-transition: all 1000ms linear;
+    -moz-transition: all 1000ms linear;
+    -o-transition: all 1000ms linear;
+    -ms-transition: all 1000ms linear;
+    transition: all 1000ms linear;
 }
 
 
@@ -1438,6 +1438,7 @@ footer{
     textarea{
     	height: 240px;
     	margin-bottom: 30px;
+    	resize: none;
     }
 }
 

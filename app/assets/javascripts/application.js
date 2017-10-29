@@ -25,6 +25,7 @@ $(document).on('turbolinks:load', function() {
     slickSlider();
     ajaxExec();
     ajaxBack();
+    prettyPhot();
 
     setTimeout(function() {
         $('body').css({ opacity: "1"});
@@ -113,15 +114,7 @@ function prettyPhot() {
     });
 }
 
-jQuery(document).ready(function($) {
-  "use strict";
-  /* pretty photo */
-  $(document).ready(function(){
-    $("a[data-rel^='prettyPhoto']").prettyPhoto();
-    $("a.prettyphoto").prettyPhoto();
-    $("a[data-rel^='prettyPhoto']").prettyPhoto({hook:"data-rel",social_tools:!1,theme:"pp_default",horizontal_padding:20,opacity:.8,deeplinking:!1});
-   })
-});
+
 
 // Funcion para ejecutar el slider
 
@@ -160,13 +153,10 @@ function slickSlider() {
 
 // Funcion para aplicar ajax
 
-function ajaxExec(){
-setTimeout(function() {    
+function ajaxExec(){ 
     $(document).on('click', '.ajaxLink', function(event){
         event.preventDefault();
 
-        $( ".cms-grid-item-masonry" ).remove();
-        $( ".cms-grid-masonry" ).remove();
         $('#Content').css({ opacity: "0"});
         $('.ajaxLink').bind('click', false);
 
@@ -203,7 +193,6 @@ setTimeout(function() {
         event.stopImmediatePropagation();
         return false;
     });
-}, 2000);     
 }
 
 // // Funcion para retroceder en el navegador con ajax
