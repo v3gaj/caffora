@@ -25,7 +25,6 @@ $(document).on('turbolinks:load', function() {
     slickSlider();
     ajaxExec();
     ajaxBack();
-    ajaxPosts();
     prettyPhot();
 
     setTimeout(function() {
@@ -270,30 +269,60 @@ function ajaxScroll(){
 
 
 
+// setTimeout(function() {
+//     if (url === "/") {
+//         $('#Content').html($(data).find('#Content').html());
+//     }else{
+//         $("#Content").html(data);
+//     }
+//     window.history.pushState("","", url);
+
+//     metaTitle();
+//     isActive();
+//     slickSlider();
+//     prettyPhot();
+
+//     $('#Content').css({ opacity: "1"});
+//     $('.ajaxLink').unbind('click', false);
+//     $("html, body").animate({ scrollTop: 0 }, "slow");
+// }, delay);  
 
 
-function ajaxPosts(){ 
+// function ajaxBack(){
+//     window.onpopstate = function (event) {
+//         event.preventDefault();
 
-    $(document).on('click', '.post_edit', function(event){
+//         $('#Content').css({ opacity: "0"});
+//         $('.ajaxLink').bind('click', false);
 
-        event.preventDefault();
+//         var url = window.location.href;
+//         setTimeout(function() {
+//             $.ajax({
+//                 dataType: 'html',
+//                 url: url,
+//                 async: true,
+//                 strURl: "",
+//                 cache: false,
+//                 success: function(data){
 
-        var edit = $(this);
-        var url = $(this).attr("href");
+//                     if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+//                         $('#Content').html($(data).find('#Content').html());
+//                     }else{
+//                         $("#Content").html(data);
+//                     }
 
-        $.ajax({
-            dataType: 'html',
-            url: url,
-            success: function(data){
+//                     $('#Content').css({ opacity: "1"});
+//                     $('.ajaxLink').unbind('click', false);
+//                     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-                $(edit).closest('div').html($(data).find('#Content').html());
-                
-            }
-        });
-
-        event.stopImmediatePropagation();
-        return false;
-    });
-}
-
-
+//                     metaTitle();
+//                     isActive();
+//                     slickSlider();  
+//                 }
+//             });
+//         }, 700);
+         
+//         event.stopImmediatePropagation();
+//         return false;
+//     }
+// }
