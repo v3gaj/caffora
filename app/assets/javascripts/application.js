@@ -278,16 +278,22 @@ function ajaxPosts(){
 
         event.preventDefault();
 
-        var edit = $(this);
+        var edit = $(this).parent();
         var url = $(this).attr("href");
+        var parent = $('.post_edit').parent();
 
         $.ajax({
             dataType: 'html',
             url: url,
             success: function(data){
-
-                $(edit).closest('div').html($(data).find('#Content').html());
-                
+                $(parent).each(function(){
+                    if ($(this).css('display') === 'none') {
+                        $(this).fadeIn();
+                    }
+                });
+                $('.edit_post').fadeOut('normal', function() { $(this).remove(); } );
+                $(edit).hide();
+                $(edit).after($(data).find('.post_form').html()).next('.edit_post').slideToggle();
             }
         });
 
