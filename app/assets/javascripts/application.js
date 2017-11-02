@@ -188,7 +188,7 @@ function ajaxExec(){
                     
                 }
             });
-        }, 1000); 
+        }, 700); 
         
         event.stopImmediatePropagation();
         return false;
@@ -232,7 +232,7 @@ function ajaxBack(){
                     
                 }
             });
-        }, 1000);
+        }, 700);
 
         event.stopImmediatePropagation();
         return false;

@@ -40,7 +40,7 @@ time, mark, audio, video {
 body{
 	max-width: 1600px;
 	margin: 0 auto;
-	padding-top: 120px;
+	padding-top: 100px;
 	opacity: 0;
 }
 
@@ -330,11 +330,11 @@ h6{
 }
 
 .animation_partial{
-	-webkit-transition: all 1000ms linear;
-    -moz-transition: all 1000ms linear;
-    -o-transition: all 1000ms linear;
-    -ms-transition: all 1000ms linear;
-    transition: all 1000ms linear;
+	-webkit-transition: all 700ms linear;
+    -moz-transition: all 700ms linear;
+    -o-transition: all 700ms linear;
+    -ms-transition: all 700ms linear;
+    transition: all 700ms linear;
 }
 
 
@@ -357,7 +357,7 @@ h6{
 }
 
 header{
-	padding: 25px 0 25px 0;
+	padding: 15px 0 15px 0;
 	font-family: proxima_nova_ltsemibold;
 	display: block;
 	overflow: auto;
@@ -469,6 +469,7 @@ header{
 	    -o-transform: translateY(-50%);
 	    transform: translateY(-50%);
 	    left: 0;
+	    width: 100%;
 	}
 }
 
@@ -794,7 +795,7 @@ header{
 	    width: 100%;
 	    display: block;
 	    font-size: 200px;
-	    opacity: 0.2;
+	    opacity: 0.4;
 	}
 
 	img{
@@ -2072,16 +2073,16 @@ footer{
 
 
 
-.post_row,
-.post_form{
-	display: none;
-}
+
 
 .post_container{
 	transition: transform 250ms ease-out, opacity 250ms ease-out;
 }
 
-
+.post_row{
+	background-color: #f8f8f8;
+	display: none;
+}
 
 
 
