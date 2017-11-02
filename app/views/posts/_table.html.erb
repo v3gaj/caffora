@@ -18,12 +18,11 @@
                 </div>
                 <% if user_signed_in? && current_user.role ==="admin" %>
                     <div class="post_links transitionOne">
-                        <%= link_to 'Edit', edit_post_path(post), :remote => true, class: "post_edit transitionOne", rel: :external %>
+                        <%= link_to 'Edit', edit_post_path(post), :remote => true, class: "post_edit transitionOne" %>
                         <span>/</span>
                         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "post_delete transitionOne" %>
                     </div>
-                <%end%>
-                <div class="post_row"></div>    
+                <%end%>   
             </div>
         </div>
     <% end %>
