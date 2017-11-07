@@ -1,4 +1,6 @@
-$('.post_delete').bind('ajax:success', function() {
+$('.post_delete').bind('ajax:success', function(event) {
 	$(".post_row").remove();
-	$(this).closest('.post_container').slideUp(1000);
+	$(this).closest('.post_container').fadeOut(1000);
+	$(".notice").slideToggle().html("Post destroyed succesfully.").delay(2000).slideToggle();
+	event.stopImmediatePropagation();
 });

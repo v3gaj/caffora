@@ -1,36 +1,36 @@
-<div class="post_form">
-  <%= form_for(@post, remote: true) do |f| %>
+<%= form_for(@post, remote: true) do |f| %>
+    
+  <i class="fa fa-angle-double-up" aria-hidden="true"></i>
 
-    <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title, class: "post_clear" %>
-    </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "post_clear" %>
+  </div>
 
-    <div class="field">
-      <%= f.label :subtitle %>
-      <%= f.text_field :subtitle, class: "post_clear" %>
-    </div>
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle, class: "post_clear" %>
+  </div>
 
-    <div class="field">
-      <%= f.label :release_date %>
-      <%= f.date_select :release_date, class: "post_clear" %>
-    </div>
+  <div class="field">
+    <%= f.label :release_date %>
+    <%= f.date_select :release_date, class: "post_clear" %>
+  </div>
 
-    <div class="field">
-      <%= f.label :cover %>
-      <%= f.file_field :cover, class: "post_clear" %>
-    </div>
+  <div class="insert">
+    <%= f.label :cover %>
+    <%= f.file_field :cover, class: "post_clear" %>
+  </div>
 
-    <div class="field">
-      <%= f.label :author %>
-      <%= f.text_field :author, class: "post_clear" %>
-    </div>
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "post_clear" %>
+  </div>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
-    <div class="post_errors"><%= render 'errors' %></div>
-
-  <% end %>
-</div>
+  <div class="post_errors"><%= render 'errors' %></div>
+    
+<% end %>

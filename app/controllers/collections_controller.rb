@@ -6,7 +6,8 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.json
   def index
-    @collections = Collection.all.joins(:post).order("posts.release_date desc")
+    #@collections = Collection.all.joins(:post).order("posts.release_date desc")
+    @collections = Collection.all.find_by_sql ["SELECT * FROM collections ORDER BY IFNULL((SELECT release_date from posts WHERE posts.id = collections.post_id), created_at) DESC;"]
   end
 
   # GET /collections/1

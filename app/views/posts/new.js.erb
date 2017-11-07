@@ -1,3 +1,11 @@
-$(".post_row").remove();
-$(".post_form").html("<%= j (render 'form') %>");
-$(".post_form").slideDown(500);
+//Remover form de editar
+$(".edit_post").each(function(){
+    if (!($(this).css('display') === 'none')){
+        $(this).slideToggle('normal', function() { $(this).remove(); } );
+        $(this).prev().delay(600).fadeIn();
+    }
+});
+$('.post_new').hide();
+$(".post_form").css("display", "none").html("<%= j (render 'form') %>").slideDown();
+
+

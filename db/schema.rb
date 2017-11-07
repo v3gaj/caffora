@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170807032229) do
+ActiveRecord::Schema.define(version: 20171106214248) do
 
   create_table "collections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer  "post_id"
     t.string   "title"
     t.string   "subtitle"
     t.string   "cover_file_name"
@@ -22,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170807032229) do
     t.datetime "cover_updated_at"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "post_id"
     t.index ["post_id"], name: "index_collections_on_post_id", using: :btree
   end
 
@@ -109,6 +109,5 @@ ActiveRecord::Schema.define(version: 20170807032229) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "collections", "posts"
   add_foreign_key "images", "collections"
 end

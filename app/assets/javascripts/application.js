@@ -158,38 +158,41 @@ function ajaxExec(){
     $(document).on('click', '.ajaxLink', function(event){
         event.preventDefault();
 
-        $('#Content').css({ opacity: "0"});
+        $('#Content').removeClass('animation_partial').css({ opacity: "0"});
+        //Codigo para inabilitar los links del menu durante la transicion
         $('.ajaxLink').bind('click', false);
 
         var url = $(this).attr('href');
-        setTimeout(function() {
-            $.ajax({
-                dataType: 'html',
-                url: url,
-                async: true,
-                strURl: "",
-                cache: false,
-                success: function(data){
+        
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            async: true,
+            strURl: "",
+            cache: false,
+            success: function(data){
 
-                    if (url === "/") {
-                        $('#Content').html($(data).find('#Content').html());
-                    }else{
-                        $("#Content").html(data);
-                    }
-                    window.history.pushState("","", url);
-
-                    $('#Content').css({ opacity: "1"});
-                    $('.ajaxLink').unbind('click', false);
-
-                    prettyPhot();
-                    ajaxScroll();
-                    metaTitle();
-                    isActive();
-                    slickSlider();
-                    
+                if (url === "/") {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
                 }
-            });
-        }, 700); 
+                window.history.pushState("","", url);
+
+                prettyPhot();
+                ajaxScroll();
+                metaTitle();
+                isActive();
+                slickSlider();
+
+                setTimeout(function() {
+                    $('#Content').addClass('animation_partial').css({ opacity: "1"});
+                    //Codigo para habilitar los links del menu durante la transicion
+                    $('.ajaxLink').unbind('click', false);
+                }, 1000);
+            },
+        });
+        
         
         event.stopImmediatePropagation();
         return false;
@@ -202,38 +205,46 @@ function ajaxBack(){
     window.onpopstate = function (event) {
         event.preventDefault();
 
-        $('#Content').css({ opacity: "0"});
+        $('#Content').removeClass('animation_partial').css({ opacity: "0"});
+        //Codigo para inabilitar los links del menu durante la transicion
         $('.ajaxLink').bind('click', false);
+
         history.scrollRestoration = 'manual'; //Eliminar scroll a la ultima posicion en pantalla
 
         var url = window.location.href;
-        setTimeout(function() {
-            $.ajax({
-                dataType: 'html',
-                url: url,
-                async: true,
-                strURl: "",
-                cache: false,
-                success: function(data){
 
-                    if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                        $('#Content').html($(data).find('#Content').html());
-                    }else{
-                        $("#Content").html(data);
-                    }
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            async: true,
+            strURl: "",
+            cache: false,
+            success: function(data){
 
-                    $('#Content').css({ opacity: "1"});
-                    $('.ajaxLink').unbind('click', false);
-
-                    prettyPhot();
-                    ajaxScroll();
-                    metaTitle();
-                    isActive();
-                    slickSlider();
-                    
+                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
+                    $('#Content').html($(data).find('#Content').html());
+                }else{
+                    $("#Content").html(data);
                 }
-            });
-        }, 700);
+
+                $('#Content').css({ opacity: "1"});
+                $('.ajaxLink').unbind('click', false);
+
+                prettyPhot();
+                ajaxScroll();
+                metaTitle();
+                isActive();
+                slickSlider();
+
+                setTimeout(function() {
+                    $('#Content').addClass('animation_partial').css({ opacity: "1"});
+                    //Codigo para habilitar los links del menu durante la transicion
+                    $('.ajaxLink').unbind('click', false);
+                }, 1000);
+                
+            }
+        });
+
 
         event.stopImmediatePropagation();
         return false;
@@ -269,8 +280,7 @@ function ajaxScroll(){
 };
 
 
-
-
+//Funcion para abrir el form de edicion del post
 
 function ajaxPosts(){ 
 
@@ -281,18 +291,28 @@ function ajaxPosts(){
         var edit = $(this).parent();
         var url = $(this).attr("href");
         var parent = $('.post_edit').parent();
+        var newform = $('.new_post');
+        var editform = $('.edit_post');
 
         $.ajax({
             dataType: 'html',
             url: url,
             success: function(data){
+                //Muestra los links de editar y eliminar si fueron ocultos
                 $(parent).each(function(){
                     if ($(this).css('display') === 'none') {
-                        $(this).fadeIn();
+                        $(this).delay(600).fadeIn();
                     }
                 });
-                $('.edit_post').fadeOut('normal', function() { $(this).remove(); } );
+                //Remueve los forms de editar abiertos
+                $(editform).delay(400).slideToggle('normal', function() { $(this).remove(); } );
+                //Muestra el boton new
+                $('.post_new').delay(600).fadeIn();
+                //Remueve el form de new
+                $(newform).slideToggle('normal', function() { $(this).remove(); } );
+                //Esconde los links de editar y eliminar
                 $(edit).hide();
+                //Muestra el formulario de editar
                 $(edit).after($(data).find('.post_form').html()).next('.edit_post').slideToggle();
             }
         });

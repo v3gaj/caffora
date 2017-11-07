@@ -17,10 +17,10 @@
                     <%= link_to "Ver post →", postlink_path(post), class: "transitionOne ajaxLink", remote: :true %>
                 </div>
                 <% if user_signed_in? && current_user.role ==="admin" %>
-                    <div class="post_links transitionOne">
-                        <%= link_to 'Edit', edit_post_path(post), :remote => true, class: "post_edit transitionOne" %>
+                    <div class="post_links">
+                        <%= link_to 'Edit', edit_post_path(post), :remote => true, class: "post_edit" %>
                         <span>/</span>
-                        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "post_delete transitionOne" %>
+                        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, class: "post_delete" %>
                     </div>
                 <%end%>   
             </div>
@@ -28,7 +28,7 @@
     <% end %>
     <% if user_signed_in? && current_user.role ==="admin" %>
         <div class="post_new">
-            <td colspan="8"><%= link_to 'New Post', new_post_path, :remote => true, class: "transitionOne buttonOne" %></td>
+            <td colspan="8"><%= link_to 'New Post', new_post_path, :remote => true %></td>
         </div>
     <%end%>        
 </div>

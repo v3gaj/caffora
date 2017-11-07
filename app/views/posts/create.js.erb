@@ -1,7 +1,7 @@
 <% if @post.errors.any? %>
-  $('.post_errors').html("<%= j (render 'errors') %>");
+  	$('.post_errors').html("<%= j (render 'errors') %>");
 <% else %>
-	$(".post_clear").val('');
 	$(".post_table").html("<%= j (render 'table') %>");
-	$(".post_form").slideUp(500).delay(500).html("<p class='post_notice'>Slider created succesfully.</p>").slideDown(500).delay(5000).slideUp(500);
+	$(".post_form").slideToggle();
+	$(".notice").slideToggle().html("Post created succesfully.").delay(2000).slideToggle();
 <% end %>

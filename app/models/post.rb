@@ -5,5 +5,11 @@ class Post < ApplicationRecord
 
 	has_many :contents
 	accepts_nested_attributes_for :contents
+
+	validates :title, :presence => true
+	validates :subtitle, :presence => true
+	validates :release_date, :presence => true
+	validates :cover_file_name, :presence => true
+	validates :author, :presence => true
 	
 end
