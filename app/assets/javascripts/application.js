@@ -64,7 +64,6 @@ function isActive(){
     
     var path = window.location.href;
 
-
     $("#menu_classic a").each(function(){
 
       var href = $(this).attr("href");
@@ -159,6 +158,7 @@ function ajaxExec(){
         event.preventDefault();
 
         $('#Content').removeClass('animation_partial').css({ opacity: "0"});
+        $('.background_logo').css({ opacity: "1"});
         //Codigo para inabilitar los links del menu durante la transicion
         $('.ajaxLink').bind('click', false);
 
@@ -185,6 +185,11 @@ function ajaxExec(){
                 isActive();
                 slickSlider();
 
+
+                setTimeout(function() {
+                    $('.background_logo').css({ opacity: "0"});
+                }, 500);
+
                 setTimeout(function() {
                     $('#Content').addClass('animation_partial').css({ opacity: "1"});
                     //Codigo para habilitar los links del menu durante la transicion
@@ -206,6 +211,7 @@ function ajaxBack(){
         event.preventDefault();
 
         $('#Content').removeClass('animation_partial').css({ opacity: "0"});
+        $('.background_logo').css({ opacity: "1"});
         //Codigo para inabilitar los links del menu durante la transicion
         $('.ajaxLink').bind('click', false);
 
@@ -228,13 +234,17 @@ function ajaxBack(){
                 }
 
                 $('#Content').css({ opacity: "1"});
-                $('.ajaxLink').unbind('click', false);
+                //$('.ajaxLink').unbind('click', false);
 
                 prettyPhot();
                 ajaxScroll();
                 metaTitle();
                 isActive();
                 slickSlider();
+
+                setTimeout(function() {
+                    $('.background_logo').css({ opacity: "0"});
+                }, 500);
 
                 setTimeout(function() {
                     $('#Content').addClass('animation_partial').css({ opacity: "1"});
