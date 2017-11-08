@@ -188,7 +188,7 @@ function ajaxExec(){
 
                 setTimeout(function() {
                     $('.background_logo').css({ opacity: "0"});
-                }, 500);
+                }, 300);
 
                 setTimeout(function() {
                     $('#Content').addClass('animation_partial').css({ opacity: "1"});
