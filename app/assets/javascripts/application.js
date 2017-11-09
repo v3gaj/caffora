@@ -34,18 +34,18 @@ $( document ).ready(function() {
     }, 1500);   
 });
 
-// $(document).on('turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
 
-//     slickSlider();
-//     ajaxExec();
-//     ajaxBack();
-//     ajaxPosts();
-//     prettyPhot();
+    slickSlider();
+    ajaxExec();
+    ajaxBack();
+    ajaxPosts();
+    prettyPhot();
 
-//     setTimeout(function() {
-//         $('body').css({ opacity: "1"});
-//     }, 1500);   
-// });
+    setTimeout(function() {
+        $('body').css({ opacity: "1"});
+    }, 1500);   
+});
 
 function menu() {
 
@@ -130,40 +130,71 @@ function prettyPhot() {
 
 
 
+/*$scope.init = function() {
+            $timeout((function() {
+                $(".slideElement").addClass("noAnimartion");
+                $(".slick-current").removeClass("slick-active");
+                $timeout((function() {
+                    $(".slideElement").removeClass("noAnimartion");
+                    $(".slick-current").removeClass("slick-active");$(".slick-current").removeClass("slick-active");$(".slick-current").removeClass("slick-active");
+                }), 700);
+                var $slides = $(".slides");
+                if (!$slides.hasClass("slick-initialized")){
+                    $slides.slick({
+                        autoplay: true,
+                        arrows: false,
+                        dots: true,
+                        pauseOnHover: false,
+                        pauseOnFocus: false,
+                        autoplaySpeed: 6000
+                    });
+                }
+            }), 750);
+        };*/
+
+
 // Funcion para ejecutar el slider
 
 function slickSlider() {
-  $('.scroller').not('.slick-initialized').slick({
-    autoplay: true, dots: false, pauseOnHover: false, pauseOnFocus: false
-  })
+    $(".slick-current").removeClass("slick-active");
+    $('.scroller').not('.slick-initialized').slick({
+        autoplay: true, dots: false, pauseOnHover: false, pauseOnFocus: false, autoplaySpeed: 4000,
+    })
 
-  $('.center').not('.slick-initialized').slick({
-    centerMode: true,
-    centerPadding: '100px',
-    slidesToShow: 1,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
+    setTimeout(function() {
+        $(".slick-current").addClass("slick-active");
+    }, 2000);
+
+  // $('.center').not('.slick-initialized').slick({
+  //   centerMode: true,
+  //   centerPadding: '100px',
+  //   slidesToShow: 1,
+  //   autoplay: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         arrows: true,
+  //         centerMode: true,
+  //         centerPadding: '40px',
+  //         slidesToShow: 3
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         arrows: false,
+  //         centerMode: true,
+  //         centerPadding: '40px',
+  //         slidesToShow: 1
+  //       }
+  //     }
+  //   ]
+  // });
 }
+
+
+
 
 // Funcion para aplicar ajax
 
@@ -171,7 +202,8 @@ function ajaxExec(){
     $(document).on('click', '.ajaxLink', function(event){
         event.preventDefault();
 
-        $(this).addClass('active')
+        $("#menu_classic a").removeClass('active');
+        $(this).addClass('active');
 
         $('#Content').removeClass('animation_partial').css({ opacity: "0"});
         $('.background_logo').css({ opacity: "1"});
