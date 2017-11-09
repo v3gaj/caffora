@@ -163,7 +163,8 @@ function slickSlider() {
 
     setTimeout(function() {
         $(".slick-current").addClass("slick-active");
-    }, 2000);
+    }, 1500);
+
 
   // $('.center').not('.slick-initialized').slick({
   //   centerMode: true,
@@ -206,6 +207,8 @@ function ajaxExec(){
         $(this).addClass('active');
 
         $('#Content').removeClass('animation_partial').css({ opacity: "0"});
+        $('footer').removeClass('animation_partial').css({ opacity: "0"});
+
         $('.background_logo').css({ opacity: "1"});
         //Codigo para inabilitar los links del menu durante la transicion
         $('.ajaxLink').bind('click', false);
@@ -233,6 +236,7 @@ function ajaxExec(){
                 isActive();
                 slickSlider();
 
+                $(".slick-current").removeClass("slick-active");
 
                 setTimeout(function() {
                     $('.background_logo').css({ opacity: "0"});
@@ -240,9 +244,12 @@ function ajaxExec(){
 
                 setTimeout(function() {
                     $('#Content').addClass('animation_partial').css({ opacity: "1"});
+                    $('footer').addClass('animation_partial').css({ opacity: "1"});
                     //Codigo para habilitar los links del menu durante la transicion
                     $('.ajaxLink').unbind('click', false);
                 }, 1000);
+
+
             },
         });
 
