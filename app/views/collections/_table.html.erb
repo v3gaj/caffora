@@ -1,15 +1,17 @@
 <div class="collection_grid">
     <% @collections.each do |collection| %>
         <div class="collection_container">
-            <div class="collection">
-                <%= image_tag collection.cover.url(:thumb) %>
-                <div class="overlay_collection">
-                  <div class="overlay_content">
-                    <h4><%= link_to collection.title, collectionlink_path(collection), class: "ajaxLink", remote: :true %></h4>
-                    <span><%= collection.subtitle %></span>
-                  </div>
+            <%= link_to collectionlink_path(collection), class: "ajaxLink", remote: :true do %>
+                <div class="collection">
+                    <%= image_tag collection.cover.url(:thumb) %>
+                    <div class="overlay_collection">
+                      <div class="overlay_content">
+                        <h4><%= collection.title %></h4>
+                        <span><%= collection.subtitle %></span>
+                      </div>
+                    </div>
                 </div>
-            </div>
+            <% end %>
             <% if user_signed_in? && current_user.role ==="admin" %>
                 <div class="collection_links transitionOne">
                     <%= link_to 'Edit', edit_collection_path(collection), :remote => true, class: "collection_edit transitionOne" %>
