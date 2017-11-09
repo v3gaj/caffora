@@ -1014,7 +1014,7 @@ header{
 	h4{
 		padding-bottom: 10px;
 		color: #fff;
-		font-size: 32px;
+		font-size: 28px;
 		opacity: 0.5;
 	}
 
@@ -2107,6 +2107,16 @@ footer{
 
 	.scroller_content{
 		width: 100%;
+
+		img{
+			width: 50px !important;
+		}
+
+		a{
+			padding: 7px 14px;
+		    margin-top: 10px;
+		    font-size: 10px;
+		}
 	}
 
 	.post_cover span {
