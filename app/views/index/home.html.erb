@@ -4,6 +4,7 @@
 	  	<div>
 	  		<div class="overlay"></div>
 	  		<div class="scroller_content">
+	  			<%= image_tag 'icon_slider.png'%>
 	  			<h5><%= slider.title %></h5>
 	  			<span><%= slider.subtitle %></span>
 	  			<% if slider.url.present? %>
@@ -19,7 +20,7 @@
 	<div class="title_container">
 		<h1>Publicaciones Recientes</h1>
 		<div class="line"></div>
-		<%= image_tag 'bean_icon.png'%>
+		<%= image_tag 'blog_icon.png'%>
 	</div>
 	<div>
 		<%= render :file => '/posts/index' %>

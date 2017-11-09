@@ -648,6 +648,7 @@ header{
 	}
 }
 
+.scroller_content img,
 .scroller_content a,
 .scroller_content span
 .scroller_content h5{
@@ -2388,7 +2389,7 @@ footer{
     -ms-opacity: 0;
     -o-opacity: 0;
     opacity: 0;
-  	bottom: -100px;
+  	bottom: -150px;
 
 }
 
@@ -2456,6 +2457,34 @@ footer{
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 
+}
+
+.slick-active .scroller_content img{
+	-webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1;
+    top: 0;
+    -webkit-transition-delay: .6s;
+    transition-delay: .6s;
+
+}
+
+.scroller_content img{
+	-webkit-filter: invert(100%);
+    filter: invert(100%);
+    width: 90px;
+    display: inline-block;
+    position: relative;
+    -webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
+  	top: -100px;
 }
 
 @-webkit-keyframes rotateIn {
