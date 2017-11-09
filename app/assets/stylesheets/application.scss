@@ -343,7 +343,11 @@ h6{
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 	width: 250px;
 	height: 248px;
 	z-index: -1;
@@ -411,6 +415,7 @@ header{
 				&:hover{
 					color: #9d132c;
 					text-decoration: none;
+
 
 					&:after{
 						color: #9d132c;
@@ -653,16 +658,10 @@ header{
 
 .parallax{
 	position: relative;
-	background-image: url('caffora_coffe_hands.jpg');
-	background-position: 50% 0;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	padding: 200px 0;
 	padding-left: 13%;
 	padding-right: 13%;
+	height: 100%;
 
 	img{
 		width: 100%;
@@ -671,18 +670,36 @@ header{
 
 .parallax_post{
 	position: relative;
-	background-position: 50% 0;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	padding: 170px 0;
 	margin: 60px 0 30px 0;
+	height: 100%;
 
 	img{
 		width: 100%;
 	}
+}
+
+.parallax_wrapper_post{
+	position: static;
+	background-position: 50% 0;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.parallax_wrapper{
+	position: static;
+	background-image: url('caffora_coffe_filter.jpg');
+	background-position: 50% 0;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /***********************POSTGRID***********************/
@@ -975,14 +992,15 @@ header{
 }
 
 .overlay_content{
-	position: relative;
+	position: absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-khtml-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-khtml-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 
 	a{
 		color: #fff;

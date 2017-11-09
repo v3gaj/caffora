@@ -19,11 +19,12 @@
 
 </div>
 <% if @collection.present? %>
-         
-	<div class="parallax_post" style="background-image: url(<%= @collection.cover.url(:large)%>)">
-		<div class="overlay"></div>
-		<span class="span_h1">Fotografias de <%= @post.subtitle %></span>
-	</div>
+    <div class="parallax_wrapper_post" style="background-image: url(<%= @collection.cover.url(:large)%>)">     
+		<div class="parallax_post">
+			<div class="overlay"></div>
+				<span class="span_h1">Fotografias de <%= @post.subtitle %></span>
+			</div>
+		</div>
 	<div>
 
 		<%= render 'images/table' %>

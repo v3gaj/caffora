@@ -20,7 +20,8 @@
 //= require modernizr.min
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
+
+$( document ).ready(function() {
 
     slickSlider();
     ajaxExec();
@@ -32,6 +33,19 @@ $(document).on('turbolinks:load', function() {
         $('body').css({ opacity: "1"});
     }, 1500);   
 });
+
+// $(document).on('turbolinks:load', function() {
+
+//     slickSlider();
+//     ajaxExec();
+//     ajaxBack();
+//     ajaxPosts();
+//     prettyPhot();
+
+//     setTimeout(function() {
+//         $('body').css({ opacity: "1"});
+//     }, 1500);   
+// });
 
 function menu() {
 
@@ -157,6 +171,8 @@ function ajaxExec(){
     $(document).on('click', '.ajaxLink', function(event){
         event.preventDefault();
 
+        $(this).addClass('active')
+
         $('#Content').removeClass('animation_partial').css({ opacity: "0"});
         $('.background_logo').css({ opacity: "1"});
         //Codigo para inabilitar los links del menu durante la transicion
@@ -197,8 +213,7 @@ function ajaxExec(){
                 }, 1000);
             },
         });
-        
-        
+
         event.stopImmediatePropagation();
         return false;
     });
@@ -254,7 +269,6 @@ function ajaxBack(){
                 
             }
         });
-
 
         event.stopImmediatePropagation();
         return false;

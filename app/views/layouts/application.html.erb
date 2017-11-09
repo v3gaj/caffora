@@ -24,7 +24,7 @@
   					<li> <%= active_link_to "Inicio", root_path, active: :exclusive, remote: :true, class: "ajaxLink" %></li>
   					<li> <%= active_link_to "Blog", blog_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
             <li> <%= active_link_to "Galeria", gallery_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
-            <li> <%= active_link_to "Caffora", about_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
+            <li> <%= active_link_to "Nosotros", about_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
             <li> <%= active_link_to "Contacto", contact_path, active: :inclusive, remote: :true, class: "ajaxLink" %></li>
             <li> <%= active_link_to winners_path, remote: :true, class: "header_icon ajaxLink"  do %><i class="fa fa-trophy" aria-hidden="true"></i><% end %></li>
     	        <% if user_signed_in? %>
@@ -39,12 +39,14 @@
   			</nav>
   		</div>
     </header>
+    <div>
       <div id="Content">
     	 <%= yield %>
       </div>
       <div class="background_logo animation_partial"></div>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+    </div>
     <footer>
       <div class="footer_social">
         <a href="https://www.facebook.com/caffora/" target="_blank" class="transitionOne">
