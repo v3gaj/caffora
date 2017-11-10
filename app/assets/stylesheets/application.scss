@@ -14,6 +14,9 @@
  *= require_self
  */
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 /***********************DEFAULT***********************/
 
 html, body, div, span, object, iframe,
@@ -233,6 +236,12 @@ h6{
 	letter-spacing: 0.5px;
 }
 
+.wrapper_maintenance{
+	display: inline-block;
+	padding-bottom: 50px;
+	padding-top: 100px;
+}
+
 .wrapper_posts_home{
 	padding-bottom: 100px;
 }
@@ -368,30 +377,37 @@ h6{
 }
 
 .header_wrapper{
+	padding: 15px 0 15px 0;
 	width: 1200px;
 	margin: 0 auto;
-}
-
-header{
-	padding: 15px 0 15px 0;
-	font-family: proxima_nova_ltsemibold;
 	display: block;
 	overflow: auto;
 	text-align: center;
-	position: fixed;
-	z-index: 500;
+	
+}
+
+.header_static{
 	background: rgba(255,255,255,.97)!important;
 	box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
+	width: 100%;
+	position: fixed;
+	z-index: 500;
 	top: 0;
 	left: 0;
 	right: 0;
+}
+
+header{
+	
+	font-family: proxima_nova_ltsemibold;
+	
 
 	img{
 		float: left;
 		padding-left: 40px;
 	}
 
-	nav ul{
+	ul{
 		list-style-type: none;
 		float: right;
 		margin-top: 25px;
@@ -451,6 +467,7 @@ header{
 
 #menu_classic{
 	overflow: auto;
+	float: right;
 }
 
 .header_icon{
@@ -468,6 +485,35 @@ header{
 	}
 }
 
+.menu_user{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #fff;
+	margin-right: 25px;
+	border-radius: 0.25rem;
+	z-index: 501;
+	box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.15);
+
+	ul{
+		margin-bottom: 0;
+
+		li{
+			display: grid;
+			float: none;
+			padding: 0 15px 0 15px;
+			text-align: center;
+
+			a{
+				padding-top: 15px;
+				padding-bottom: 10px;
+			}	
+
+		}
+	}
+
+	
+}
 
 /***********************VIEWTITLE***********************/
 
@@ -1636,6 +1682,17 @@ footer{
 	.post_cover span {
 		font-size: 160px;
 	}
+
+}
+
+@media (max-width: 1350px) {
+	
+	.header_wrapper{
+		box-sizing: initial;
+		width: initial;
+		padding-left: 70px;
+    	padding-right: 70px;
+	}
 }
 
 @media (max-width: 1300px) {
@@ -1646,10 +1703,6 @@ footer{
 }
 
 @media (max-width: 1220px) {
-	
-	.header_wrapper{
-		width: 100%;
-	}
 
 	.wrapper_winners_barismo{
 		width: 100%;
@@ -1731,14 +1784,32 @@ footer{
 }
 
 @media (max-width: 1000px) {
+
+	#menu_classic{
+		float: none;
+	}
+
+	.header_icon{
+		top: 0;
+	}
+
+	.header_wrapper {
+	    box-sizing: initial;
+	    width: initial;
+	    padding-left: 0;
+	    padding-right: 0;
+	}
 	
+	.header_static {
+	    position: initial;
+	}
+
+
 	body{
 		padding-top: 0;
 	}
 
 	header{
-
-		position: relative;
 
 		img{
 			display: block;
@@ -2179,6 +2250,11 @@ footer{
 			}
 		}
 	}
+
+	.menu_user{
+		right: -21px;
+    	top: -8px;
+	}
 }
 
 
@@ -2592,4 +2668,27 @@ footer{
 	   transform: rotate(0);
 	   opacity: 1;
 	}
+}
+
+.no_transition {
+    -webkit-transition: none;
+    -khtml-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
+
+
+/***********************MAINTENANCE VIEW***********************/
+
+.maintenance{
+	display: inline-block;
+	width: 400px;
+	padding-bottom: 50px;
+
+	i{
+		font-size: 100px;
+		padding-bottom: 10px;
+	}	
 }

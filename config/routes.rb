@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   match "about", to: "index#about", :via => 'get'
   match "contact", to: "index#contact", :via => 'get'
   match "winners", to: "index#winners", :via => 'get'
+  match "maintenance", to: "index#maintenance", :via => 'get'
 
   get 'blog/:id', to: 'posts#show', as: 'postlink'
   get 'gallery/:id', to: 'collections#show', as: 'collectionlink'

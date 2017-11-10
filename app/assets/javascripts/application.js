@@ -78,7 +78,7 @@ function isActive(){
     
     var path = window.location.href;
 
-    $("#menu_classic a").each(function(){
+    $("header a").each(function(){
 
       var href = $(this).attr("href");
       $(this).removeClass('active');
@@ -203,7 +203,7 @@ function ajaxExec(){
     $(document).on('click', '.ajaxLink', function(event){
         event.preventDefault();
 
-        $("#menu_classic a").removeClass('active');
+        $("header a").removeClass('active');
         $(this).addClass('active');
 
         $('#Content').removeClass('animation_partial').css({ opacity: "0"});
@@ -223,11 +223,8 @@ function ajaxExec(){
             cache: false,
             success: function(data){
 
-                if (url === "/") {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
-                }
+                $("#Content").html(data);
+
                 window.history.pushState("","", url);
 
                 prettyPhot();
@@ -281,11 +278,7 @@ function ajaxBack(){
             cache: false,
             success: function(data){
 
-                if (url === "http://localhost:3000/" || url === "http://caffora.cafe/" ) {
-                    $('#Content').html($(data).find('#Content').html());
-                }else{
-                    $("#Content").html(data);
-                }
+                $("#Content").html(data);
 
                 $('#Content').css({ opacity: "1"});
                 //$('.ajaxLink').unbind('click', false);
@@ -295,6 +288,8 @@ function ajaxBack(){
                 metaTitle();
                 isActive();
                 slickSlider();
+
+
 
                 setTimeout(function() {
                     $('.background_logo').css({ opacity: "0"});
