@@ -44,7 +44,7 @@ gem "remotipart"
 
 gem 'meta-tags'
 
-gem 'font-awesome-sass'
+gem "font-awesome-rails"
 
 #gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 
