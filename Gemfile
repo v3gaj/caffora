@@ -46,6 +46,11 @@ gem 'meta-tags'
 
 gem "font-awesome-rails"
 
+#gem "wysiwyg-rails", '~> 2.6.0'
+
+gem "froala-editor-sdk"
+
+
 #gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 
 platform :ruby, :x64_mingw, :mingw do

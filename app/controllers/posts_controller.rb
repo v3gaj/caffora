@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all.order(release_date: :desc)
+
+    ajax_call
   end
 
   # GET /posts/1
@@ -22,13 +24,7 @@ class PostsController < ApplicationController
       end
     end
 
-    if request.xhr? # checks whether its an ajax call
-      render :layout => false
-    else
-      respond_to do |format|
-        format.html {  }
-      end
-    end
+    ajax_call
   end
 
   # GET /posts/new
@@ -100,6 +96,16 @@ class PostsController < ApplicationController
     def authenticate_admin!
       unless current_user.present? && current_user.role === 'admin'
         redirect_to new_user_session_path
+      end
+    end
+
+    def ajax_call
+      if request.xhr? # checks whether its an ajax call
+        render :layout => false
+      else
+        respond_to do |format|
+          format.html {  }
+        end
       end
     end
 end

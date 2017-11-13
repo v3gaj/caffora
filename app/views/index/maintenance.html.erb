@@ -7,16 +7,22 @@
 </div>
 <div class="wrapper_maintenance">
 	<div class="maintenance">
-		<i class="fa fa-picture-o" aria-hidden="true"></i>
-		<h1>Slider</h1>
+		<%= link_to sliders_path, class: "ajaxLink", remote: :true do %>
+			<i class="fa fa-picture-o" aria-hidden="true"></i>
+			<h1>Slider</h1>
+		<% end %>
 	</div>
 	<div class="maintenance">
-		<i class="fa fa-file-text" aria-hidden="true"></i>
-		<h1>Post</h1>
+		<%= link_to posts_path, class: "ajaxLink", remote: :true do %>
+			<i class="fa fa-file-text" aria-hidden="true"></i>
+			<h1>Post</h1>
+		<% end %>
 	</div>
 	<div class="maintenance">
-		<i class="fa fa-camera" aria-hidden="true"></i>
-		<h1>Gallery</h1>
+		<%= link_to collections_path, class: "ajaxLink", remote: :true do %>
+			<i class="fa fa-camera" aria-hidden="true"></i>
+			<h1>Gallery</h1>
+		<% end %>
 	</div>
 	<div class="maintenance">
 		<i class="fa fa-user" aria-hidden="true"></i>

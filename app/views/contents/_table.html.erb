@@ -1,7 +1,7 @@
 <div class="content_grid">
     <% @post.contents.each do |content| %>
         <div class="content_container">
-            <div class="content">
+            <div class="content fr-element fr-view">
                 <% if user_signed_in? && current_user.role ==="admin" %>
                     <div class="content_links">
                         <span><%= content.index %></span>/

@@ -13,7 +13,7 @@
   <% if @content.style ==="Paragraph" %>
     <div class="field">
       <%= f.label :body %>
-      <%= f.text_area :body, class: "content_clear" %>
+      <%= f.text_area :body, class: "content_clear", id: "froala_area" %>
     </div>
   <%end%>
 
@@ -34,7 +34,8 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-
+  
   <div class="content_errors"><%= render 'errors' %></div>
 
 <% end %>
+

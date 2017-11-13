@@ -1,8 +1,7 @@
 <% if @collection.errors.any? %>
   $('.collection_errors').html("<%= j (render 'errors') %>");
 <% else %>
-	$(".collection_clear").val('');
 	$(".collection_table").html("<%= j (render 'table') %>");
-	$(".collection_form").html("<p class='post_notice'>Collection created succesfully.</p>");
-	$(".collection_notice").delay(3000).hide(0);
+	$(".collection_form").slideToggle();
+	$(".notice").slideToggle().html("Collection created succesfully.").delay(2000).slideToggle();
 <% end %>

@@ -1,6 +1,6 @@
 <% if @collection.errors.any? %>
 	<div id="error_explanation">
-		<h2><%= pluralize(@collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
+		<p><%= pluralize(@collection.errors.count, "error") %> prohibited this collection from being saved:</p>
 
 		<ul>
 			<% @collection.errors.full_messages.each do |message| %>

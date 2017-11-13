@@ -1,4 +1,6 @@
-$('.collection_delete').bind('ajax:success', function() {
+$('.collection_delete').bind('ajax:success', function(event) {
 	$(".collection_row").remove();
-	$(this).closest('.collection_container').fadeOut();
+	$(this).closest('.collection_container').fadeOut(1000);
+	$(".notice").slideToggle().html("Collection destroyed succesfully.").delay(2000).slideToggle();
+	event.stopImmediatePropagation();
 });

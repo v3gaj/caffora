@@ -1,6 +1,10 @@
 <h1>Editing Content</h1>
 
-<%= render 'editform', content: @content %>
+<div class="content_form">
+	<%= render 'editform', content: @content %>
+</div>
 
 <%= link_to 'Show', [@post, @content] %> |
 <%= link_to 'Back', post_path(@post) %>
+
+

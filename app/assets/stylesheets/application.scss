@@ -15,8 +15,6 @@
  *= require_self
  */
 
-@import "font-awesome";
-
 /***********************DEFAULT***********************/
 
 html, body, div, span, object, iframe,
@@ -2273,22 +2271,42 @@ footer{
 
 
 /***********************FORMS***********************/
-
+.edit_collection,
 .edit_post,
+.new_collection,
 .new_post{
 	padding-top: 50px;
 }
 
+.edit_collection{
+	padding-bottom: 50px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.edit_content,
+.edit_collection,
 .edit_post{
 	display: none;
 }
 
+.new_collection,
 .new_post{
 	display: inline-block;	
 	max-width: 400px;
 }
 
 .new_post,
+.edit_post{
+
+	select{
+		width: 32.4% !important;
+	}
+}
+
+.new_collection,
+.new_post,
+.edit_collection,
 .edit_post{
 	i{
 		font-size: 50px;
@@ -2393,7 +2411,6 @@ footer{
 			}
 		}
 		select{
-			width: 32.4%;
 			display: inline-block;	
 			font-family: 'Alice', serif;
 			font-size: 16px;
@@ -2420,6 +2437,8 @@ footer{
 	}
 }
 
+.collection_new,
+.collection_links,
 .post_new,
 .post_links{
 
@@ -2475,9 +2494,10 @@ footer{
 	}
 }
 
+.collection_links,
 .post_links{
 	a{
-		margin: 20px 10px 10px 10px;
+		margin: 20px 10px 20px 10px;
 		width: 56px;
 	}
 }
@@ -2502,6 +2522,7 @@ footer{
     background-image: -o-linear-gradient(#88c149, #73A839 60%, #699934);
     background-image: linear-gradient(#88c149, #73A839 60%, #699934);
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 /***********************FORMS ERROR***********************/
@@ -2687,8 +2708,13 @@ footer{
 	width: 400px;
 	padding-bottom: 50px;
 
+	a{
+		color: #000;
+	}
+
 	i{
 		font-size: 100px;
 		padding-bottom: 10px;
 	}	
 }
+

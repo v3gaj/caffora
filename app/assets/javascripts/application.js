@@ -21,17 +21,24 @@
 //= require_tree .
 
 
+
 $( document ).ready(function() {
 
     slickSlider();
     ajaxExec();
     ajaxBack();
     ajaxPosts();
+    ajaxCollection();
+    ajaxContent();
     prettyPhot();
+
+    froala();
 
     setTimeout(function() {
         $('body').css({ opacity: "1"});
     }, 1500);   
+
+    
 });
 
 $(document).on('turbolinks:load', function() {
@@ -40,12 +47,63 @@ $(document).on('turbolinks:load', function() {
     ajaxExec();
     ajaxBack();
     ajaxPosts();
+    ajaxCollection();
+    ajaxContent();
     prettyPhot();
+
+    froala();
 
     setTimeout(function() {
         $('body').css({ opacity: "1"});
     }, 1500);   
 });
+
+
+function froala() {
+    $('#froala_area').froalaEditor({
+          imageUploadURL: '/upload_image',
+          imageManagerDeleteURL: '/delete_image',
+          fileUploadURL: '/upload_file',
+    }).on('froalaEditor.file.unlink', function (e, editor, link) {
+        $.ajax({
+          // Request method.
+          method: 'POST',
+
+          // Request URL.
+          url: '/delete_file',
+
+          // Request params.
+          data: {
+            src: link.getAttribute("href")
+          }
+        })
+        .done (function (data) {
+          console.log ('File was deleted');
+        })
+        .fail (function (err) {
+          console.log ('File delete problem: ' + JSON.stringify(err));
+        })
+    }).on('froalaEditor.image.removed', function (e, editor, $img) {
+        $.ajax({
+          // Request method.
+          method: 'POST',
+
+          // Request URL.
+          url: '/delete_image',
+
+          // Request params.
+          data: {
+            src: $img.attr("src")
+          }
+        })
+        .done (function (data) {
+          console.log ('Image was deleted');
+        })
+        .fail (function (err) {
+          console.log ('Image delete problem: ' + JSON.stringify(err));
+        })
+    });
+}
 
 function menu() {
 
@@ -380,4 +438,84 @@ function ajaxPosts(){
     });
 }
 
+function ajaxCollection(){ 
 
+    $(document).on('click', '.collection_edit', function(event){
+
+        event.preventDefault();
+
+        var edit = $(this).parent();
+        var url = $(this).attr("href");
+        var parent = $('.collection_edit').parent();
+        var newform = $('.new_collection');
+        var editform = $('.edit_collection');
+
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            success: function(data){
+                //Muestra los links de editar y eliminar si fueron ocultos
+                $(parent).each(function(){
+                    if ($(this).css('display') === 'none') {
+                        $(this).delay(600).fadeIn();
+                    }
+                });
+                //Remueve los forms de editar abiertos
+                $(editform).delay(400).slideToggle('normal', function() { $(this).remove(); } );
+                //Muestra el boton new
+                $('.collection_new').delay(600).fadeIn();
+                //Remueve el form de new
+                $(newform).slideToggle('normal', function() { $(this).remove(); } );
+                //Esconde los links de editar y eliminar
+                $(edit).hide();
+                //Muestra el formulario de editar
+                $(edit).after($(data).find('.collection_form').html()).next('.edit_collection').slideToggle();
+            }
+        });
+
+        event.stopImmediatePropagation();
+        return false;
+    });
+}
+
+function ajaxContent(){ 
+
+    $(document).on('click', '.content_edit', function(event){
+
+        event.preventDefault();
+
+        var edit = $(this).parent();
+        var url = $(this).attr("href");
+        var parent = $('.content_edit').parent();
+        var newform = $('.new_content');
+        var editform = $('.edit_content');
+
+        $.ajax({
+            dataType: 'html',
+            url: url,
+            success: function(data){
+                //Muestra los links de editar y eliminar si fueron ocultos
+                $(parent).each(function(){
+                    if ($(this).css('display') === 'none') {
+                        $(this).delay(600).fadeIn();
+                    }
+                });
+                //Remueve los forms de editar abiertos
+                $(editform).delay(400).slideToggle('normal', function() { $(this).remove(); } );
+                //Muestra el boton new
+                $('.content_new').delay(600).fadeIn();
+                //Remueve el form de new
+                $(newform).slideToggle('normal', function() { $(this).remove(); } );
+                //Esconde los links de editar y eliminar
+                $(edit).hide();
+                //Muestra el formulario de editar
+                $(edit).after($(data).find('.content_form').html()).next('.edit_content').slideToggle();
+
+                froala();
+            }
+        });
+
+        event.stopImmediatePropagation();
+        return false;
+    });
+}

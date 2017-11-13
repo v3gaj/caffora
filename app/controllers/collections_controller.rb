@@ -8,6 +8,8 @@ class CollectionsController < ApplicationController
   def index
     #@collections = Collection.all.joins(:post).order("posts.release_date desc")
     @collections = Collection.all.find_by_sql ["SELECT * FROM collections ORDER BY IFNULL((SELECT release_date from posts WHERE posts.id = collections.post_id), created_at) DESC;"]
+
+    ajax_call
   end
 
   # GET /collections/1
@@ -15,13 +17,7 @@ class CollectionsController < ApplicationController
   def show
     @collection.images = @collection.images.all
 
-    if request.xhr? # checks whether its an ajax call
-      render :layout => false
-    else
-      respond_to do |format|
-        format.html {  }
-      end
-    end
+    ajax_call
   end
 
   # GET /collections/new
@@ -93,6 +89,16 @@ class CollectionsController < ApplicationController
     def authenticate_admin!
       unless current_user.present? && current_user.role === 'admin'
         redirect_to new_user_session_path
+      end
+    end
+
+    def ajax_call
+      if request.xhr? # checks whether its an ajax call
+        render :layout => false
+      else
+        respond_to do |format|
+          format.html {  }
+        end
       end
     end
 end
